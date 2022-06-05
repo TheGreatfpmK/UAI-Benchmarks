@@ -1,0 +1,80 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 18:17:25 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/rocks-12/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/rocks-12/sketch.props --belief-exploration unfold --size-threshold 0 --gap-threshold 0 --clipping-threshold 0 --expl-heuristic bfs -tm --signal-timeout 60
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.082s.
+
+Time for model construction: 0.094s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	6553
+Transitions: 	39604
+Choices: 	31537
+Observations: 	1645
+Reward Models:  cost
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 468 item(s)
+Choice Labels: 	10 labels
+   * placement -> 1 item(s)
+   * r1sense -> 4050 item(s)
+   * r2sense -> 4050 item(s)
+   * west -> 5616 item(s)
+   * r2sample -> 18 item(s)
+   * north -> 5616 item(s)
+   * finish -> 468 item(s)
+   * south -> 5616 item(s)
+   * east -> 5616 item(s)
+   * r1sample -> 18 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"cost"}min=? [F "goal"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 26212.
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	6553
+Transitions: 	39604
+Choices: 	31537
+Observations: 	1645
+Reward Models:  cost
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 468 item(s)
+Choice Labels: 	10 labels
+   * placement -> 1 item(s)
+   * r1sense -> 4050 item(s)
+   * r2sense -> 4050 item(s)
+   * west -> 5616 item(s)
+   * r2sample -> 18 item(s)
+   * north -> 5616 item(s)
+   * finish -> 468 item(s)
+   * south -> 5616 item(s)
+   * east -> 5616 item(s)
+   * r1sample -> 18 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 4
+# Total check time: 0.421s
+# Number of states in the belief MDP for the under-approximation: 26213
+# Truncated states for the under-approximation: 19551
+# Exploration state limit for under-approximation: 26212
+# Time spend for building the under-approx grid MDP(s): 0.165s
+# Time spend for checking the under-approx grid MDP(s): 0.066s
+##########################################
+
+Result: ≤ 38
+Time for POMDP analysis: 0.425ss.
+
+Performance statistics:
+  * peak memory usage: 120MB
+  * CPU time: 0.488s
+  * wallclock time: 0.647s

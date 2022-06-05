@@ -1,0 +1,68 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 18:17:19 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/grid-large-30-5/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/grid-large-30-5/sketch.props --belief-exploration unfold --size-threshold 0 --gap-threshold 0 --clipping-threshold 0 --expl-heuristic bfs -tm --signal-timeout 60
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.084s.
+
+Time for model construction: 0.063s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	900
+Transitions: 	7075
+Choices: 	3597
+Observations: 	37
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * done -> 1 item(s)
+Choice Labels: 	4 labels
+   * east -> 899 item(s)
+   * west -> 899 item(s)
+   * north -> 899 item(s)
+   * south -> 899 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"steps"}min=? [F "done"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 22500.
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	900
+Transitions: 	7075
+Choices: 	3597
+Observations: 	37
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * done -> 1 item(s)
+Choice Labels: 	4 labels
+   * east -> 899 item(s)
+   * west -> 899 item(s)
+   * north -> 899 item(s)
+   * south -> 899 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 25
+# Total check time: 1.350s
+# Number of states in the belief MDP for the under-approximation: 22500
+# Truncated states for the under-approximation: 17067
+# Exploration state limit for under-approximation: 22500
+# Time spend for building the under-approx grid MDP(s): 0.153s
+# Time spend for checking the under-approx grid MDP(s): 0.029s
+##########################################
+
+Result: ≤ 120.523539
+Time for POMDP analysis: 1.354ss.
+
+Performance statistics:
+  * peak memory usage: 115MB
+  * CPU time: 1.408s
+  * wallclock time: 1.544s

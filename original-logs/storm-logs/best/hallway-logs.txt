@@ -1,0 +1,69 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 22:34:42 2022
+Command line arguments: --explicit-drn /mnt/d/src/PP/new_storm/artifact/benchmark/uai/hallway/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/hallway/sketch.props --belief-exploration unfold --timeout 1800 --gap-threshold 0 --size-threshold 0 --clip-resolution 2 --expl-heuristic bfs --clipping-mode grid -tm --signal-timeout 60 --sound --lpsolver glpk '--glpk:inttol' 1e-9 '--topological:minmax' svi --buildchoicelab
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model construction: 0.044s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	61
+Transitions: 	995
+Choices: 	301
+Observations: 	23
+Reward Models:  rew0
+State Labels: 	2 labels
+   * init -> 1 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	5 labels
+   * 4 -> 60 item(s)
+   * 2 -> 60 item(s)
+   * 3 -> 60 item(s)
+   * 1 -> 60 item(s)
+   * 0 -> 61 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"rew0"}min=? [F "target"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 610.
+Use Belief Clipping with grid beliefs
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	61
+Transitions: 	995
+Choices: 	301
+Observations: 	23
+Reward Models:  rew0
+State Labels: 	2 labels
+   * init -> 1 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	5 labels
+   * 4 -> 60 item(s)
+   * 2 -> 60 item(s)
+   * 3 -> 60 item(s)
+   * 1 -> 60 item(s)
+   * 0 -> 61 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 10
+# Total check time: 0.795s
+# Number of states in the belief MDP for the under-approximation: 622
+# Clipping attempts (clipped states) for the under-approximation: 1963 (0)
+# Total clipping preprocessing time: 0.000s
+# Total clipping time: 0.000s
+# Exploration state limit for under-approximation: 610
+# Time spend for building the under-approx grid MDP(s): 0.725s
+# Time spend for checking the under-approx grid MDP(s): 0.015s
+##########################################
+
+Result: ≤ 19.20340978
+Time for POMDP analysis: 0.804ss.
+
+Performance statistics:
+  * peak memory usage: 40MB
+  * CPU time: 0.776s
+  * wallclock time: 0.919s

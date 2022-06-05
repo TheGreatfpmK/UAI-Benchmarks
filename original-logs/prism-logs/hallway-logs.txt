@@ -1,0 +1,55 @@
+PRISM
+=====
+
+Version: 4.7.dev
+Date: Thu Jun 02 10:16:23 CEST 2022
+Hostname: DESKTOP-12JT6ER
+Memory limits: cudd=1g, java(heap)=16g
+Command line: prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/hallway/sketch.templ /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/hallway/sketch.props --gridresolution 10 -javamaxmem 16g -maxiters 1000000
+
+Parsing model file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/hallway/sketch.templ"...
+
+Type:        POMDP
+Modules:     model 
+Variables:   s o 
+Observables: o
+
+Switching to explicit engine, which supports POMDPs...
+
+Parsing properties file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/hallway/sketch.props"...
+
+1 property:
+(1) R{"rew0"}min=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: R{"rew0"}min=? [ F "target" ]
+
+Building model...
+
+Computing reachable states... 59 states
+Reachable states exploration and model construction done in 0.021 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.036 seconds.
+
+Type:        POMDP
+States:      59 (1 initial)
+Obs/unobs:   15/59
+Transitions: 985
+Choices:     291
+Max/avg:     5/4.93
+Building reward structure...
+
+Starting expected reachability (min)...
+Starting fixed-resolution grid approximation (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 10 iterations and 0.006 seconds.
+target obs=1, inf obs=0
+Grid statistics: resolution=10, points=189623
+Building belief space approximation...
+Solving belief space approximation...
+Belief space value iteration (min) took 80 iterations and 2049.894 seconds.
+Outer bound: 12.505658141669603 (exact floating point)
+
+Building strategy-induced model...

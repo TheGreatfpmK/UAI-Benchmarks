@@ -1,0 +1,62 @@
+Storm-pomdp 1.6.3
+
+Date: Wed May 25 22:22:41 2022
+Command line arguments: --explicit-drn /mnt/d/src/PP/new_storm/artifact/benchmark/uai/hallway/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/hallway/sketch.props --belief-exploration discretize --resolution 8 --gap-threshold 0 --triangulationmode static -tm --signal-timeout 60 --sound --lpsolver gurobi '--gurobi:inttol' 1e-9 '--gurobi:opttol' 1e-9 '--topological:minmax' svi --buildchoicelab
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model construction: 0.055s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	61
+Transitions: 	995
+Choices: 	301
+Observations: 	23
+Reward Models:  rew0
+State Labels: 	2 labels
+   * init -> 1 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	5 labels
+   * 4 -> 60 item(s)
+   * 2 -> 60 item(s)
+   * 3 -> 60 item(s)
+   * 1 -> 60 item(s)
+   * 0 -> 61 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"rew0"}min=? [F "target"]'
+Exploring the belief MDP... 
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	61
+Transitions: 	995
+Choices: 	301
+Observations: 	23
+Reward Models:  rew0
+State Labels: 	2 labels
+   * init -> 1 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	5 labels
+   * 4 -> 60 item(s)
+   * 2 -> 60 item(s)
+   * 3 -> 60 item(s)
+   * 1 -> 60 item(s)
+   * 0 -> 61 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 10
+# Total check time: 0.506s
+# Number of states in the grid MDP for the over-approximation: 15926
+# Maximal resolution for over-approximation: 8
+# Time spend for building the over-approx grid MDP(s): 0.300s
+# Time spend for checking the over-approx grid MDP(s): 0.131s
+##########################################
+
+Result: ≥ 12.43399231
+Time for POMDP analysis: 0.516ss.
+
+Performance statistics:
+  * peak memory usage: 106MB
+  * CPU time: 0.534s
+  * wallclock time: 0.666s

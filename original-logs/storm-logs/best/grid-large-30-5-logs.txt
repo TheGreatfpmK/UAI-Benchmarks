@@ -1,0 +1,79 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 22:30:11 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/grid-large-30-5/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/grid-large-30-5/sketch.props --belief-exploration unfold --timeout 1800 --gap-threshold 0 --size-threshold 0 --clip-resolution 2 --expl-heuristic bfs --clipping-mode grid -tm --signal-timeout 60 --sound --lpsolver glpk '--glpk:inttol' 1e-9 '--topological:minmax' svi
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.099s.
+
+Time for model construction: 0.059s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	900
+Transitions: 	7075
+Choices: 	3597
+Observations: 	37
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * done -> 1 item(s)
+Choice Labels: 	4 labels
+   * east -> 899 item(s)
+   * west -> 899 item(s)
+   * north -> 899 item(s)
+   * south -> 899 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"steps"}min=? [F "done"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 22500.
+Use Belief Clipping with grid beliefs
+### 22501 beliefs in underapproximation MDP ##### 12997 beliefs queued
+##### Clipping Attempts: 17394 ##### Clipped States: 0
+### 22501 beliefs in underapproximation MDP ##### 9285 beliefs queued
+##### Clipping Attempts: 33575 ##### Clipped States: 0
+### 22501 beliefs in underapproximation MDP ##### 5370 beliefs queued
+##### Clipping Attempts: 50746 ##### Clipped States: 0
+### 22501 beliefs in underapproximation MDP ##### 2017 beliefs queued
+##### Clipping Attempts: 65632 ##### Clipped States: 0
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	900
+Transitions: 	7075
+Choices: 	3597
+Observations: 	37
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * done -> 1 item(s)
+Choice Labels: 	4 labels
+   * east -> 899 item(s)
+   * west -> 899 item(s)
+   * north -> 899 item(s)
+   * south -> 899 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 25
+# Total check time: 270.613s
+# Number of states in the belief MDP for the under-approximation: 22501
+# Clipping attempts (clipped states) for the under-approximation: 74283 (0)
+# Total clipping preprocessing time: 0.000s
+# Total clipping time: 0.000s
+# Exploration state limit for under-approximation: 22500
+# Time spend for building the under-approx grid MDP(s): 270.185s
+# Time spend for checking the under-approx grid MDP(s): 0.063s
+##########################################
+
+Result: ≤ 120.523539
+Time for POMDP analysis: 270.616ss.
+
+Performance statistics:
+  * peak memory usage: 146MB
+  * CPU time: 270.630s
+  * wallclock time: 270.822s

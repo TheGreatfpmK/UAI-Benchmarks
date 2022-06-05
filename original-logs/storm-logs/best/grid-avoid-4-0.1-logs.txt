@@ -1,0 +1,79 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 22:28:06 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/grid-avoid-4-0.1/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/grid-avoid-4-0.1/sketch.props --belief-exploration unfold --timeout 1800 --gap-threshold 0 --size-threshold 0 --clip-resolution 2 --expl-heuristic bfs --clipping-mode grid -tm --signal-timeout 60 --sound --lpsolver glpk '--glpk:inttol' 1e-9 '--topological:minmax' svi
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.094s.
+
+Time for model construction: 0.059s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17
+Transitions: 	114
+Choices: 	59
+Observations: 	4
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+   * bad -> 1 item(s)
+Choice Labels: 	5 labels
+   * east -> 14 item(s)
+   * west -> 14 item(s)
+   * north -> 14 item(s)
+   * south -> 14 item(s)
+   * bad -> 1 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? [(!"bad") U "goal"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 238.
+Use Belief Clipping with grid beliefs
+### 285 beliefs in underapproximation MDP ##### 140 beliefs queued
+##### Clipping Attempts: 328 ##### Clipped States: 328
+### 292 beliefs in underapproximation MDP ##### 59 beliefs queued
+##### Clipping Attempts: 680 ##### Clipped States: 680
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17
+Transitions: 	114
+Choices: 	59
+Observations: 	4
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+   * bad -> 1 item(s)
+Choice Labels: 	5 labels
+   * east -> 14 item(s)
+   * west -> 14 item(s)
+   * north -> 14 item(s)
+   * south -> 14 item(s)
+   * bad -> 1 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 14
+# Total check time: 124.051s
+# Number of states in the belief MDP for the under-approximation: 317
+# Clipping attempts (clipped states) for the under-approximation: 978 (978)
+# Total clipping preprocessing time: 0.000s
+# Total clipping time: 0.000s
+# Exploration state limit for under-approximation: 238
+# Time spend for building the under-approx grid MDP(s): 124.007s
+# Time spend for checking the under-approx grid MDP(s): 0.010s
+##########################################
+
+Result: ≥ 0.8477042857
+Time for POMDP analysis: 124.055ss.
+
+Performance statistics:
+  * peak memory usage: 52MB
+  * CPU time: 124.159s
+  * wallclock time: 124.261s

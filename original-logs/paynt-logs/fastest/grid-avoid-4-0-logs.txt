@@ -1,0 +1,159 @@
+2022-06-05 15:16:16,579 - cli.py - This is Paynt version 0.1.0.
+2022-06-05 15:16:16,585 - sketch.py - Loading sketch from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/grid-avoid-4-0/sketch.templ...
+2022-06-05 15:16:16,599 - prism_parser.py - PRISM model type: PrismModelType.POMDP
+2022-06-05 15:16:16,599 - prism_parser.py - Loading properties from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/grid-avoid-4-0/sketch.props ...
+2022-06-05 15:16:16,615 - sketch.py - Constructed quotient MDP having 17 states and 59 actions.
+2022-06-05 15:16:16,615 - sketch.py - Found the following specification: constraints: none, optimality objective: Pmax=? [(!"bad") U "goal"] 
+2022-06-05 15:16:16,615 - sketch.py - Initializing the quotient ...
+2022-06-05 15:16:16,615 - quotient_pomdp.py - Constructed POMDP having 4 observations.
+2022-06-05 15:16:16,615 - quotient_pomdp.py - Observation labels: ['[o=1]', '[]', '[o=3]', '[o=2]']
+2022-06-05 15:16:16,615 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1] ...
+2022-06-05 15:16:16,615 - quotient_pomdp.py - Constructed quotient MDP having 17 states and 59 actions.
+2022-06-05 15:16:16,615 - sketch.py - Sketch parsing complete.
+2022-06-05 15:16:16,615 - sketch.py - Sketch has 1 holes
+2022-06-05 15:16:16,615 - sketch.py - Design space size: 4
+2022-06-05 15:16:16,615 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1] ...
+2022-06-05 15:16:16,615 - quotient_pomdp.py - Constructed quotient MDP having 17 states and 59 actions.
+
+------------------------------------------------------------
+
+2022-06-05 15:16:16,616 - quotient_pomdp.py - Symmetry breaking: reduced design space from 4 to 4
+2022-06-05 15:16:16,616 - synthesizer.py - Synthesis initiated.
+2022-06-05 15:16:16,617 - property.py - New opt = 0.2142857142857143.
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? [(!"bad") U "goal"] 
+
+method: AR, synthesis time: 0.0 s
+number of holes: 1, family size: 4, super quotient: 17 states / 59 actions
+explored: 75 %
+AR stats: avg MDP size: 17, iterations: 4
+
+optimal: 0.214286
+--------------------
+
+A([o=1],0)={'south'}
+
+hole scores:  {0: 0.01020408163265306}
+selected hole:  0
+hole has options:  [0, 2, 3]
+2022-06-05 15:16:16,617 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 0.214, injections: 0.
+2022-06-05 15:16:16,617 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-05 15:16:16,617 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [2, 1, 1, 1] ...
+2022-06-05 15:16:16,617 - quotient_pomdp.py - Constructed quotient MDP having 31 states and 228 actions.
+
+------------------------------------------------------------
+
+2022-06-05 15:16:16,618 - quotient_pomdp.py - Symmetry breaking: reduced design space from 128 to 48
+2022-06-05 15:16:16,619 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? [(!"bad") U "goal"] 
+
+method: AR, synthesis time: 0.0 s
+number of holes: 3, family size: 128, super quotient: 31 states / 228 actions
+explored: 6 %
+AR stats: avg MDP size: 31, iterations: 3
+
+optimal: 0.214286
+--------------------
+
+None
+
+hole scores:  {0: 0.015306122448979591}
+selected hole:  0
+hole has options:  [0, 6]
+2022-06-05 15:16:16,619 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 0.214, injections: 1.
+2022-06-05 15:16:16,619 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-05 15:16:16,619 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [3, 1, 1, 1] ...
+2022-06-05 15:16:16,619 - quotient_pomdp.py - Constructed quotient MDP having 45 states and 509 actions.
+
+------------------------------------------------------------
+
+2022-06-05 15:16:16,622 - quotient_pomdp.py - Symmetry breaking: reduced design space from 5184 to 648
+2022-06-05 15:16:16,623 - synthesizer.py - Synthesis initiated.
+2022-06-05 15:16:16,624 - property.py - New opt = 0.8571428571428569.
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? [(!"bad") U "goal"] 
+
+method: AR, synthesis time: 0.0 s
+number of holes: 4, family size: 5184, super quotient: 45 states / 509 actions
+explored: 1 %
+AR stats: avg MDP size: 45, iterations: 30
+
+optimal: 0.857143
+--------------------
+
+AM([o=1],0)={'east'}+2, AM([o=1],1)={'north'}+1, AM([o=1],2)={'south'}+0, M([],0)=0
+
+hole scores:  {0: 0.00510204081632653, 2: 0.007936507936507936}
+selected hole:  2
+hole has options:  [9]
+2022-06-05 15:16:16,628 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 0.857, injections: 2.
+2022-06-05 15:16:16,628 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-05 15:16:16,628 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [4, 1, 1, 1] ...
+2022-06-05 15:16:16,628 - quotient_pomdp.py - Constructed quotient MDP having 59 states and 902 actions.
+
+------------------------------------------------------------
+
+2022-06-05 15:16:16,636 - quotient_pomdp.py - Symmetry breaking: reduced design space from 262144 to 16384
+2022-06-05 15:16:16,637 - synthesizer.py - Synthesis initiated.
+2022-06-05 15:16:16,647 - property.py - New opt = 0.9285714285714284.
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? [(!"bad") U "goal"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 5, family size: 262144, super quotient: 59 states / 902 actions
+explored: 0 %
+AR stats: avg MDP size: 59, iterations: 123
+
+optimal: 0.928571
+--------------------
+
+AM([o=1],0)={'east'}+2, AM([o=1],1)={'west'}+3, AM([o=1],2)={'south'}+0, AM([o=1],3)={'east'}+0, M([],0)=3
+
+hole scores:  {3: 0.00510204081632653}
+selected hole:  3
+hole has options:  [4]
+2022-06-05 15:16:16,660 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 0.929, injections: 3.
+2022-06-05 15:16:16,660 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-05 15:16:16,660 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [5, 1, 1, 1] ...
+2022-06-05 15:16:16,660 - quotient_pomdp.py - Constructed quotient MDP having 73 states and 1407 actions.
+
+------------------------------------------------------------
+
+2022-06-05 15:16:16,679 - quotient_pomdp.py - Symmetry breaking: reduced design space from 16000000 to 500000
+2022-06-05 15:16:16,680 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? [(!"bad") U "goal"] 
+
+method: AR, synthesis time: 0.04 s
+number of holes: 6, family size: 16000000, super quotient: 73 states / 1407 actions
+explored: 0 %
+AR stats: avg MDP size: 73, iterations: 210
+
+optimal: 0.928571
+--------------------
+
+None
+
+hole scores:  {0: 0.01020408163265306}
+selected hole:  0
+hole has options:  [0, 2, 7]
+2022-06-05 15:16:16,724 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 0.929, injections: 4.
+2022-06-05 15:16:16,724 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-05 15:16:16,724 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [6, 1, 1, 1] ...
+2022-06-05 15:16:16,724 - quotient_pomdp.py - Constructed quotient MDP having 87 states and 2024 actions.
+
+------------------------------------------------------------
+
+2022-06-05 15:16:16,764 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1146617856 to 279936
+2022-06-05 15:16:16,764 - synthesizer_pomdp.py - Optimum matches the upper bound of the observation-free MDP.

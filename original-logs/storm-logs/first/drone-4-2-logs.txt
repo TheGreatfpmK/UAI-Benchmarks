@@ -1,0 +1,75 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 18:17:16 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/drone-4-2/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/drone-4-2/sketch.props --belief-exploration unfold --size-threshold 0 --gap-threshold 0 --clipping-threshold 0 --expl-heuristic bfs -tm --signal-timeout 60
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.075s.
+
+ WARN (FormulaParserGrammar.cpp:281): Identifier `R' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'R' will not be parsed correctly.
+Time for model construction: 0.053s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	1226
+Transitions: 	6461
+Choices: 	2954
+Observations: 	761
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * notbad -> 1177 item(s)
+   * goal -> 25 item(s)
+Choice Labels: 	6 labels
+   * placement -> 1 item(s)
+   * adv -> 576 item(s)
+   * east -> 576 item(s)
+   * north -> 576 item(s)
+   * south -> 576 item(s)
+   * west -> 576 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 19616.
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	1226
+Transitions: 	6461
+Choices: 	2954
+Observations: 	761
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * notbad -> 1177 item(s)
+   * goal -> 25 item(s)
+Choice Labels: 	6 labels
+   * placement -> 1 item(s)
+   * adv -> 576 item(s)
+   * east -> 576 item(s)
+   * north -> 576 item(s)
+   * south -> 576 item(s)
+   * west -> 576 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 16
+# Total check time: 0.205s
+# Number of states in the belief MDP for the under-approximation: 19616
+# Truncated states for the under-approximation: 8627
+# Exploration state limit for under-approximation: 19616
+# Time spend for building the under-approx grid MDP(s): 0.093s
+# Time spend for checking the under-approx grid MDP(s): 0.046s
+##########################################
+
+Result: ≥ 0.8626975274
+Time for POMDP analysis: 0.209ss.
+
+Performance statistics:
+  * peak memory usage: 89MB
+  * CPU time: 0.289s
+  * wallclock time: 0.380s

@@ -1,0 +1,912 @@
+2022-06-05 14:16:16,587 - cli.py - This is Paynt version 0.1.0.
+2022-06-05 14:16:16,593 - sketch.py - Loading sketch from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/drone-4-1/sketch.templ...
+2022-06-05 14:16:16,612 - prism_parser.py - PRISM model type: PrismModelType.POMDP
+2022-06-05 14:16:16,612 - prism_parser.py - Loading properties from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/drone-4-1/sketch.props ...
+ WARN (FormulaParserGrammar.cpp:328): Identifier `R' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'R' will not be parsed correctly.
+2022-06-05 14:16:16,633 - sketch.py - Constructed quotient MDP having 1226 states and 2954 actions.
+2022-06-05 14:16:16,633 - sketch.py - Found the following specification: constraints: none, optimality objective: Pmax=? ["notbad" U "goal"] 
+2022-06-05 14:16:16,633 - sketch.py - Initializing the quotient ...
+2022-06-05 14:16:16,634 - quotient_pomdp.py - Constructed POMDP having 384 observations.
+2022-06-05 14:16:16,636 - quotient_pomdp.py - Observation labels: ['[start & turn & dx=2 & dy=4 & seedx=-1 & seedy=-1]', '[start & turn & dx=1 & dy=4 & seedx=-1 & seedy=-1]', '[start & !turn & dx=3 & dy=2 & seedx=-1 & seedy=-1]', '[start & turn & dx=4 & seedx=-1 & seedy=-1]', '[start & turn & dx=3 & dy=3 & seedx=-1 & seedy=-1]', '[start & !turn & dx=2 & dy=4 & seedx=1 & seedy=4]', '[start & !turn & dx=3 & dy=3 & seedx=-1 & seedy=-1]', '[start & turn & dx=1 & dy=4 & seedx=2 & seedy=3]', '[start & !turn & dy=4 & seedx=-1 & seedy=-1]', '[start & !turn & dy=3 & seedx=-1 & seedy=-1]', '[start & !turn & dy=4 & hascrash=1 & seedy=4]', '[start & turn & dy=2 & hascrash=1 & seedy=2]', '[start & turn & dy=1 & seedx=-1 & seedy=-1]', '[start & !turn & dx=4 & dy=2 & seedx=3 & seedy=3]', '[start & turn & dx=1 & dy=3 & seedx=-1 & seedy=-1]', '[start & turn & seedx=1 & seedy=1]', '[start & !turn & dx=4 & dy=1 & seedx=-1 & seedy=-1]', '[start & !turn & dx=2 & dy=1 & seedx=-1 & seedy=-1]', '[start & turn & dx=2 & seedx=1 & seedy=1]', '[start & !turn & dx=2 & dy=4 & seedx=-1 & seedy=-1]', '[start & !turn & dx=2 & seedx=-1 & seedy=-1]', '[start & !turn & dy=2 & seedx=-1 & seedy=-1]', '[start & turn & dx=4 & dy=3 & seedx=-1 & seedy=-1]', '[start & !turn & dx=2 & dy=2 & seedx=3 & seedy=2]', '[start & !turn & seedy=1]', '[start & !turn & dx=3 & seedx=-1 & seedy=-1]', '[start & !turn & dx=4 & dy=3 & seedx=-1 & seedy=-1]', '[start & !turn & dy=2 & seedy=1]', '[start & turn & dx=3 & dy=3 & seedx=4 & seedy=2]', '[start & !turn & dx=2 & dy=3 & seedx=-1 & seedy=-1]', '[start & !turn & dx=4 & dy=3 & seedx=4 & seedy=2]', '[start & turn & dx=2 & dy=2 & seedx=-1 & seedy=-1]', '[start & !turn & dx=3 & dy=4 & seedx=-1 & seedy=-1]', '[start & turn & dx=1 & seedx=-1 & seedy=-1]', '[start & !turn & dx=4 & dy=2 & seedx=4 & seedy=3]', '[start & !turn & dy=3 & seedx=1 & seedy=2]', '[start & turn & dx=3 & dy=4 & seedx=-1 & seedy=-1]', '[start & turn & dx=4 & dy=3 & hascrash=1 & seedx=4 & seedy=3]', '[start & !turn & dx=3 & hascrash=1 & seedx=3]', '[start & turn & dx=3 & dy=1 & seedx=2 & seedy=2]', '[start & turn & dx=2 & seedx=2 & seedy=1]', '[start & turn & dx=4 & dy=1 & hascrash=1 & seedx=4 & seedy=1]', '[start & !turn & dx=4 & dy=2 & seedx=4 & seedy=1]', '[start & !turn & dy=2 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=3 & seedx=-1 & seedy=-1]', '[start & turn & dx=4 & dy=2 & seedx=3 & seedy=1]', '[start & !turn & dy=1 & seedx=-1 & seedy=-1]', '[start & turn & dx=1 & dy=2 & seedx=-1 & seedy=-1]', '[start & turn & dx=2 & seedx=-1 & seedy=-1]', '[start & turn & dx=4 & dy=2 & seedx=-1 & seedy=-1]', '[start & !turn & dx=3 & dy=1 & seedx=-1 & seedy=-1]', '[start & !turn & dx=3 & seedx=4 & seedy=1]', '[start & !turn & dx=1 & dy=4 & seedy=3]', '[start & turn & dx=3 & dy=3 & seedx=4 & seedy=4]', '[start & turn & dy=2 & seedx=-1 & seedy=-1]', '[start & turn & dx=1 & dy=2 & seedy=2]', '[start & turn & dy=3 & seedx=-1 & seedy=-1]', '[start & turn & dx=4 & dy=1 & seedx=-1 & seedy=-1]', '[start & turn & dx=3 & dy=2 & seedx=-1 & seedy=-1]', '[start & !turn & dx=4 & dy=4 & amdone=1 & seedx=-1 & seedy=-1]', '[start & !turn & dx=1 & seedx=-1 & seedy=-1]', '[start & turn & dx=2 & dy=3 & seedx=-1 & seedy=-1]', '[start & !turn & dx=1 & dy=4 & seedy=4]', '[start & turn & dx=2 & dy=1 & seedx=3 & seedy=1]', '[start & turn & dx=1 & dy=3 & seedy=4]', '[start & !turn & dx=4 & seedx=-1 & seedy=-1]', '[start & turn & dy=4 & seedx=-1 & seedy=-1]', '[start & !turn & dx=1 & dy=3 & seedx=1 & seedy=2]', '[start & !turn & dx=3 & seedx=3 & seedy=1]', '[start & !turn & dx=1 & dy=3 & seedx=2 & seedy=4]', '[start & !turn & seedx=-1 & seedy=-1]', '[start & !turn & dx=4 & dy=2 & seedx=-1 & seedy=-1]', '[start & !turn & dx=3 & dy=1 & seedx=3 & seedy=2]', '[start & turn & dx=2 & dy=4 & hascrash=1 & seedx=2 & seedy=4]', '[start & !turn & dx=3 & dy=1 & seedx=2]', '[start & turn & dx=3 & dy=4 & seedx=4 & seedy=3]', '[start & turn & dx=2 & seedx=3 & seedy=1]', '[start & turn & dx=2 & dy=1 & seedx=-1 & seedy=-1]', '[start & turn & dx=3 & dy=1 & hascrash=1 & seedx=3 & seedy=1]', '[start & !turn & dx=3 & dy=4 & seedx=2 & seedy=4]', '[start & !turn & dx=1 & dy=1 & seedx=-1 & seedy=-1]', '[start & turn & seedx=-1 & seedy=-1]', '[start & turn & dx=2 & dy=1 & seedx=1 & seedy=2]', '[start & turn & dx=1 & dy=3 & seedx=2 & seedy=2]', '[start & turn & dx=3 & seedx=-1 & seedy=-1]', '[start & !turn & dx=1 & dy=2 & seedx=2 & seedy=3]', '[start & turn & dx=3 & hascrash=1 & seedx=3]', '[start & !turn & dx=3 & dy=3 & seedx=4 & seedy=4]', '[start & !turn & dx=1 & dy=4 & seedx=-1 & seedy=-1]', '[start & turn & dx=1 & hascrash=1 & seedx=1]', '[start & !turn & dx=4 & dy=3 & hascrash=1 & seedx=4 & seedy=3]', '[start & !turn & dx=2 & dy=2 & seedx=-1 & seedy=-1]', '[start & !turn & dy=1 & seedy=2]', '[start & turn & dx=1 & dy=1 & seedx=-1 & seedy=-1]', '[start & !turn & dx=1 & dy=2 & seedx=-1 & seedy=-1]', '[start & turn & dx=3 & seedx=4 & seedy=1]', '[start & turn & dx=3 & dy=1 & seedx=-1 & seedy=-1]', '[start & turn & dx=3 & dy=1 & seedx=4 & seedy=1]', '[start & turn & dx=3 & dy=3 & seedx=2 & seedy=3]', '[start & !turn & dx=4 & dy=3 & seedx=3 & seedy=4]', '[start & turn & dx=3 & dy=2 & seedx=2 & seedy=3]', '[start & !turn & dy=3 & seedx=1 & seedy=3]', '[start & turn & dy=1 & hascrash=1 & seedy=1]', '[start & turn & dx=3 & dy=1 & seedx=2]', '[start & turn & dx=2 & dy=2 & seedx=2 & seedy=3]', '[start & turn & dx=1 & dy=1 & hascrash=1 & seedx=1 & seedy=1]', '[start & turn & dx=3 & dy=1 & seedx=2 & seedy=1]', '[start & !turn & dy=2 & seedx=1 & seedy=2]', '[start & !turn & dy=4 & seedx=1 & seedy=4]', '[start & turn & dx=4 & dy=3 & seedx=3 & seedy=2]', '[start & turn & dx=1 & dy=1]', '[start & turn & dx=3 & dy=2 & seedx=2 & seedy=1]', '[start & !turn & dx=4 & dy=3 & seedx=3 & seedy=2]', '[start & !turn & dx=2 & dy=1 & seedx=3 & seedy=1]', '[start & turn & dx=2 & dy=3 & seedx=1 & seedy=2]', '[start & !turn & dy=2 & seedx=1 & seedy=1]', '[start & !turn & dx=3 & dy=2 & seedx=4 & seedy=3]', '[start & turn & dy=2 & seedx=1 & seedy=3]', '[start & turn & dx=4 & dy=2 & hascrash=1 & seedx=4 & seedy=2]', '[start & !turn & dx=3 & dy=2 & seedx=3 & seedy=1]', '[start & turn & dx=2 & dy=2 & seedx=1 & seedy=1]', '[start & turn & dx=2 & dy=3 & seedx=2 & seedy=2]', '[start & !turn & dx=4 & seedx=4 & seedy=1]', '[start & turn & dx=2 & dy=1 & seedx=3]', '[start & turn & dx=3 & dy=3 & seedx=3 & seedy=4]', '[start & !turn & dx=1 & dy=2 & hascrash=1 & seedx=1 & seedy=2]', '[start & !turn & dx=2 & dy=4 & seedx=3 & seedy=3]', '[start & turn & dx=1 & dy=3 & hascrash=1 & seedx=1 & seedy=3]', '[start & turn & dx=3 & dy=1 & seedx=4]', '[start & turn & dy=3 & seedx=1 & seedy=4]', '[start & !turn & dx=4 & dy=2 & hascrash=1 & seedx=4 & seedy=2]', '[start & turn & dx=1 & seedx=2 & seedy=1]', '[start & !turn & dx=1 & dy=3 & seedx=1 & seedy=4]', '[start & turn & dx=2 & hascrash=1 & seedx=2]', '[start & turn & dx=3 & dy=4 & seedx=3 & seedy=3]', '[start & turn & dy=4 & hascrash=1 & seedy=4]', '[start & turn & dx=1 & dy=1 & seedx=1 & seedy=2]', '[start & !turn & dx=3 & dy=3 & seedx=2 & seedy=4]', '[start & turn & dx=1 & dy=2 & hascrash=1 & seedx=1 & seedy=2]', '[start & turn & dx=2 & dy=3 & seedx=1 & seedy=4]', '[start & !turn & dx=1 & dy=2 & seedx=1 & seedy=1]', '[start & turn & dx=1 & dy=2 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=1 & seedx=2 & seedy=2]', '[start & turn & dy=1 & seedx=1 & seedy=2]', '[start & !turn & dx=1 & dy=3 & seedy=3]', '[start & !turn & dx=2 & dy=3 & hascrash=1 & seedx=2 & seedy=3]', '[start & !turn & dx=3 & dy=2 & seedx=2 & seedy=2]', '[start & turn & dx=4 & dy=2 & seedx=3 & seedy=2]', '[start & !turn & dx=3 & seedx=2]', '[start & !turn & dx=3 & dy=1 & seedx=3]', '[start & !turn & dx=4 & dy=1 & seedx=3 & seedy=2]', '[start & turn & dx=3 & dy=4 & hascrash=1 & seedx=3 & seedy=4]', '[start & turn & dy=4 & seedx=1 & seedy=3]', '[start & turn & dx=1 & dy=2 & seedx=2 & seedy=3]', '[start & turn & dx=1 & seedy=1]', '[start & turn & dx=4 & dy=1 & seedx=3 & seedy=1]', '[start & !turn & hascrash=1]', '[start & turn & dx=1 & dy=4 & seedx=2 & seedy=4]', '[start & !turn & dx=2 & dy=1 & seedx=3]', '[start & turn & dx=2 & dy=4 & seedx=3 & seedy=4]', '[start & turn & dx=3 & seedx=2 & seedy=1]', '[start & !turn & dx=1 & dy=1 & seedx=1 & seedy=2]', '[start & !turn & dx=4 & dy=4 & amdone=1 & hascrash=1 & seedx=4 & seedy=4]', '[start & turn & dx=2 & dy=4 & seedx=3 & seedy=3]', '[start & turn & dx=3 & dy=3 & seedx=2 & seedy=2]', '[start & !turn & dx=3 & dy=3 & seedx=3 & seedy=2]', '[start & !turn & dx=2 & dy=3 & seedx=2 & seedy=2]', '[start & turn & dx=2 & dy=2 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=2 & seedx=1 & seedy=3]', '[start & turn & dx=2 & dy=2 & seedx=3 & seedy=3]', '[start & !turn & dx=2 & dy=2 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=4 & seedx=2 & seedy=3]', '[start & turn & seedy=1]', '[start & turn & dx=3 & dy=2 & seedx=4 & seedy=2]', '[start & !turn & dx=4 & dy=1 & seedx=3]', '[start & turn & dx=4 & dy=1 & seedx=4 & seedy=2]', '[start & !turn & dx=2 & dy=3 & seedx=1 & seedy=2]', '[start & turn & dx=2 & dy=2 & seedx=2 & seedy=1]', '[start & turn & dx=1 & dy=3 & seedx=1 & seedy=2]', '[start & turn & dy=3 & seedx=1 & seedy=2]', '[start & turn & dx=2 & seedx=3]', '[start & !turn & dx=1 & dy=1 & seedy=2]', '[start & turn & hascrash=1]', '[start & !turn & dx=2 & dy=3 & seedx=3 & seedy=2]', '[start & !turn & dx=3 & dy=4 & seedx=4 & seedy=4]', '[start & !turn & dy=4 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=1 & seedx=1]', '[start & turn & dx=3 & dy=2 & seedx=2 & seedy=2]', '[start & turn & dx=1 & dy=4 & seedy=4]', '[start & turn & dx=2 & dy=3 & seedx=3 & seedy=4]', '[start & !turn & dx=1 & dy=1 & seedy=1]', '[start & !turn & dx=2 & dy=4 & hascrash=1 & seedx=2 & seedy=4]', '[start & !turn & dx=2 & dy=3 & seedx=3 & seedy=4]', '[start & turn & dx=3 & seedx=3 & seedy=1]', '[start & !turn & dx=1 & dy=3 & seedy=4]', '[start & !turn & dx=3 & dy=2 & seedx=4 & seedy=1]', '[start & turn & dx=3 & dy=4 & seedx=2 & seedy=3]', '[start & !turn & dx=4 & dy=2 & seedx=3 & seedy=2]', '[start & !turn & dx=3 & dy=1 & hascrash=1 & seedx=3 & seedy=1]', '[start & turn & dy=4 & seedx=1 & seedy=4]', '[start & !turn & dx=2 & seedx=2 & seedy=1]', '[start & !turn & dx=1 & seedx=1 & seedy=1]', '[start & !turn & seedx=1]', '[start & !turn & dx=3 & dy=2 & seedx=3 & seedy=3]', '[start & turn & dx=1 & dy=4 & seedy=3]', '[start & turn & dx=1 & dy=2 & seedy=3]', '[start & turn & dx=2 & dy=3 & seedx=1 & seedy=3]', '[start & !turn & dx=2 & dy=4 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=4 & seedx=1 & seedy=3]', '[start & !turn & dx=3 & dy=3 & seedx=4 & seedy=2]', '[start & turn & dy=2 & seedx=1 & seedy=2]', '[start & !turn & dx=3 & dy=1 & seedx=2 & seedy=1]', '[start & !turn & dx=1 & dy=4 & hascrash=1 & seedx=1 & seedy=4]', '[start & turn & dx=2 & dy=2 & seedx=1 & seedy=2]', '[start & turn & dx=2 & seedx=1]', '[start & !turn & dx=3 & dy=2 & seedx=2 & seedy=1]', '[start & turn & dx=3 & dy=2 & seedx=4 & seedy=3]', '[start & !turn & dx=1 & dy=1 & hascrash=1 & seedx=1 & seedy=1]', '[start & !turn & dy=3 & seedy=4]', '[start & !turn & dx=1 & dy=3 & hascrash=1 & seedx=1 & seedy=3]', '[start & turn & dy=1 & seedy=2]', '[start & !turn & dx=2 & dy=3 & seedx=3 & seedy=3]', '[start & !turn & dy=2 & seedy=3]', '[start & !turn & dx=1 & dy=2 & seedy=1]', '[start & turn & dx=1 & dy=2 & seedx=1 & seedy=1]', '[start & !turn & dx=1 & dy=4 & seedx=2 & seedy=4]', '[start & turn & dx=2 & dy=2 & hascrash=1 & seedx=2 & seedy=2]', '[start & !turn & dx=4 & dy=4 & amdone=1 & seedx=4 & seedy=3]', '[start & turn & dx=2 & dy=1 & seedx=3 & seedy=2]', '[start & turn & dx=4 & dy=1 & seedx=3 & seedy=2]', '[start & !turn & dx=3 & dy=2 & seedx=4 & seedy=2]', '[start & turn & dx=2 & dy=4 & seedx=1 & seedy=3]', '[start & turn & dx=3 & seedx=2]', '[start & !turn & dx=1 & dy=3 & seedx=2 & seedy=3]', '[start & !turn & dx=3 & seedx=2 & seedy=1]', '[start & turn & dx=3 & dy=1 & seedx=3]', '[start & turn & dx=2 & dy=4 & seedx=1 & seedy=4]', '[start & !turn & dx=2 & seedx=1 & seedy=1]', '[start & !turn & dx=2 & seedx=3]', '[start & turn & dx=3 & dy=3 & hascrash=1 & seedx=3 & seedy=3]', '[start & !turn & dx=1 & dy=1 & seedx=2 & seedy=1]', '[start & turn & dx=3 & dy=3 & seedx=4 & seedy=3]', '[start & turn & dx=1 & dy=1 & seedx=2 & seedy=1]', '[!start & !turn & seedx=-1 & seedy=-1]', '[start & !turn & dx=1 & seedy=1]', '[start & !turn & dy=3 & hascrash=1 & seedy=3]', '[start & turn & dx=1 & dy=3 & seedy=2]', '[start & turn & dx=3 & dy=3 & seedx=3 & seedy=2]', '[start & turn & dx=1 & dy=1 & seedy=1]', '[start & !turn & dx=3 & dy=2 & hascrash=1 & seedx=3 & seedy=2]', '[start & !turn & dx=1]', '[start & !turn & dx=4 & hascrash=1 & seedx=4]', '[start & !turn & dx=2 & dy=1 & seedx=3 & seedy=2]', '[start & !turn & dy=3 & seedy=2]', '[start & !turn & dx=3 & seedx=4]', '[start & !turn & dx=2 & dy=1 & seedx=1 & seedy=2]', '[start & turn & dx=1 & dy=3 & seedx=1 & seedy=4]', '[start & !turn & dy=2 & hascrash=1 & seedy=2]', '[start & !turn & dx=4 & dy=1 & seedx=4]', '[start & turn & dx=3 & dy=4 & seedx=4 & seedy=4]', '[start & turn & dx=3 & dy=1 & seedx=4 & seedy=2]', '[start & turn & dx=1 & dy=2 & seedx=2 & seedy=2]', '[start & !turn & dx=2 & dy=1 & seedx=1 & seedy=1]', '[start & !turn & dx=4 & dy=1 & seedx=3 & seedy=1]', '[start & !turn & dx=2 & seedx=1]', '[start & !turn & dx=1 & seedx=2 & seedy=1]', '[start & !turn & dy=1 & seedx=1]', '[start & !turn & dx=4 & seedx=3 & seedy=1]', '[start & !turn & dx=3 & dy=3 & seedx=2 & seedy=2]', '[start & !turn & dx=4 & dy=4 & amdone=1 & seedx=3 & seedy=3]', '[start & !turn & dx=4 & dy=1 & hascrash=1 & seedx=4 & seedy=1]', '[start & turn & dx=1 & dy=2 & seedx=2 & seedy=1]', '[start & !turn & dx=3 & dy=3 & seedx=4 & seedy=3]', '[start & turn & dy=3 & seedy=4]', '[start & !turn & seedx=1 & seedy=1]', '[start & turn & dx=4 & dy=3 & seedx=3 & seedy=4]', '[start & turn & dy=3 & seedy=2]', '[start & !turn & dy=1 & seedx=1 & seedy=1]', '[start & turn & dx=3 & dy=1 & seedx=3 & seedy=2]', '[start & turn & dx=1 & dy=4 & hascrash=1 & seedx=1 & seedy=4]', '[start & turn & dx=4 & dy=1 & seedx=3]', '[start & !turn & dx=2 & dy=4 & seedx=3 & seedy=4]', '[start & turn & dx=1 & dy=4 & seedx=1 & seedy=3]', '[start & turn & dx=1 & dy=2 & seedy=1]', '[start & turn & dx=3 & dy=2 & seedx=3 & seedy=1]', '[start & turn & dy=1 & seedx=1]', '[start & !turn & dx=1 & dy=3 & seedx=2 & seedy=2]', '[start & turn & dy=4 & seedy=3]', '[start & turn & dx=1 & dy=3 & seedx=2 & seedy=3]', '[start & !turn & dx=1 & dy=2 & seedy=2]', '[start & turn & dx=4 & seedx=3 & seedy=1]', '[start & !turn & dx=3 & dy=1 & seedx=4 & seedy=1]', '[start & turn & dx=1 & dy=1 & seedx=2]', '[start & !turn & dx=3 & dy=4 & seedx=4 & seedy=3]', '[start & !turn & dx=2 & dy=1 & seedx=1]', '[start & !turn & dy=4 & seedy=3]', '[start & turn & dy=3 & seedx=1 & seedy=3]', '[start & turn & dx=2 & dy=2 & seedx=3 & seedy=2]', '[start & turn & dx=4 & dy=3 & seedx=3 & seedy=3]', '[start & !turn & dy=1 & hascrash=1 & seedy=1]', '[start & !turn & dx=4 & dy=3 & seedx=3 & seedy=3]', '[start & !turn & dx=4 & dy=1 & seedx=4 & seedy=2]', '[start & turn & dx=2 & dy=4 & seedx=2 & seedy=3]', '[start & turn & seedx=1]', '[start & !turn & dy=1 & seedx=1 & seedy=2]', '[start & turn & dx=4 & dy=3 & seedx=4 & seedy=2]', '[start & !turn & dx=2 & dy=3 & seedx=1 & seedy=3]', '[start & !turn & dx=1 & dy=1 & seedx=2]', '[start & !turn & dx=2 & dy=2 & seedx=2 & seedy=3]', '[start & !turn & dx=2 & dy=1 & seedx=2 & seedy=2]', '[start & !turn & dx=2 & dy=4 & seedx=2 & seedy=3]', '[start & turn & dx=4 & seedx=3]', '[start & !turn & dx=3 & dy=4 & seedx=3 & seedy=3]', '[start & !turn & dx=2 & dy=2 & hascrash=1 & seedx=2 & seedy=2]', '[start & !turn & dx=1 & dy=2 & seedx=2 & seedy=1]', '[start & turn & dy=2 & seedy=1]', '[start & !turn & dx=1 & dy=1]', '[start & !turn & dx=2 & dy=2 & seedx=1 & seedy=2]', '[start & turn & dy=3 & hascrash=1 & seedy=3]', '[start & turn & dx=2 & dy=3 & hascrash=1 & seedx=2 & seedy=3]', '[start & turn & dx=4 & dy=2 & seedx=3 & seedy=3]', '[start & turn & dx=1 & dy=3 & seedy=3]', '[start & !turn & dx=4 & dy=3 & seedx=4 & seedy=4]', '[start & turn & dx=1 & dy=1 & seedy=2]', '[start & turn & dx=4 & dy=2 & seedx=4 & seedy=3]', '[start & !turn & dx=1 & dy=2 & seedx=2 & seedy=2]', '[start & turn & dx=2 & dy=3 & seedx=3 & seedy=3]', '[start & turn & dx=1 & dy=3 & seedx=2 & seedy=4]', '[start & turn & dx=4 & seedx=4 & seedy=1]', '[start & !turn & dx=1 & dy=3 & seedy=2]', '[start & turn & dx=4 & hascrash=1 & seedx=4]', '[start & !turn & dx=4 & seedx=3]', '[start & turn & dx=2 & dy=3 & seedx=3 & seedy=2]', '[start & turn & dx=2 & dy=1 & seedx=1 & seedy=1]', '[start & !turn & dx=2 & dy=3 & seedx=2 & seedy=4]', '[start & turn & dx=2 & dy=1 & seedx=2]', '[start & !turn & dx=4 & dy=2 & seedx=3 & seedy=1]', '[start & turn & dx=2 & dy=1 & seedx=1]', '[start & turn & dx=1 & seedx=2]', '[start & !turn & dy=1]', '[start & turn & dx=4 & dy=2 & seedx=4 & seedy=1]', '[start & turn & dx=2 & dy=1 & seedx=2 & seedy=2]', '[start & turn & dx=2 & dy=3 & seedx=2 & seedy=4]', '[start & !turn & dx=2 & seedx=3 & seedy=1]', '[start & turn & dx=1 & dy=1 & seedx=2 & seedy=2]', '[start & !turn & dx=2 & dy=2 & seedx=3 & seedy=3]', '[start & turn & dx=3 & dy=2 & hascrash=1 & seedx=3 & seedy=2]', '[start & turn & dx=3 & dy=3 & seedx=2 & seedy=4]', '[start & !turn & dx=2 & dy=2 & seedx=1 & seedy=1]', '[start & !turn & dx=2 & hascrash=1 & seedx=2]', '[start & turn & dx=4 & dy=3 & seedx=4 & seedy=4]', '[start & turn & dx=2 & dy=1 & hascrash=1 & seedx=2 & seedy=1]', '[start & !turn & dx=2 & dy=1 & seedx=2]', '[start & turn & dx=2 & dy=2 & seedx=3 & seedy=1]', '[start & !turn & dx=3 & dy=1 & seedx=4 & seedy=2]', '[start & turn & dx=1 & seedx=1 & seedy=1]', '[start & !turn & dx=2 & dy=2 & seedx=3 & seedy=1]', '[start & !turn & dx=4 & dy=4 & amdone=1 & seedx=3 & seedy=4]', '[start & turn & dx=1]', '[start & turn & dx=3 & dy=4 & seedx=2 & seedy=4]', '[start & !turn & dx=3 & dy=4 & hascrash=1 & seedx=3 & seedy=4]', '[start & turn & dx=3 & dy=2 & seedx=4 & seedy=1]', '[start & !turn & dx=1 & hascrash=1 & seedx=1]', '[start & !turn & dx=3 & dy=1 & seedx=4]', '[start & !turn & dx=3 & dy=1 & seedx=2 & seedy=2]', '[start & !turn & dx=3 & dy=3 & seedx=2 & seedy=3]', '[start & !turn & dx=3 & dy=3 & seedx=3 & seedy=4]', '[start & turn & dy=2 & seedx=1 & seedy=1]', '[start & !turn & dx=1 & dy=2 & seedy=3]', '[start & turn & dx=3 & seedx=4]', '[start & !turn & dy=3 & seedx=1 & seedy=4]', '[start & !turn & dx=3 & dy=2 & seedx=2 & seedy=3]', '[start & !turn & dx=3 & dy=3 & hascrash=1 & seedx=3 & seedy=3]', '[start & turn & dy=2 & seedy=3]', '[start & turn & dx=4 & dy=1 & seedx=4]', '[start & !turn & dx=2 & dy=3 & seedx=1 & seedy=4]', '[start & turn & dx=1 & dy=1 & seedx=1]', '[start & !turn & dx=1 & seedx=2]', '[start & turn & dx=3 & dy=2 & seedx=3 & seedy=3]', '[start & !turn & dx=2 & dy=2 & seedx=2 & seedy=1]', '[start & turn & dy=1 & seedx=1 & seedy=1]', '[start & turn & dy=1]', '[start & !turn & dx=3 & dy=4 & seedx=2 & seedy=3]', '[start & !turn & dx=2 & dy=1 & hascrash=1 & seedx=2 & seedy=1]']
+2022-06-05 14:16:16,646 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 14:16:16,647 - quotient_pomdp.py - Constructed quotient MDP having 1226 states and 2954 actions.
+2022-06-05 14:16:16,707 - sketch.py - Sketch parsing complete.
+2022-06-05 14:16:16,707 - sketch.py - Sketch has 165 holes
+2022-06-05 14:16:16,707 - sketch.py - Design space size: 2187250724783011924372502227117621365353169430893212436425770606409952999199375923223513177023053824
+2022-06-05 14:16:16,707 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 14:16:16,707 - quotient_pomdp.py - Constructed quotient MDP having 1226 states and 2954 actions.
+
+------------------------------------------------------------
+
+2022-06-05 14:16:16,766 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2187250724783011924372502227117621365353169430893212436425770606409952999199375923223513177023053824 to 2187250724783011924372502227117621365353169430893212436425770606409952999199375923223513177023053824
+2022-06-05 14:16:16,773 - synthesizer.py - Synthesis initiated.
+2022-06-05 14:16:16,918 - property.py - New opt = 0.6829316503298493.
+2022-06-05 14:16:16,986 - property.py - New opt = 0.6855406725883729.
+2022-06-05 14:16:17,037 - property.py - New opt = 0.6857897130700401.
+2022-06-05 14:16:17,106 - property.py - New opt = 0.6875448260949489.
+2022-06-05 14:16:17,118 - property.py - New opt = 0.6900866182624057.
+2022-06-05 14:16:17,160 - property.py - New opt = 0.6904832566298366.
+2022-06-05 14:16:17,247 - property.py - New opt = 0.6907971208445368.
+2022-06-05 14:16:17,263 - property.py - New opt = 0.6912973847134789.
+2022-06-05 14:16:17,346 - property.py - New opt = 0.6936239786931572.
+2022-06-05 14:16:17,385 - property.py - New opt = 0.6939989781596544.
+2022-06-05 14:16:17,555 - property.py - New opt = 0.7004779905503526.
+2022-06-05 14:16:17,587 - property.py - New opt = 0.7011716358551622.
+2022-06-05 14:16:17,645 - property.py - New opt = 0.7026100722005413.
+2022-06-05 14:16:17,695 - property.py - New opt = 0.7028599987998837.
+2022-06-05 14:16:17,761 - property.py - New opt = 0.703817939077499.
+2022-06-05 14:16:17,775 - property.py - New opt = 0.7064172315049356.
+2022-06-05 14:16:17,816 - property.py - New opt = 0.7068042922242461.
+2022-06-05 14:16:17,921 - property.py - New opt = 0.7117908182193639.
+2022-06-05 14:16:17,951 - property.py - New opt = 0.7127280865795074.
+2022-06-05 14:16:17,998 - property.py - New opt = 0.7143922872711175.
+2022-06-05 14:16:18,061 - property.py - New opt = 0.7146621890119174.
+2022-06-05 14:16:18,123 - property.py - New opt = 0.7157053539189258.
+2022-06-05 14:16:18,140 - property.py - New opt = 0.7188434294387365.
+2022-06-05 14:16:18,202 - property.py - New opt = 0.7192990193931946.
+2022-06-05 14:16:18,340 - property.py - New opt = 0.7200718298733184.
+2022-06-05 14:16:18,468 - property.py - New opt = 0.720365146004512.
+2022-06-05 14:16:18,623 - property.py - New opt = 0.7221030687542319.
+2022-06-05 14:16:18,640 - property.py - New opt = 0.7225824883606653.
+2022-06-05 14:16:18,670 - property.py - New opt = 0.7229516721217769.
+2022-06-05 14:16:18,716 - property.py - New opt = 0.7246816676564329.
+2022-06-05 14:16:18,740 - property.py - New opt = 0.7251502887644858.
+2022-06-05 14:16:18,812 - property.py - New opt = 0.7255901214948415.
+2022-06-05 14:16:18,818 - property.py - New opt = 0.7260647275627525.
+2022-06-05 14:16:18,832 - property.py - New opt = 0.7266469130982762.
+2022-06-05 14:16:18,843 - property.py - New opt = 0.7292475667091564.
+2022-06-05 14:16:18,848 - property.py - New opt = 0.7296663243383709.
+2022-06-05 14:16:18,889 - property.py - New opt = 0.7297941096920556.
+2022-06-05 14:16:18,994 - property.py - New opt = 0.7300634838196384.
+2022-06-05 14:16:19,016 - property.py - New opt = 0.7301739683636895.
+2022-06-05 14:16:19,106 - property.py - New opt = 0.7304585195799713.
+2022-06-05 14:16:19,171 - property.py - New opt = 0.7308674775888969.
+2022-06-05 14:16:19,299 - property.py - New opt = 0.7327481817668552.
+2022-06-05 14:16:19,393 - property.py - New opt = 0.7697594658893864.
+2022-06-05 14:16:19,409 - property.py - New opt = 0.7701407573107852.
+2022-06-05 14:16:19,439 - property.py - New opt = 0.770383899126467.
+2022-06-05 14:16:19,504 - property.py - New opt = 0.7717648904360445.
+2022-06-05 14:16:19,529 - property.py - New opt = 0.7721405238547738.
+2022-06-05 14:16:19,611 - property.py - New opt = 0.772691395201047.
+2022-06-05 14:16:19,627 - property.py - New opt = 0.773208644787366.
+2022-06-05 14:16:19,644 - property.py - New opt = 0.7751941568409894.
+2022-06-05 14:16:19,650 - property.py - New opt = 0.7755464057971119.
+> Progress 0.0%, elapsed 3.0 s, iters = (606, 0), opt = 0.776
+2022-06-05 14:16:19,786 - property.py - New opt = 0.7758313205851562.
+2022-06-05 14:16:19,868 - property.py - New opt = 0.7761251578092323.
+2022-06-05 14:16:20,042 - property.py - New opt = 0.7766099399267905.
+2022-06-05 14:16:20,048 - property.py - New opt = 0.7773722392871433.
+2022-06-05 14:16:20,224 - property.py - New opt = 0.7777043670157002.
+2022-06-05 14:16:20,265 - property.py - New opt = 0.7780330117038975.
+2022-06-05 14:16:20,542 - property.py - New opt = 0.778425180690595.
+2022-06-05 14:16:20,926 - property.py - New opt = 0.7788151772250785.
+2022-06-05 14:16:20,979 - property.py - New opt = 0.7794924127527237.
+2022-06-05 14:16:21,197 - property.py - New opt = 0.7797646991742877.
+2022-06-05 14:16:21,243 - property.py - New opt = 0.7798850232572704.
+2022-06-05 14:16:21,349 - property.py - New opt = 0.7803787184364754.
+2022-06-05 14:16:21,400 - property.py - New opt = 0.7806351812889843.
+2022-06-05 14:16:21,449 - property.py - New opt = 0.7807499184991322.
+2022-06-05 14:16:21,602 - property.py - New opt = 0.7812375190127979.
+2022-06-05 14:16:21,626 - property.py - New opt = 0.78155633372891.
+2022-06-05 14:16:21,702 - property.py - New opt = 0.782143908192215.
+2022-06-05 14:16:21,718 - property.py - New opt = 0.7826467055248592.
+2022-06-05 14:16:21,749 - property.py - New opt = 0.784781463423779.
+2022-06-05 14:16:21,756 - property.py - New opt = 0.7850813459463725.
+2022-06-05 14:16:21,863 - property.py - New opt = 0.785380860844907.
+2022-06-05 14:16:21,917 - property.py - New opt = 0.7857489777903665.
+2022-06-05 14:16:22,010 - property.py - New opt = 0.7862714836317893.
+2022-06-05 14:16:22,176 - property.py - New opt = 0.7866146859338408.
+2022-06-05 14:16:22,238 - property.py - New opt = 0.7869218643679292.
+2022-06-05 14:16:22,371 - property.py - New opt = 0.7872404695257207.
+2022-06-05 14:16:22,519 - property.py - New opt = 0.7877937495402939.
+> Progress 0.0%, elapsed 6.0 s, iters = (1246, 0), opt = 0.788
+2022-06-05 14:16:22,826 - property.py - New opt = 0.7881353676180667.
+2022-06-05 14:16:22,865 - property.py - New opt = 0.7884491937858098.
+2022-06-05 14:16:23,048 - property.py - New opt = 0.7887089155918167.
+2022-06-05 14:16:23,115 - property.py - New opt = 0.788903451662161.
+2022-06-05 14:16:23,163 - property.py - New opt = 0.7892888479811164.
+2022-06-05 14:16:23,388 - property.py - New opt = 0.7902021497440667.
+2022-06-05 14:16:23,407 - property.py - New opt = 0.790315228596782.
+2022-06-05 14:16:23,517 - property.py - New opt = 0.7905821703112217.
+2022-06-05 14:16:23,566 - property.py - New opt = 0.790695080188401.
+2022-06-05 14:16:23,719 - property.py - New opt = 0.7908680320556252.
+2022-06-05 14:16:23,765 - property.py - New opt = 0.7911274674135348.
+2022-06-05 14:16:25,190 - property.py - New opt = 0.7914858033064512.
+> Progress 0.0%, elapsed 9.0 s, iters = (1911, 0), opt = 0.791
+2022-06-05 14:16:26,746 - property.py - New opt = 0.7927726420449513.
+> Progress 0.0%, elapsed 12.0 s, iters = (2580, 0), opt = 0.793
+2022-06-05 14:16:29,428 - property.py - New opt = 0.7943809711498742.
+2022-06-05 14:16:31,254 - property.py - New opt = 0.811984392848677.
+2022-06-05 14:16:31,279 - property.py - New opt = 0.8157945809693548.
+2022-06-05 14:16:31,333 - property.py - New opt = 0.8166274792677785.
+2022-06-05 14:16:31,669 - property.py - New opt = 0.8167743385595185.
+> Progress 0.0%, elapsed 15.0 s, iters = (3217, 0), opt = 0.817
+2022-06-05 14:16:31,903 - property.py - New opt = 0.8178488053550989.
+2022-06-05 14:16:32,864 - property.py - New opt = 0.818277418273577.
+2022-06-05 14:16:32,878 - property.py - New opt = 0.8184334350892128.
+2022-06-05 14:16:34,616 - property.py - New opt = 0.8198870151664505.
+2022-06-05 14:16:34,662 - property.py - New opt = 0.8205743226648449.
+> Progress 0.0%, elapsed 18.0 s, iters = (3896, 0), opt = 0.821
+2022-06-05 14:16:34,900 - property.py - New opt = 0.8208620209730707.
+2022-06-05 14:16:34,947 - property.py - New opt = 0.8211367042774204.
+2022-06-05 14:16:35,225 - property.py - New opt = 0.8217133495379364.
+2022-06-05 14:16:35,912 - property.py - New opt = 0.8218811521723045.
+2022-06-05 14:16:35,936 - property.py - New opt = 0.8222844600098633.
+2022-06-05 14:16:36,359 - property.py - New opt = 0.8230462710710985.
+2022-06-05 14:16:36,720 - property.py - New opt = 0.8234214577862089.
+> Progress 0.0%, elapsed 21.0 s, iters = (4551, 0), opt = 0.823
+2022-06-05 14:16:39,198 - property.py - New opt = 0.8237061034557303.
+> Progress 0.0%, elapsed 24.0 s, iters = (5164, 0), opt = 0.824
+> Progress 0.0%, elapsed 27.0 s, iters = (5818, 0), opt = 0.824
+> Progress 0.0%, elapsed 30.0 s, iters = (6439, 0), opt = 0.824
+2022-06-05 14:16:48,114 - property.py - New opt = 0.8240746099221151.
+2022-06-05 14:16:48,165 - property.py - New opt = 0.8243159271587188.
+2022-06-05 14:16:48,474 - property.py - New opt = 0.82489178926522.
+2022-06-05 14:16:49,192 - property.py - New opt = 0.8251082634000184.
+2022-06-05 14:16:49,212 - property.py - New opt = 0.8254959163883571.
+2022-06-05 14:16:49,578 - property.py - New opt = 0.82622050340067.
+> Progress 0.0%, elapsed 33.0 s, iters = (7074, 0), opt = 0.826
+2022-06-05 14:16:49,982 - property.py - New opt = 0.8265943709908665.
+2022-06-05 14:16:51,514 - property.py - New opt = 0.8517724108782347.
+2022-06-05 14:16:51,520 - property.py - New opt = 0.8521063770892078.
+2022-06-05 14:16:51,534 - property.py - New opt = 0.8523629656964202.
+2022-06-05 14:16:51,551 - property.py - New opt = 0.8528130335835564.
+2022-06-05 14:16:51,557 - property.py - New opt = 0.8531576030479457.
+2022-06-05 14:16:51,571 - property.py - New opt = 0.8534578920158623.
+2022-06-05 14:16:51,600 - property.py - New opt = 0.853838771359892.
+2022-06-05 14:16:51,614 - property.py - New opt = 0.8541547805046543.
+2022-06-05 14:16:51,663 - property.py - New opt = 0.8543208840153358.
+2022-06-05 14:16:51,837 - property.py - New opt = 0.8547085137736848.
+2022-06-05 14:16:51,850 - property.py - New opt = 0.8550530170086469.
+2022-06-05 14:16:51,924 - property.py - New opt = 0.8552612234945236.
+2022-06-05 14:16:52,251 - property.py - New opt = 0.855425726025966.
+2022-06-05 14:16:52,627 - property.py - New opt = 0.8555541359307407.
+2022-06-05 14:16:52,742 - property.py - New opt = 0.8558422678778451.
+2022-06-05 14:16:52,747 - property.py - New opt = 0.8562190910080857.
+> Progress 0.0%, elapsed 36.0 s, iters = (7683, 0), opt = 0.856
+2022-06-05 14:16:52,876 - property.py - New opt = 0.8564279207178783.
+2022-06-05 14:16:54,044 - property.py - New opt = 0.8566951250724335.
+2022-06-05 14:16:54,083 - property.py - New opt = 0.8568583130350567.
+2022-06-05 14:16:54,897 - property.py - New opt = 0.8572718421674754.
+2022-06-05 14:16:54,902 - property.py - New opt = 0.8575098013335222.
+2022-06-05 14:16:54,973 - property.py - New opt = 0.8577926639818791.
+2022-06-05 14:16:54,987 - property.py - New opt = 0.8579479839183058.
+2022-06-05 14:16:55,373 - property.py - New opt = 0.8580915131947068.
+2022-06-05 14:16:55,443 - property.py - New opt = 0.8582280265586331.
+2022-06-05 14:16:55,468 - property.py - New opt = 0.8584231864716044.
+> Progress 0.0%, elapsed 39.0 s, iters = (8357, 0), opt = 0.858
+2022-06-05 14:16:55,928 - property.py - New opt = 0.8585788814586436.
+2022-06-05 14:16:55,942 - property.py - New opt = 0.8587797505789094.
+2022-06-05 14:16:55,964 - property.py - New opt = 0.8589343875992216.
+2022-06-05 14:16:56,964 - property.py - New opt = 0.8591956356955878.
+> Progress 0.0%, elapsed 42.0 s, iters = (9020, 0), opt = 0.859
+2022-06-05 14:16:58,795 - property.py - New opt = 0.8594430996985852.
+2022-06-05 14:17:00,847 - property.py - New opt = 0.8597624585397873.
+> Progress 0.0%, elapsed 45.0 s, iters = (9651, 0), opt = 0.86
+2022-06-05 14:17:03,890 - property.py - New opt = 0.860114773987077.
+2022-06-05 14:17:04,030 - property.py - New opt = 0.8603321501103113.
+2022-06-05 14:17:04,769 - property.py - New opt = 0.8607235927919628.
+> Progress 0.0%, elapsed 48.0 s, iters = (10307, 0), opt = 0.861
+2022-06-05 14:17:04,845 - property.py - New opt = 0.8610036979709537.
+2022-06-05 14:17:04,869 - property.py - New opt = 0.8612401375561999.
+2022-06-05 14:17:05,269 - property.py - New opt = 0.8614317980568739.
+2022-06-05 14:17:05,298 - property.py - New opt = 0.8616261062154582.
+2022-06-05 14:17:05,768 - property.py - New opt = 0.8619418431713973.
+2022-06-05 14:17:06,914 - property.py - New opt = 0.8622150045990157.
+> Progress 0.0%, elapsed 51.0 s, iters = (10952, 0), opt = 0.862
+2022-06-05 14:17:09,641 - property.py - New opt = 0.8624685639732846.
+2022-06-05 14:17:09,673 - property.py - New opt = 0.8627272815707131.
+2022-06-05 14:17:09,748 - property.py - New opt = 0.8636853403026107.
+2022-06-05 14:17:09,762 - property.py - New opt = 0.8639530322090196.
+2022-06-05 14:17:09,822 - property.py - New opt = 0.8642247163875693.
+2022-06-05 14:17:10,415 - property.py - New opt = 0.8645743461843183.
+> Progress 0.0%, elapsed 54.0 s, iters = (11547, 0), opt = 0.865
+2022-06-05 14:17:10,902 - property.py - New opt = 0.8647950204576554.
+2022-06-05 14:17:10,909 - property.py - New opt = 0.8650521831940446.
+> Progress 0.0%, elapsed 57.0 s, iters = (12193, 0), opt = 0.865
+> Progress 0.0%, elapsed 60.0 s, iters = (12815, 0), opt = 0.865
+> Progress 0.0%, elapsed 63.0 s, iters = (13428, 0), opt = 0.865
+2022-06-05 14:17:20,489 - property.py - New opt = 0.8651789701502711.
+2022-06-05 14:17:21,753 - property.py - New opt = 0.8653050873379052.
+> Progress 0.0%, elapsed 66.0 s, iters = (14110, 0), opt = 0.865
+2022-06-05 14:17:22,822 - property.py - New opt = 0.8655069694121037.
+2022-06-05 14:17:23,825 - property.py - New opt = 0.8656447756258222.
+2022-06-05 14:17:23,842 - property.py - New opt = 0.8658347537840843.
+2022-06-05 14:17:23,922 - property.py - New opt = 0.8659475961337356.
+2022-06-05 14:17:24,023 - property.py - New opt = 0.8660924501088715.
+2022-06-05 14:17:24,204 - property.py - New opt = 0.8664047431077656.
+2022-06-05 14:17:24,894 - property.py - New opt = 0.8665526756674582.
+> Progress 0.0%, elapsed 69.0 s, iters = (14782, 0), opt = 0.867
+> Progress 0.0%, elapsed 72.0 s, iters = (15369, 0), opt = 0.867
+> Progress 0.0%, elapsed 75.0 s, iters = (16005, 0), opt = 0.867
+> Progress 0.0%, elapsed 78.0 s, iters = (16644, 0), opt = 0.867
+> Progress 0.0%, elapsed 81.0 s, iters = (17273, 0), opt = 0.867
+> Progress 0.0%, elapsed 84.0 s, iters = (17927, 0), opt = 0.867
+> Progress 0.0%, elapsed 87.0 s, iters = (18557, 0), opt = 0.867
+> Progress 0.0%, elapsed 90.0 s, iters = (19232, 0), opt = 0.867
+> Progress 0.0%, elapsed 93.0 s, iters = (19864, 0), opt = 0.867
+> Progress 0.0%, elapsed 96.0 s, iters = (20478, 0), opt = 0.867
+> Progress 0.0%, elapsed 99.0 s, iters = (21142, 0), opt = 0.867
+2022-06-05 14:17:56,198 - property.py - New opt = 0.8667791026987542.
+> Progress 0.0%, elapsed 102.0 s, iters = (21796, 0), opt = 0.867
+> Progress 0.0%, elapsed 105.0 s, iters = (22381, 0), opt = 0.867
+> Progress 0.0%, elapsed 108.0 s, iters = (23008, 0), opt = 0.867
+> Progress 0.0%, elapsed 111.0 s, iters = (23655, 0), opt = 0.867
+> Progress 0.0%, elapsed 114.0 s, iters = (24323, 0), opt = 0.867
+2022-06-05 14:18:12,544 - property.py - New opt = 0.8669735882604807.
+> Progress 0.0%, elapsed 117.0 s, iters = (24992, 0), opt = 0.867
+> Progress 0.0%, elapsed 120.0 s, iters = (25642, 0), opt = 0.867
+> Progress 0.0%, elapsed 123.0 s, iters = (26289, 0), opt = 0.867
+> Progress 0.0%, elapsed 126.0 s, iters = (26871, 0), opt = 0.867
+> Progress 0.0%, elapsed 129.0 s, iters = (27479, 0), opt = 0.867
+> Progress 0.0%, elapsed 132.0 s, iters = (28124, 0), opt = 0.867
+> Progress 0.0%, elapsed 135.0 s, iters = (28770, 0), opt = 0.867
+> Progress 0.0%, elapsed 138.0 s, iters = (29402, 0), opt = 0.867
+> Progress 0.0%, elapsed 141.0 s, iters = (30029, 0), opt = 0.867
+> Progress 0.0%, elapsed 144.0 s, iters = (30693, 0), opt = 0.867
+> Progress 0.0%, elapsed 147.0 s, iters = (31345, 0), opt = 0.867
+> Progress 0.0%, elapsed 150.0 s, iters = (31990, 0), opt = 0.867
+> Progress 0.0%, elapsed 153.0 s, iters = (32619, 0), opt = 0.867
+> Progress 0.0%, elapsed 156.0 s, iters = (33245, 0), opt = 0.867
+> Progress 0.0%, elapsed 159.0 s, iters = (33904, 0), opt = 0.867
+> Progress 0.0%, elapsed 162.0 s, iters = (34589, 0), opt = 0.867
+> Progress 0.0%, elapsed 165.0 s, iters = (35226, 0), opt = 0.867
+> Progress 0.0%, elapsed 168.0 s, iters = (35933, 0), opt = 0.867
+> Progress 0.0%, elapsed 171.0 s, iters = (36571, 0), opt = 0.867
+> Progress 0.0%, elapsed 174.0 s, iters = (37104, 0), opt = 0.867
+> Progress 0.0%, elapsed 177.0 s, iters = (37725, 0), opt = 0.867
+> Progress 0.0%, elapsed 180.0 s, iters = (38272, 0), opt = 0.867
+> Progress 0.0%, elapsed 183.0 s, iters = (38863, 0), opt = 0.867
+> Progress 0.0%, elapsed 186.0 s, iters = (39486, 0), opt = 0.867
+> Progress 0.0%, elapsed 189.0 s, iters = (40222, 0), opt = 0.867
+> Progress 0.0%, elapsed 192.0 s, iters = (40906, 0), opt = 0.867
+> Progress 0.0%, elapsed 195.0 s, iters = (41617, 0), opt = 0.867
+> Progress 0.0%, elapsed 198.0 s, iters = (42315, 0), opt = 0.867
+> Progress 0.0%, elapsed 201.0 s, iters = (42996, 0), opt = 0.867
+> Progress 0.0%, elapsed 204.0 s, iters = (43688, 0), opt = 0.867
+> Progress 0.0%, elapsed 207.0 s, iters = (44387, 0), opt = 0.867
+> Progress 0.0%, elapsed 210.0 s, iters = (45132, 0), opt = 0.867
+> Progress 0.0%, elapsed 213.0 s, iters = (45886, 0), opt = 0.867
+> Progress 0.0%, elapsed 216.0 s, iters = (46624, 0), opt = 0.867
+> Progress 0.0%, elapsed 219.0 s, iters = (47361, 0), opt = 0.867
+> Progress 0.0%, elapsed 222.0 s, iters = (48074, 0), opt = 0.867
+> Progress 0.0%, elapsed 225.0 s, iters = (48685, 0), opt = 0.867
+> Progress 0.0%, elapsed 228.0 s, iters = (49307, 0), opt = 0.867
+> Progress 0.0%, elapsed 231.0 s, iters = (49926, 0), opt = 0.867
+> Progress 0.0%, elapsed 234.0 s, iters = (50661, 0), opt = 0.867
+> Progress 0.0%, elapsed 237.0 s, iters = (51409, 0), opt = 0.867
+> Progress 0.0%, elapsed 240.0 s, iters = (52161, 0), opt = 0.867
+> Progress 0.0%, elapsed 243.0 s, iters = (52799, 0), opt = 0.867
+> Progress 0.0%, elapsed 246.0 s, iters = (53496, 0), opt = 0.867
+> Progress 0.0%, elapsed 249.0 s, iters = (54193, 0), opt = 0.867
+> Progress 0.0%, elapsed 252.0 s, iters = (54871, 0), opt = 0.867
+> Progress 0.0%, elapsed 255.0 s, iters = (55532, 0), opt = 0.867
+> Progress 0.0%, elapsed 258.0 s, iters = (56221, 0), opt = 0.867
+> Progress 0.0%, elapsed 261.0 s, iters = (56975, 0), opt = 0.867
+> Progress 0.0%, elapsed 264.0 s, iters = (57694, 0), opt = 0.867
+> Progress 0.0%, elapsed 267.0 s, iters = (58441, 0), opt = 0.867
+> Progress 0.0%, elapsed 270.0 s, iters = (59070, 0), opt = 0.867
+> Progress 0.0%, elapsed 273.0 s, iters = (59704, 0), opt = 0.867
+> Progress 0.0%, elapsed 276.0 s, iters = (60376, 0), opt = 0.867
+> Progress 0.0%, elapsed 279.0 s, iters = (61136, 0), opt = 0.867
+> Progress 0.0%, elapsed 282.0 s, iters = (61822, 0), opt = 0.867
+> Progress 0.0%, elapsed 285.0 s, iters = (62540, 0), opt = 0.867
+> Progress 0.0%, elapsed 288.0 s, iters = (63313, 0), opt = 0.867
+> Progress 0.0%, elapsed 291.0 s, iters = (63971, 0), opt = 0.867
+> Progress 0.0%, elapsed 294.0 s, iters = (64688, 0), opt = 0.867
+> Progress 0.0%, elapsed 297.0 s, iters = (65445, 0), opt = 0.867
+> Progress 0.0%, elapsed 300.0 s, iters = (66088, 0), opt = 0.867
+> Progress 0.0%, elapsed 303.0 s, iters = (66814, 0), opt = 0.867
+> Progress 0.0%, elapsed 306.0 s, iters = (67505, 0), opt = 0.867
+> Progress 0.0%, elapsed 309.0 s, iters = (68202, 0), opt = 0.867
+> Progress 0.0%, elapsed 312.0 s, iters = (68869, 0), opt = 0.867
+> Progress 0.0%, elapsed 315.0 s, iters = (69510, 0), opt = 0.867
+> Progress 0.0%, elapsed 318.0 s, iters = (70224, 0), opt = 0.867
+2022-06-05 14:21:35,117 - property.py - New opt = 0.8672931157042342.
+2022-06-05 14:21:35,136 - property.py - New opt = 0.867558391507509.
+2022-06-05 14:21:35,378 - property.py - New opt = 0.867678351472783.
+2022-06-05 14:21:35,404 - property.py - New opt = 0.8678632610776059.
+> Progress 0.0%, elapsed 321.0 s, iters = (70921, 0), opt = 0.868
+> Progress 0.0%, elapsed 324.0 s, iters = (71581, 0), opt = 0.868
+> Progress 0.0%, elapsed 327.0 s, iters = (72293, 0), opt = 0.868
+> Progress 0.0%, elapsed 330.0 s, iters = (72978, 0), opt = 0.868
+> Progress 0.0%, elapsed 333.0 s, iters = (73601, 0), opt = 0.868
+> Progress 0.0%, elapsed 336.0 s, iters = (74273, 0), opt = 0.868
+> Progress 0.0%, elapsed 339.0 s, iters = (74952, 0), opt = 0.868
+> Progress 0.0%, elapsed 342.0 s, iters = (75639, 0), opt = 0.868
+> Progress 0.0%, elapsed 345.0 s, iters = (76309, 0), opt = 0.868
+> Progress 0.0%, elapsed 348.0 s, iters = (76994, 0), opt = 0.868
+> Progress 0.0%, elapsed 351.0 s, iters = (77701, 0), opt = 0.868
+> Progress 0.0%, elapsed 354.0 s, iters = (78399, 0), opt = 0.868
+> Progress 0.0%, elapsed 357.0 s, iters = (79047, 0), opt = 0.868
+> Progress 0.0%, elapsed 360.0 s, iters = (79722, 0), opt = 0.868
+> Progress 0.0%, elapsed 363.0 s, iters = (80443, 0), opt = 0.868
+> Progress 0.0%, elapsed 366.0 s, iters = (81073, 0), opt = 0.868
+> Progress 0.0%, elapsed 369.0 s, iters = (81735, 0), opt = 0.868
+> Progress 0.0%, elapsed 372.0 s, iters = (82410, 0), opt = 0.868
+> Progress 0.0%, elapsed 375.0 s, iters = (83064, 0), opt = 0.868
+> Progress 0.0%, elapsed 378.0 s, iters = (83703, 0), opt = 0.868
+> Progress 0.0%, elapsed 381.0 s, iters = (84305, 0), opt = 0.868
+> Progress 0.0%, elapsed 384.0 s, iters = (84931, 0), opt = 0.868
+> Progress 0.0%, elapsed 387.0 s, iters = (85588, 0), opt = 0.868
+> Progress 0.0%, elapsed 390.0 s, iters = (86269, 0), opt = 0.868
+> Progress 0.0%, elapsed 393.0 s, iters = (86934, 0), opt = 0.868
+> Progress 0.0%, elapsed 396.0 s, iters = (87596, 0), opt = 0.868
+> Progress 0.0%, elapsed 399.0 s, iters = (88227, 0), opt = 0.868
+> Progress 0.0%, elapsed 402.0 s, iters = (88903, 0), opt = 0.868
+> Progress 0.0%, elapsed 405.0 s, iters = (89569, 0), opt = 0.868
+> Progress 0.0%, elapsed 408.0 s, iters = (90233, 0), opt = 0.868
+> Progress 0.0%, elapsed 411.0 s, iters = (90891, 0), opt = 0.868
+> Progress 0.0%, elapsed 414.0 s, iters = (91526, 0), opt = 0.868
+> Progress 0.0%, elapsed 417.0 s, iters = (92218, 0), opt = 0.868
+> Progress 0.0%, elapsed 420.0 s, iters = (92900, 0), opt = 0.868
+> Progress 0.0%, elapsed 423.0 s, iters = (93572, 0), opt = 0.868
+> Progress 0.0%, elapsed 426.0 s, iters = (94284, 0), opt = 0.868
+> Progress 0.0%, elapsed 429.0 s, iters = (94892, 0), opt = 0.868
+> Progress 0.0%, elapsed 432.0 s, iters = (95483, 0), opt = 0.868
+> Progress 0.0%, elapsed 435.0 s, iters = (96067, 0), opt = 0.868
+> Progress 0.0%, elapsed 438.0 s, iters = (96658, 0), opt = 0.868
+> Progress 0.0%, elapsed 441.0 s, iters = (97366, 0), opt = 0.868
+> Progress 0.0%, elapsed 444.0 s, iters = (98086, 0), opt = 0.868
+> Progress 0.0%, elapsed 447.0 s, iters = (98774, 0), opt = 0.868
+> Progress 0.0%, elapsed 450.0 s, iters = (99379, 0), opt = 0.868
+> Progress 0.0%, elapsed 453.0 s, iters = (100045, 0), opt = 0.868
+> Progress 0.0%, elapsed 456.0 s, iters = (100733, 0), opt = 0.868
+> Progress 0.0%, elapsed 459.0 s, iters = (101392, 0), opt = 0.868
+> Progress 0.0%, elapsed 462.0 s, iters = (102107, 0), opt = 0.868
+> Progress 0.0%, elapsed 465.0 s, iters = (102713, 0), opt = 0.868
+> Progress 0.0%, elapsed 468.0 s, iters = (103388, 0), opt = 0.868
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 469.92 s
+number of holes: 165, family size: 2187250724783011924372502227117621365353169430893212436425770606409952999199375923223513177023053824, super quotient: 1226 states / 2954 actions
+explored: 0 %
+AR stats: avg MDP size: 1226, iterations: 103814
+
+optimal: 0.867863
+--------------------
+
+A([start & turn & dx=2 & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=1 & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=4 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=1 & dy=4 & seedx=2 & seedy=3],0)={'south'}, A([start & turn & dy=1 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & seedx=1 & seedy=1],0)={'north'}, A([start & turn & dx=2 & seedx=1 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=4 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=1 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=2 & seedy=2],0)={'east'}, A([start & turn & dx=2 & seedx=2 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=2 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=4 & seedy=4],0)={'west'}, A([start & turn & dy=2 & seedx=-1 & seedy=-1],0)={'west'}, A([start & turn & dx=1 & dy=2 & seedy=2],0)={'east'}, A([start & turn & dy=3 & seedx=-1 & seedy=-1],0)={'west'}, A([start & turn & dx=4 & dy=1 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=2 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedy=4],0)={'east'}, A([start & turn & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=4 & seedy=3],0)={'east'}, A([start & turn & dx=2 & seedx=3 & seedy=1],0)={'north'}, A([start & turn & dx=2 & dy=1 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=2 & dy=1 & seedx=1 & seedy=2],0)={'east'}, A([start & turn & dx=1 & dy=3 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & seedx=4 & seedy=1],0)={'north'}, A([start & turn & dx=3 & dy=1 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=4 & seedy=1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=2 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=1 & dy=1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=3 & seedx=1 & seedy=2],0)={'east'}, A([start & turn & dy=2 & seedx=1 & seedy=3],0)={'west'}, A([start & turn & dx=2 & dy=2 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=3 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=3],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=3 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=4],0)={'south'}, A([start & turn & dy=3 & seedx=1 & seedy=4],0)={'west'}, A([start & turn & dx=1 & seedx=2 & seedy=1],0)={'north'}, A([start & turn & dx=3 & dy=4 & seedx=3 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=1 & seedx=1 & seedy=2],0)={'north'}, A([start & turn & dx=2 & dy=3 & seedx=1 & seedy=4],0)={'east'}, A([start & turn & dx=1 & dy=2 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dy=1 & seedx=1 & seedy=2],0)={'north'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dy=4 & seedx=1 & seedy=3],0)={'south'}, A([start & turn & dx=1 & dy=2 & seedx=2 & seedy=3],0)={'north'}, A([start & turn & dx=1 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=1 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=4 & seedx=2 & seedy=4],0)={'north'}, A([start & turn & dx=2 & dy=4 & seedx=3 & seedy=4],0)={'north'}, A([start & turn & dx=3 & seedx=2 & seedy=1],0)={'east'}, A([start & turn & dx=2 & dy=4 & seedx=3 & seedy=3],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dx=2 & dy=2 & seedx=3 & seedy=3],0)={'west'}, A([start & turn & seedy=1],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=4 & seedy=2],0)={'south'}, A([start & turn & dx=4 & dy=1 & seedx=4 & seedy=2],0)={'west'}, A([start & turn & dx=2 & dy=2 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=1 & seedy=2],0)={'south'}, A([start & turn & dy=3 & seedx=1 & seedy=2],0)={'south'}, A([start & turn & dx=2 & seedx=3],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=2 & seedy=2],0)={'east'}, A([start & turn & dx=1 & dy=4 & seedy=4],0)={'east'}, A([start & turn & dx=2 & dy=3 & seedx=3 & seedy=4],0)={'west'}, A([start & turn & dx=3 & seedx=3 & seedy=1],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dy=4 & seedx=1 & seedy=4],0)={'north'}, A([start & turn & dx=1 & dy=4 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=2 & seedy=3],0)={'east'}, A([start & turn & dx=2 & dy=3 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dy=2 & seedx=1 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=1 & seedy=2],0)={'east'}, A([start & turn & dx=2 & seedx=1],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=4 & seedy=3],0)={'west'}, A([start & turn & dy=1 & seedy=2],0)={'north'}, A([start & turn & dx=1 & dy=2 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=3 & seedy=2],0)={'north'}, A([start & turn & dx=4 & dy=1 & seedx=3 & seedy=2],0)={'east'}, A([start & turn & dx=2 & dy=4 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dx=3 & seedx=2],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=3],0)={'south'}, A([start & turn & dx=2 & dy=4 & seedx=1 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=3 & seedx=4 & seedy=3],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedy=2],0)={'east'}, A([start & turn & dx=3 & dy=3 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedy=1],0)={'east'}, A([start & turn & dx=1 & dy=3 & seedx=1 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=4 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=4 & seedy=2],0)={'west'}, A([start & turn & dx=1 & dy=2 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=1 & dy=2 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dy=3 & seedy=4],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=3 & seedy=4],0)={'south'}, A([start & turn & dy=3 & seedy=2],0)={'south'}, A([start & turn & dx=3 & dy=1 & seedx=3 & seedy=2],0)={'east'}, A([start & turn & dx=4 & dy=1 & seedx=3],0)={'south'}, A([start & turn & dx=1 & dy=4 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=2 & seedy=1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dy=1 & seedx=1],0)={'south'}, A([start & turn & dy=4 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=3 & seedx=2 & seedy=3],0)={'south'}, A([start & turn & dx=4 & seedx=3 & seedy=1],0)={'north'}, A([start & turn & dx=1 & dy=1 & seedx=2],0)={'south'}, A([start & turn & dy=3 & seedx=1 & seedy=3],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=4 & dy=3 & seedx=3 & seedy=3],0)={'south'}, A([start & turn & dx=2 & dy=4 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & seedx=1],0)={'south'}, A([start & turn & dx=4 & dy=3 & seedx=4 & seedy=2],0)={'south'}, A([start & turn & dx=4 & seedx=3],0)={'south'}, A([start & turn & dy=2 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=3 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=1 & seedy=2],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=4 & seedy=3],0)={'west'}, A([start & turn & dx=2 & dy=3 & seedx=3 & seedy=3],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=2 & seedy=4],0)={'west'}, A([start & turn & dx=4 & seedx=4 & seedy=1],0)={'west'}, A([start & turn & dx=2 & dy=3 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=1 & seedy=1],0)={'east'}, A([start & turn & dx=2 & dy=1 & seedx=2],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=1],0)={'south'}, A([start & turn & dx=1 & seedx=2],0)={'south'}, A([start & turn & dx=4 & dy=2 & seedx=4 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=2 & seedy=2],0)={'east'}, A([start & turn & dx=2 & dy=3 & seedx=2 & seedy=4],0)={'east'}, A([start & turn & dx=1 & dy=1 & seedx=2 & seedy=2],0)={'north'}, A([start & turn & dx=3 & dy=3 & seedx=2 & seedy=4],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=4 & seedy=4],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & seedx=1 & seedy=1],0)={'east'}, A([start & turn & dx=1],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=2 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=4 & seedy=1],0)={'south'}, A([start & turn & dy=2 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dx=3 & seedx=4],0)={'south'}, A([start & turn & dy=2 & seedy=3],0)={'east'}, A([start & turn & dx=4 & dy=1 & seedx=4],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedx=1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=3 & seedy=3],0)={'east'}, A([start & turn & dy=1 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dy=1],0)={'east'}
+
+hole scores:  {0: 0.00017904430812947306, 1: 3.418571327979174e-05, 4: 2.4782179912037885e-05, 11: 4.391414855864128e-05, 12: 9.414192260583284e-05, 18: 0.0002502491482707304, 19: 0.0015645156919088191, 24: 0.0016056255198156721, 25: 0.00012424148096216677, 26: 3.569328234505543e-05, 27: 5.52771968532326e-05, 31: 0.0008049335794076763, 32: 4.400969057238171e-05, 36: 0.001113519254249997, 38: 0.0016026254685925375, 39: 0.0003520116445034552, 40: 0.000609872253236342, 56: 9.771856630108724e-05, 57: 0.00011143143250731082, 69: 0.0001254535184444459, 71: 0.00021757296726439412, 76: 0.00043042485737078076, 77: 0.0003623291224869676, 81: 9.366891636655267e-05, 85: 0.0004800776384699899, 97: 4.948528869610808e-05, 98: 0.0011766494758431167, 116: 0.001376780044746645, 127: 0.00010217574706730021, 134: 0.0024478427122088036, 137: 0.0013804948626727578, 138: 0.00016262530603903958, 148: 4.889891010593767e-05, 158: 0.0002980848085389132, 162: 0.0003984669699899187}
+selected hole:  134
+hole has options:  [0]
+2022-06-05 14:24:06,699 - synthesizer_pomdp.py - FSC synthesis: elapsed 469.9 s, opt = 0.868, injections: 0.
+2022-06-05 14:24:06,699 - synthesizer_pomdp.py - Injecting memory into observation 320 ...
+2022-06-05 14:24:06,699 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 14:24:06,699 - quotient_pomdp.py - Constructed quotient MDP having 1227 states and 2979 actions.
+
+------------------------------------------------------------
+
+2022-06-05 14:24:06,770 - quotient_pomdp.py - Symmetry breaking: reduced design space from 69992023193056381579920071267763883691301421788582797965624659405118495974380029543152421664737722368 to 69992023193056381579920071267763883691301421788582797965624659405118495974380029543152421664737722368
+2022-06-05 14:24:06,776 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (643, 0), opt = 0.868
+> Progress 0.0%, elapsed 6.0 s, iters = (1241, 0), opt = 0.868
+> Progress 0.0%, elapsed 9.0 s, iters = (1854, 0), opt = 0.868
+> Progress 0.0%, elapsed 12.0 s, iters = (2484, 0), opt = 0.868
+> Progress 0.0%, elapsed 15.0 s, iters = (3114, 0), opt = 0.868
+> Progress 0.0%, elapsed 18.0 s, iters = (3728, 0), opt = 0.868
+> Progress 0.0%, elapsed 21.0 s, iters = (4369, 0), opt = 0.868
+> Progress 0.0%, elapsed 24.0 s, iters = (4991, 0), opt = 0.868
+> Progress 0.0%, elapsed 27.0 s, iters = (5606, 0), opt = 0.868
+> Progress 0.0%, elapsed 30.0 s, iters = (6263, 0), opt = 0.868
+> Progress 0.0%, elapsed 33.0 s, iters = (6898, 0), opt = 0.868
+> Progress 0.0%, elapsed 36.0 s, iters = (7483, 0), opt = 0.868
+> Progress 0.0%, elapsed 39.0 s, iters = (8103, 0), opt = 0.868
+> Progress 0.0%, elapsed 42.0 s, iters = (8746, 0), opt = 0.868
+> Progress 0.0%, elapsed 45.0 s, iters = (9371, 0), opt = 0.868
+> Progress 0.0%, elapsed 48.0 s, iters = (10037, 0), opt = 0.868
+> Progress 0.0%, elapsed 51.0 s, iters = (10666, 0), opt = 0.868
+> Progress 0.0%, elapsed 54.0 s, iters = (11266, 0), opt = 0.868
+> Progress 0.0%, elapsed 57.0 s, iters = (11916, 0), opt = 0.868
+> Progress 0.0%, elapsed 60.0 s, iters = (12564, 0), opt = 0.868
+> Progress 0.0%, elapsed 63.0 s, iters = (13181, 0), opt = 0.868
+> Progress 0.0%, elapsed 66.0 s, iters = (13851, 0), opt = 0.868
+> Progress 0.0%, elapsed 69.0 s, iters = (14423, 0), opt = 0.868
+> Progress 0.0%, elapsed 72.0 s, iters = (14983, 0), opt = 0.868
+> Progress 0.0%, elapsed 75.0 s, iters = (15580, 0), opt = 0.868
+> Progress 0.0%, elapsed 78.0 s, iters = (16163, 0), opt = 0.868
+> Progress 0.0%, elapsed 81.0 s, iters = (16747, 0), opt = 0.868
+> Progress 0.0%, elapsed 84.0 s, iters = (17459, 0), opt = 0.868
+> Progress 0.0%, elapsed 87.0 s, iters = (18120, 0), opt = 0.868
+> Progress 0.0%, elapsed 90.0 s, iters = (18769, 0), opt = 0.868
+> Progress 0.0%, elapsed 93.0 s, iters = (19393, 0), opt = 0.868
+> Progress 0.0%, elapsed 96.0 s, iters = (20037, 0), opt = 0.868
+> Progress 0.0%, elapsed 99.0 s, iters = (20743, 0), opt = 0.868
+> Progress 0.0%, elapsed 102.0 s, iters = (21421, 0), opt = 0.868
+> Progress 0.0%, elapsed 105.0 s, iters = (22136, 0), opt = 0.868
+> Progress 0.0%, elapsed 108.0 s, iters = (22768, 0), opt = 0.868
+> Progress 0.0%, elapsed 111.0 s, iters = (23359, 0), opt = 0.868
+> Progress 0.0%, elapsed 114.0 s, iters = (23972, 0), opt = 0.868
+> Progress 0.0%, elapsed 117.0 s, iters = (24690, 0), opt = 0.868
+> Progress 0.0%, elapsed 120.0 s, iters = (25377, 0), opt = 0.868
+> Progress 0.0%, elapsed 123.0 s, iters = (25987, 0), opt = 0.868
+> Progress 0.0%, elapsed 126.0 s, iters = (26648, 0), opt = 0.868
+> Progress 0.0%, elapsed 129.0 s, iters = (27290, 0), opt = 0.868
+> Progress 0.0%, elapsed 132.0 s, iters = (27946, 0), opt = 0.868
+> Progress 0.0%, elapsed 135.0 s, iters = (28595, 0), opt = 0.868
+> Progress 0.0%, elapsed 138.0 s, iters = (29289, 0), opt = 0.868
+> Progress 0.0%, elapsed 141.0 s, iters = (29975, 0), opt = 0.868
+> Progress 0.0%, elapsed 144.0 s, iters = (30562, 0), opt = 0.868
+> Progress 0.0%, elapsed 147.0 s, iters = (31237, 0), opt = 0.868
+> Progress 0.0%, elapsed 150.0 s, iters = (31905, 0), opt = 0.868
+> Progress 0.0%, elapsed 153.0 s, iters = (32609, 0), opt = 0.868
+> Progress 0.0%, elapsed 156.0 s, iters = (33268, 0), opt = 0.868
+> Progress 0.0%, elapsed 159.0 s, iters = (33951, 0), opt = 0.868
+> Progress 0.0%, elapsed 162.0 s, iters = (34560, 0), opt = 0.868
+> Progress 0.0%, elapsed 165.0 s, iters = (35208, 0), opt = 0.868
+> Progress 0.0%, elapsed 168.0 s, iters = (35823, 0), opt = 0.868
+> Progress 0.0%, elapsed 171.0 s, iters = (36456, 0), opt = 0.868
+> Progress 0.0%, elapsed 174.0 s, iters = (37105, 0), opt = 0.868
+> Progress 0.0%, elapsed 177.0 s, iters = (37784, 0), opt = 0.868
+> Progress 0.0%, elapsed 180.0 s, iters = (38439, 0), opt = 0.868
+> Progress 0.0%, elapsed 183.0 s, iters = (39077, 0), opt = 0.868
+> Progress 0.0%, elapsed 186.0 s, iters = (39761, 0), opt = 0.868
+> Progress 0.0%, elapsed 189.0 s, iters = (40448, 0), opt = 0.868
+> Progress 0.0%, elapsed 192.0 s, iters = (41037, 0), opt = 0.868
+> Progress 0.0%, elapsed 195.0 s, iters = (41676, 0), opt = 0.868
+> Progress 0.0%, elapsed 198.0 s, iters = (42342, 0), opt = 0.868
+> Progress 0.0%, elapsed 201.0 s, iters = (43033, 0), opt = 0.868
+> Progress 0.0%, elapsed 204.0 s, iters = (43647, 0), opt = 0.868
+> Progress 0.0%, elapsed 207.0 s, iters = (44296, 0), opt = 0.868
+> Progress 0.0%, elapsed 210.0 s, iters = (44949, 0), opt = 0.868
+> Progress 0.0%, elapsed 213.0 s, iters = (45578, 0), opt = 0.868
+> Progress 0.0%, elapsed 216.0 s, iters = (46244, 0), opt = 0.868
+> Progress 0.0%, elapsed 219.0 s, iters = (46907, 0), opt = 0.868
+> Progress 0.0%, elapsed 222.0 s, iters = (47611, 0), opt = 0.868
+> Progress 0.0%, elapsed 225.0 s, iters = (48274, 0), opt = 0.868
+> Progress 0.0%, elapsed 228.0 s, iters = (48916, 0), opt = 0.868
+> Progress 0.0%, elapsed 231.0 s, iters = (49574, 0), opt = 0.868
+> Progress 0.0%, elapsed 234.0 s, iters = (50248, 0), opt = 0.868
+> Progress 0.0%, elapsed 237.0 s, iters = (50903, 0), opt = 0.868
+> Progress 0.0%, elapsed 240.0 s, iters = (51471, 0), opt = 0.868
+> Progress 0.0%, elapsed 243.0 s, iters = (52026, 0), opt = 0.868
+> Progress 0.0%, elapsed 246.0 s, iters = (52615, 0), opt = 0.868
+> Progress 0.0%, elapsed 249.0 s, iters = (53284, 0), opt = 0.868
+> Progress 0.0%, elapsed 252.0 s, iters = (53894, 0), opt = 0.868
+> Progress 0.0%, elapsed 255.0 s, iters = (54571, 0), opt = 0.868
+> Progress 0.0%, elapsed 258.0 s, iters = (55226, 0), opt = 0.868
+> Progress 0.0%, elapsed 261.0 s, iters = (55839, 0), opt = 0.868
+> Progress 0.0%, elapsed 264.0 s, iters = (56495, 0), opt = 0.868
+> Progress 0.0%, elapsed 267.0 s, iters = (57111, 0), opt = 0.868
+> Progress 0.0%, elapsed 270.0 s, iters = (57727, 0), opt = 0.868
+> Progress 0.0%, elapsed 273.0 s, iters = (58345, 0), opt = 0.868
+> Progress 0.0%, elapsed 276.0 s, iters = (58961, 0), opt = 0.868
+> Progress 0.0%, elapsed 279.0 s, iters = (59614, 0), opt = 0.868
+> Progress 0.0%, elapsed 282.0 s, iters = (60247, 0), opt = 0.868
+> Progress 0.0%, elapsed 285.0 s, iters = (60875, 0), opt = 0.868
+> Progress 0.0%, elapsed 288.0 s, iters = (61517, 0), opt = 0.868
+> Progress 0.0%, elapsed 291.0 s, iters = (62096, 0), opt = 0.868
+> Progress 0.0%, elapsed 294.0 s, iters = (62646, 0), opt = 0.868
+> Progress 0.0%, elapsed 297.0 s, iters = (63183, 0), opt = 0.868
+> Progress 0.0%, elapsed 300.0 s, iters = (63723, 0), opt = 0.868
+> Progress 0.0%, elapsed 303.0 s, iters = (64310, 0), opt = 0.868
+> Progress 0.0%, elapsed 306.0 s, iters = (64986, 0), opt = 0.868
+> Progress 0.0%, elapsed 309.0 s, iters = (65623, 0), opt = 0.868
+> Progress 0.0%, elapsed 312.0 s, iters = (66249, 0), opt = 0.868
+> Progress 0.0%, elapsed 315.0 s, iters = (66813, 0), opt = 0.868
+> Progress 0.0%, elapsed 318.0 s, iters = (67432, 0), opt = 0.868
+> Progress 0.0%, elapsed 321.0 s, iters = (68047, 0), opt = 0.868
+> Progress 0.0%, elapsed 324.0 s, iters = (68662, 0), opt = 0.868
+> Progress 0.0%, elapsed 327.0 s, iters = (69322, 0), opt = 0.868
+> Progress 0.0%, elapsed 330.0 s, iters = (69920, 0), opt = 0.868
+> Progress 0.0%, elapsed 333.0 s, iters = (70521, 0), opt = 0.868
+> Progress 0.0%, elapsed 336.0 s, iters = (71143, 0), opt = 0.868
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 336.44 s
+number of holes: 169, family size: 69992023193056381579920071267763883691301421788582797965624659405118495974380029543152421664737722368, super quotient: 1227 states / 2979 actions
+explored: 0 %
+AR stats: avg MDP size: 1227, iterations: 71221
+
+optimal: 0.867863
+--------------------
+
+None
+
+hole scores:  {0: 0.0002216321822592069, 1: 0.0005442380476000152, 2: 0.0005270523749670312, 5: 0.0010150047045699832, 6: 3.2657993196120496e-05, 12: 0.0009881070791551137, 18: 4.563383690376257e-05, 19: 0.000475113569370031, 20: 0.00029966873322853394, 22: 0.0003704819716903996, 24: 0.00029538571520695313, 25: 0.0007302110406927799, 30: 0.0003972414302261396, 34: 3.799659311476556e-05, 35: 0.0006002237569510719, 38: 0.00036586736686732496, 39: 0.00017771786075085425, 41: 3.263759229213444e-05}
+selected hole:  5
+hole has options:  [0, 1, 2, 3]
+2022-06-05 14:29:43,220 - synthesizer_pomdp.py - FSC synthesis: elapsed 806.5 s, opt = 0.868, injections: 1.
+2022-06-05 14:29:43,220 - synthesizer_pomdp.py - Injecting memory into observation 12 ...
+2022-06-05 14:29:43,220 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 14:29:43,221 - quotient_pomdp.py - Constructed quotient MDP having 1246 states and 3078 actions.
+
+------------------------------------------------------------
+
+2022-06-05 14:29:43,305 - quotient_pomdp.py - Symmetry breaking: reduced design space from 8958978968711216842229769122273777112486581988938598139599956403855167484720643781523509973086428463104 to 2239744742177804210557442280568444278121645497234649534899989100963791871180160945380877493271607115776
+2022-06-05 14:29:43,312 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (604, 0), opt = 0.868
+> Progress 0.0%, elapsed 6.0 s, iters = (1183, 0), opt = 0.868
+> Progress 0.0%, elapsed 9.0 s, iters = (1759, 0), opt = 0.868
+> Progress 0.0%, elapsed 12.0 s, iters = (2348, 0), opt = 0.868
+> Progress 0.0%, elapsed 15.0 s, iters = (2943, 0), opt = 0.868
+> Progress 0.0%, elapsed 18.0 s, iters = (3546, 0), opt = 0.868
+> Progress 0.0%, elapsed 21.0 s, iters = (4147, 0), opt = 0.868
+> Progress 0.0%, elapsed 24.0 s, iters = (4730, 0), opt = 0.868
+> Progress 0.0%, elapsed 27.0 s, iters = (5337, 0), opt = 0.868
+> Progress 0.0%, elapsed 30.0 s, iters = (5935, 0), opt = 0.868
+> Progress 0.0%, elapsed 33.0 s, iters = (6538, 0), opt = 0.868
+> Progress 0.0%, elapsed 36.0 s, iters = (7126, 0), opt = 0.868
+> Progress 0.0%, elapsed 39.0 s, iters = (7734, 0), opt = 0.868
+> Progress 0.0%, elapsed 42.0 s, iters = (8332, 0), opt = 0.868
+> Progress 0.0%, elapsed 45.0 s, iters = (8954, 0), opt = 0.868
+> Progress 0.0%, elapsed 48.0 s, iters = (9500, 0), opt = 0.868
+> Progress 0.0%, elapsed 51.0 s, iters = (10090, 0), opt = 0.868
+> Progress 0.0%, elapsed 54.0 s, iters = (10696, 0), opt = 0.868
+> Progress 0.0%, elapsed 57.0 s, iters = (11313, 0), opt = 0.868
+> Progress 0.0%, elapsed 60.0 s, iters = (11974, 0), opt = 0.868
+> Progress 0.0%, elapsed 63.0 s, iters = (12667, 0), opt = 0.868
+> Progress 0.0%, elapsed 66.0 s, iters = (13307, 0), opt = 0.868
+> Progress 0.0%, elapsed 69.0 s, iters = (13941, 0), opt = 0.868
+> Progress 0.0%, elapsed 72.0 s, iters = (14600, 0), opt = 0.868
+> Progress 0.0%, elapsed 75.0 s, iters = (15246, 0), opt = 0.868
+> Progress 0.0%, elapsed 78.0 s, iters = (15877, 0), opt = 0.868
+> Progress 0.0%, elapsed 81.0 s, iters = (16508, 0), opt = 0.868
+> Progress 0.0%, elapsed 84.0 s, iters = (17137, 0), opt = 0.868
+> Progress 0.0%, elapsed 87.0 s, iters = (17773, 0), opt = 0.868
+> Progress 0.0%, elapsed 90.0 s, iters = (18389, 0), opt = 0.868
+> Progress 0.0%, elapsed 93.0 s, iters = (19029, 0), opt = 0.868
+2022-06-05 14:31:17,112 - property.py - New opt = 0.867996297937399.
+2022-06-05 14:31:17,240 - property.py - New opt = 0.8681927599973487.
+> Progress 0.0%, elapsed 96.0 s, iters = (19682, 0), opt = 0.868
+> Progress 0.0%, elapsed 99.0 s, iters = (20330, 0), opt = 0.868
+> Progress 0.0%, elapsed 102.0 s, iters = (20971, 0), opt = 0.868
+> Progress 0.0%, elapsed 105.0 s, iters = (21627, 0), opt = 0.868
+2022-06-05 14:31:30,405 - property.py - New opt = 0.8683044900606339.
+2022-06-05 14:31:31,066 - property.py - New opt = 0.8684856095917299.
+> Progress 0.0%, elapsed 108.0 s, iters = (22280, 0), opt = 0.868
+2022-06-05 14:31:32,674 - property.py - New opt = 0.8686106186822662.
+> Progress 0.0%, elapsed 111.0 s, iters = (22931, 0), opt = 0.869
+> Progress 0.0%, elapsed 114.0 s, iters = (23460, 0), opt = 0.869
+> Progress 0.0%, elapsed 117.0 s, iters = (24003, 0), opt = 0.869
+> Progress 0.0%, elapsed 120.0 s, iters = (24526, 0), opt = 0.869
+> Progress 0.0%, elapsed 123.0 s, iters = (25130, 0), opt = 0.869
+> Progress 0.0%, elapsed 126.0 s, iters = (25800, 0), opt = 0.869
+> Progress 0.0%, elapsed 129.0 s, iters = (26454, 0), opt = 0.869
+> Progress 0.0%, elapsed 132.0 s, iters = (27065, 0), opt = 0.869
+> Progress 0.0%, elapsed 135.0 s, iters = (27710, 0), opt = 0.869
+> Progress 0.0%, elapsed 138.0 s, iters = (28293, 0), opt = 0.869
+> Progress 0.0%, elapsed 141.0 s, iters = (28820, 0), opt = 0.869
+> Progress 0.0%, elapsed 144.0 s, iters = (29356, 0), opt = 0.869
+> Progress 0.0%, elapsed 147.0 s, iters = (29930, 0), opt = 0.869
+> Progress 0.0%, elapsed 150.0 s, iters = (30533, 0), opt = 0.869
+> Progress 0.0%, elapsed 153.0 s, iters = (31129, 0), opt = 0.869
+> Progress 0.0%, elapsed 156.0 s, iters = (31753, 0), opt = 0.869
+> Progress 0.0%, elapsed 159.0 s, iters = (32367, 0), opt = 0.869
+> Progress 0.0%, elapsed 162.0 s, iters = (32947, 0), opt = 0.869
+> Progress 0.0%, elapsed 165.0 s, iters = (33573, 0), opt = 0.869
+> Progress 0.0%, elapsed 168.0 s, iters = (34147, 0), opt = 0.869
+> Progress 0.0%, elapsed 171.0 s, iters = (34747, 0), opt = 0.869
+> Progress 0.0%, elapsed 174.0 s, iters = (35329, 0), opt = 0.869
+> Progress 0.0%, elapsed 177.0 s, iters = (35920, 0), opt = 0.869
+> Progress 0.0%, elapsed 180.0 s, iters = (36507, 0), opt = 0.869
+> Progress 0.0%, elapsed 183.0 s, iters = (37118, 0), opt = 0.869
+> Progress 0.0%, elapsed 186.0 s, iters = (37672, 0), opt = 0.869
+> Progress 0.0%, elapsed 189.0 s, iters = (38274, 0), opt = 0.869
+> Progress 0.0%, elapsed 192.0 s, iters = (38852, 0), opt = 0.869
+> Progress 0.0%, elapsed 195.0 s, iters = (39450, 0), opt = 0.869
+> Progress 0.0%, elapsed 198.0 s, iters = (40045, 0), opt = 0.869
+> Progress 0.0%, elapsed 201.0 s, iters = (40637, 0), opt = 0.869
+> Progress 0.0%, elapsed 204.0 s, iters = (41226, 0), opt = 0.869
+> Progress 0.0%, elapsed 207.0 s, iters = (41807, 0), opt = 0.869
+> Progress 0.0%, elapsed 210.0 s, iters = (42456, 0), opt = 0.869
+> Progress 0.0%, elapsed 213.0 s, iters = (43094, 0), opt = 0.869
+> Progress 0.0%, elapsed 216.0 s, iters = (43729, 0), opt = 0.869
+> Progress 0.0%, elapsed 219.0 s, iters = (44362, 0), opt = 0.869
+> Progress 0.0%, elapsed 222.0 s, iters = (45008, 0), opt = 0.869
+> Progress 0.0%, elapsed 225.0 s, iters = (45680, 0), opt = 0.869
+> Progress 0.0%, elapsed 228.0 s, iters = (46290, 0), opt = 0.869
+> Progress 0.0%, elapsed 231.0 s, iters = (46887, 0), opt = 0.869
+> Progress 0.0%, elapsed 234.0 s, iters = (47531, 0), opt = 0.869
+> Progress 0.0%, elapsed 237.0 s, iters = (48105, 0), opt = 0.869
+> Progress 0.0%, elapsed 240.0 s, iters = (48651, 0), opt = 0.869
+> Progress 0.0%, elapsed 243.0 s, iters = (49204, 0), opt = 0.869
+> Progress 0.0%, elapsed 246.0 s, iters = (49749, 0), opt = 0.869
+> Progress 0.0%, elapsed 249.0 s, iters = (50280, 0), opt = 0.869
+> Progress 0.0%, elapsed 252.0 s, iters = (50813, 0), opt = 0.869
+> Progress 0.0%, elapsed 255.0 s, iters = (51340, 0), opt = 0.869
+> Progress 0.0%, elapsed 258.0 s, iters = (51867, 0), opt = 0.869
+> Progress 0.0%, elapsed 261.0 s, iters = (52435, 0), opt = 0.869
+> Progress 0.0%, elapsed 264.0 s, iters = (53084, 0), opt = 0.869
+> Progress 0.0%, elapsed 267.0 s, iters = (53667, 0), opt = 0.869
+> Progress 0.0%, elapsed 270.0 s, iters = (54242, 0), opt = 0.869
+> Progress 0.0%, elapsed 273.0 s, iters = (54873, 0), opt = 0.869
+> Progress 0.0%, elapsed 276.0 s, iters = (55512, 0), opt = 0.869
+> Progress 0.0%, elapsed 279.0 s, iters = (56156, 0), opt = 0.869
+> Progress 0.0%, elapsed 282.0 s, iters = (56766, 0), opt = 0.869
+> Progress 0.0%, elapsed 285.0 s, iters = (57361, 0), opt = 0.869
+> Progress 0.0%, elapsed 288.0 s, iters = (57967, 0), opt = 0.869
+> Progress 0.0%, elapsed 291.0 s, iters = (58580, 0), opt = 0.869
+> Progress 0.0%, elapsed 294.0 s, iters = (59203, 0), opt = 0.869
+> Progress 0.0%, elapsed 297.0 s, iters = (59817, 0), opt = 0.869
+> Progress 0.0%, elapsed 300.0 s, iters = (60417, 0), opt = 0.869
+> Progress 0.0%, elapsed 303.0 s, iters = (61007, 0), opt = 0.869
+> Progress 0.0%, elapsed 306.0 s, iters = (61578, 0), opt = 0.869
+> Progress 0.0%, elapsed 309.0 s, iters = (62156, 0), opt = 0.869
+> Progress 0.0%, elapsed 312.0 s, iters = (62724, 0), opt = 0.869
+> Progress 0.0%, elapsed 315.0 s, iters = (63297, 0), opt = 0.869
+> Progress 0.0%, elapsed 318.0 s, iters = (63870, 0), opt = 0.869
+> Progress 0.0%, elapsed 321.0 s, iters = (64462, 0), opt = 0.869
+> Progress 0.0%, elapsed 324.0 s, iters = (65050, 0), opt = 0.869
+> Progress 0.0%, elapsed 327.0 s, iters = (65649, 0), opt = 0.869
+> Progress 0.0%, elapsed 330.0 s, iters = (66291, 0), opt = 0.869
+> Progress 0.0%, elapsed 333.0 s, iters = (66926, 0), opt = 0.869
+> Progress 0.0%, elapsed 336.0 s, iters = (67567, 0), opt = 0.869
+> Progress 0.0%, elapsed 339.0 s, iters = (68221, 0), opt = 0.869
+> Progress 0.0%, elapsed 342.0 s, iters = (68875, 0), opt = 0.869
+> Progress 0.0%, elapsed 345.0 s, iters = (69483, 0), opt = 0.869
+> Progress 0.0%, elapsed 348.0 s, iters = (70109, 0), opt = 0.869
+> Progress 0.0%, elapsed 351.0 s, iters = (70738, 0), opt = 0.869
+> Progress 0.0%, elapsed 354.0 s, iters = (71361, 0), opt = 0.869
+> Progress 0.0%, elapsed 357.0 s, iters = (71992, 0), opt = 0.869
+> Progress 0.0%, elapsed 360.0 s, iters = (72596, 0), opt = 0.869
+> Progress 0.0%, elapsed 363.0 s, iters = (73184, 0), opt = 0.869
+> Progress 0.0%, elapsed 366.0 s, iters = (73798, 0), opt = 0.869
+> Progress 0.0%, elapsed 369.0 s, iters = (74406, 0), opt = 0.869
+> Progress 0.0%, elapsed 372.0 s, iters = (74991, 0), opt = 0.869
+> Progress 0.0%, elapsed 375.0 s, iters = (75549, 0), opt = 0.869
+> Progress 0.0%, elapsed 378.0 s, iters = (76102, 0), opt = 0.869
+> Progress 0.0%, elapsed 381.0 s, iters = (76637, 0), opt = 0.869
+> Progress 0.0%, elapsed 384.0 s, iters = (77192, 0), opt = 0.869
+> Progress 0.0%, elapsed 387.0 s, iters = (77759, 0), opt = 0.869
+> Progress 0.0%, elapsed 390.0 s, iters = (78310, 0), opt = 0.869
+> Progress 0.0%, elapsed 393.0 s, iters = (78853, 0), opt = 0.869
+> Progress 0.0%, elapsed 396.0 s, iters = (79406, 0), opt = 0.869
+> Progress 0.0%, elapsed 399.0 s, iters = (79950, 0), opt = 0.869
+> Progress 0.0%, elapsed 402.0 s, iters = (80511, 0), opt = 0.869
+> Progress 0.0%, elapsed 405.0 s, iters = (81050, 0), opt = 0.869
+> Progress 0.0%, elapsed 408.0 s, iters = (81605, 0), opt = 0.869
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 410.72 s
+number of holes: 175, family size: 8958978968711216842229769122273777112486581988938598139599956403855167484720643781523509973086428463104, super quotient: 1246 states / 3078 actions
+explored: 0 %
+AR stats: avg MDP size: 1238, iterations: 82095
+
+optimal: 0.868611
+--------------------
+
+A([start & turn & dx=2 & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=1 & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=4 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=1 & dy=4 & seedx=2 & seedy=3],0)={'south'}, A([start & turn & dy=1 & seedx=-1 & seedy=-1],0)={'north'}, A([start & turn & dy=1 & seedx=-1 & seedy=-1],1)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & seedx=1 & seedy=1],0)={'north'}, A([start & turn & dx=2 & seedx=1 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=4 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=1 & seedx=-1 & seedy=-1],0)={'east'}, M([start & !turn & dx=4 & dy=2 & seedx=4 & seedy=3],0)=0, A([start & turn & dx=3 & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=2 & seedy=2],0)={'east'}, A([start & turn & dx=2 & seedx=2 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=1],0)={'south'}, M([start & !turn & dy=1 & seedx=-1 & seedy=-1],0)=0, A([start & turn & dx=1 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=2 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=4 & seedy=4],0)={'west'}, A([start & turn & dy=2 & seedx=-1 & seedy=-1],0)={'west'}, A([start & turn & dx=1 & dy=2 & seedy=2],0)={'east'}, A([start & turn & dy=3 & seedx=-1 & seedy=-1],0)={'west'}, A([start & turn & dx=4 & dy=1 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=2 & dy=3 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedy=4],0)={'east'}, A([start & turn & dy=4 & seedx=-1 & seedy=-1],0)={'east'}, M([start & !turn & dx=4 & dy=2 & seedx=-1 & seedy=-1],0)=0, A([start & turn & dx=3 & dy=4 & seedx=4 & seedy=3],0)={'east'}, A([start & turn & dx=2 & seedx=3 & seedy=1],0)={'north'}, A([start & turn & dx=2 & dy=1 & seedx=-1 & seedy=-1],0)={'west'}, A([start & turn & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=2 & dy=1 & seedx=1 & seedy=2],0)={'east'}, A([start & turn & dx=1 & dy=3 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=3 & seedx=-1 & seedy=-1],0)={'south'}, M([start & !turn & dy=1 & seedy=2],0)=0, A([start & turn & dx=1 & dy=1 & seedx=-1 & seedy=-1],0)={'south'}, A([start & turn & dx=3 & seedx=4 & seedy=1],0)={'north'}, A([start & turn & dx=3 & dy=1 & seedx=-1 & seedy=-1],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=4 & seedy=1],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=2 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=1 & dy=1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=3 & seedx=1 & seedy=2],0)={'east'}, A([start & turn & dy=2 & seedx=1 & seedy=3],0)={'north'}, A([start & turn & dx=2 & dy=2 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=3 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=3],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=3 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=4],0)={'south'}, A([start & turn & dy=3 & seedx=1 & seedy=4],0)={'north'}, A([start & turn & dx=1 & seedx=2 & seedy=1],0)={'north'}, A([start & turn & dx=3 & dy=4 & seedx=3 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=1 & seedx=1 & seedy=2],0)={'north'}, A([start & turn & dx=2 & dy=3 & seedx=1 & seedy=4],0)={'east'}, A([start & turn & dx=1 & dy=2 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dy=1 & seedx=1 & seedy=2],0)={'north'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dy=4 & seedx=1 & seedy=3],0)={'south'}, A([start & turn & dx=1 & dy=2 & seedx=2 & seedy=3],0)={'west'}, A([start & turn & dx=1 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=1 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=4 & seedx=2 & seedy=4],0)={'north'}, A([start & turn & dx=2 & dy=4 & seedx=3 & seedy=4],0)={'north'}, A([start & turn & dx=3 & seedx=2 & seedy=1],0)={'east'}, A([start & turn & dx=2 & dy=4 & seedx=3 & seedy=3],0)={'south'}, A([start & turn & dx=3 & dy=3 & seedx=2 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dx=2 & dy=2 & seedx=3 & seedy=3],0)={'west'}, A([start & turn & seedy=1],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=4 & seedy=2],0)={'south'}, A([start & turn & dx=4 & dy=1 & seedx=4 & seedy=2],0)={'west'}, A([start & turn & dx=2 & dy=2 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=1 & seedy=2],0)={'south'}, A([start & turn & dy=3 & seedx=1 & seedy=2],0)={'south'}, A([start & turn & dx=2 & seedx=3],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=2 & seedy=2],0)={'east'}, A([start & turn & dx=1 & dy=4 & seedy=4],0)={'east'}, A([start & turn & dx=2 & dy=3 & seedx=3 & seedy=4],0)={'west'}, A([start & turn & dx=3 & seedx=3 & seedy=1],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=2 & seedy=3],0)={'east'}, M([start & !turn & dx=4 & dy=2 & seedx=3 & seedy=2],0)=0, A([start & turn & dy=4 & seedx=1 & seedy=4],0)={'north'}, A([start & turn & dx=1 & dy=4 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=2 & seedy=3],0)={'east'}, A([start & turn & dx=2 & dy=3 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dy=2 & seedx=1 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=1 & seedy=2],0)={'east'}, A([start & turn & dx=2 & seedx=1],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=4 & seedy=3],0)={'west'}, A([start & turn & dy=1 & seedy=2],0)={'north'}, A([start & turn & dx=1 & dy=2 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=3 & seedy=2],0)={'west'}, A([start & turn & dx=4 & dy=1 & seedx=3 & seedy=2],0)={'east'}, A([start & turn & dx=2 & dy=4 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dx=3 & seedx=2],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=3],0)={'south'}, A([start & turn & dx=2 & dy=4 & seedx=1 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=3 & seedx=4 & seedy=3],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedy=2],0)={'east'}, A([start & turn & dx=3 & dy=3 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedy=1],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=1 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=4 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=1 & seedx=4 & seedy=2],0)={'west'}, A([start & turn & dx=1 & dy=2 & seedx=2 & seedy=2],0)={'south'}, M([start & !turn & dy=1 & seedx=1],0)=1, A([start & turn & dx=1 & dy=2 & seedx=2 & seedy=1],0)={'south'}, A([start & turn & dy=3 & seedy=4],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=3 & seedy=4],0)={'south'}, A([start & turn & dy=3 & seedy=2],0)={'south'}, M([start & !turn & dy=1 & seedx=1 & seedy=1],0)=1, A([start & turn & dx=3 & dy=1 & seedx=3 & seedy=2],0)={'east'}, A([start & turn & dx=4 & dy=1 & seedx=3],0)={'south'}, A([start & turn & dx=1 & dy=4 & seedx=1 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=2 & seedy=1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dy=1 & seedx=1],0)={'south'}, A([start & turn & dy=4 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=3 & seedx=2 & seedy=3],0)={'south'}, A([start & turn & dx=4 & seedx=3 & seedy=1],0)={'north'}, A([start & turn & dx=1 & dy=1 & seedx=2],0)={'south'}, A([start & turn & dy=3 & seedx=1 & seedy=3],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=4 & dy=3 & seedx=3 & seedy=3],0)={'south'}, A([start & turn & dx=2 & dy=4 & seedx=2 & seedy=3],0)={'east'}, A([start & turn & seedx=1],0)={'south'}, M([start & !turn & dy=1 & seedx=1 & seedy=2],0)=0, A([start & turn & dx=4 & dy=3 & seedx=4 & seedy=2],0)={'south'}, A([start & turn & dx=4 & seedx=3],0)={'south'}, A([start & turn & dy=2 & seedy=1],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=3],0)={'east'}, A([start & turn & dx=4 & dy=2 & seedx=3 & seedy=3],1)={'north'}, A([start & turn & dx=1 & dy=3 & seedy=3],0)={'east'}, A([start & turn & dx=1 & dy=1 & seedy=2],0)={'north'}, A([start & turn & dx=4 & dy=2 & seedx=4 & seedy=3],0)={'west'}, A([start & turn & dx=2 & dy=3 & seedx=3 & seedy=3],0)={'south'}, A([start & turn & dx=1 & dy=3 & seedx=2 & seedy=4],0)={'west'}, A([start & turn & dx=4 & seedx=4 & seedy=1],0)={'west'}, A([start & turn & dx=2 & dy=3 & seedx=3 & seedy=2],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=1 & seedy=1],0)={'east'}, A([start & turn & dx=2 & dy=1 & seedx=2],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=1],0)={'south'}, A([start & turn & dx=1 & seedx=2],0)={'south'}, A([start & turn & dx=4 & dy=2 & seedx=4 & seedy=1],0)={'south'}, A([start & turn & dx=2 & dy=1 & seedx=2 & seedy=2],0)={'east'}, A([start & turn & dx=2 & dy=3 & seedx=2 & seedy=4],0)={'east'}, A([start & turn & dx=1 & dy=1 & seedx=2 & seedy=2],0)={'north'}, A([start & turn & dx=3 & dy=3 & seedx=2 & seedy=4],0)={'east'}, A([start & turn & dx=4 & dy=3 & seedx=4 & seedy=4],0)={'south'}, A([start & turn & dx=2 & dy=2 & seedx=3 & seedy=1],0)={'south'}, A([start & turn & dx=1 & seedx=1 & seedy=1],0)={'east'}, A([start & turn & dx=1],0)={'east'}, A([start & turn & dx=3 & dy=4 & seedx=2 & seedy=4],0)={'east'}, A([start & turn & dx=3 & dy=2 & seedx=4 & seedy=1],0)={'south'}, A([start & turn & dy=2 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dx=3 & seedx=4],0)={'south'}, A([start & turn & dy=2 & seedy=3],0)={'north'}, A([start & turn & dx=4 & dy=1 & seedx=4],0)={'south'}, A([start & turn & dx=1 & dy=1 & seedx=1],0)={'south'}, A([start & turn & dx=3 & dy=2 & seedx=3 & seedy=3],0)={'east'}, A([start & turn & dy=1 & seedx=1 & seedy=1],0)={'south'}, A([start & turn & dy=1],0)={'east'}
+
+hole scores:  {0: 0.00018305128045775705, 1: 9.039054938154592e-05, 4: 7.154328995211838e-05, 13: 9.437475761457817e-05, 21: 0.00024053053561282688, 22: 0.0015540509571401217, 27: 0.0015931841940685601, 28: 0.00012233862276005977, 29: 2.4332146185895915e-05, 30: 5.1510720997642056e-05, 35: 0.0006924839922993123, 40: 0.0010878136577044334, 43: 0.001536503196700845, 44: 0.00034758803691996494, 45: 0.0005951186575487415, 62: 0.0001310340898109843, 74: 0.00013748659141838492, 76: 0.00023496027229906463, 81: 0.0004237012282370569, 82: 0.00035969344524484795, 86: 8.48436293596037e-05, 90: 0.0004622458692929784, 104: 0.00116274838581162, 117: 2.850191664152301e-05, 124: 0.001356407218845033, 131: 6.330228960839904e-05, 143: 0.002429879989541108, 147: 0.0013719541640501668, 148: 8.732506995839931e-05, 158: 4.392617915743382e-05, 168: 0.00028474972378113105, 172: 0.0003916227873121215}
+selected hole:  143
+hole has options:  [0]
+2022-06-05 14:36:34,040 - synthesizer_pomdp.py - FSC synthesis: elapsed 1217.3 s, opt = 0.869, injections: 2.
+2022-06-05 14:36:34,040 - synthesizer_pomdp.py - Injecting memory into observation 320 ...
+2022-06-05 14:36:34,040 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 14:36:34,040 - quotient_pomdp.py - Constructed quotient MDP having 1247 states and 3103 actions.
+
+------------------------------------------------------------
+
+2022-06-05 14:36:34,127 - quotient_pomdp.py - Symmetry breaking: reduced design space from 120946216077601427370101883150695991018568856850671074884599411452044761043728691050567384636666784251904 to 30236554019400356842525470787673997754642214212667768721149852863011190260932172762641846159166696062976
+2022-06-05 14:36:34,134 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (593, 0), opt = 0.869
+> Progress 0.0%, elapsed 6.0 s, iters = (1167, 0), opt = 0.869
+> Progress 0.0%, elapsed 9.0 s, iters = (1741, 0), opt = 0.869
+> Progress 0.0%, elapsed 12.0 s, iters = (2307, 0), opt = 0.869
+> Progress 0.0%, elapsed 15.0 s, iters = (2915, 0), opt = 0.869
+> Progress 0.0%, elapsed 18.0 s, iters = (3506, 0), opt = 0.869
+> Progress 0.0%, elapsed 21.0 s, iters = (4086, 0), opt = 0.869
+> Progress 0.0%, elapsed 24.0 s, iters = (4706, 0), opt = 0.869
+> Progress 0.0%, elapsed 27.0 s, iters = (5290, 0), opt = 0.869
+> Progress 0.0%, elapsed 30.0 s, iters = (5873, 0), opt = 0.869
+> Progress 0.0%, elapsed 33.0 s, iters = (6461, 0), opt = 0.869
+> Progress 0.0%, elapsed 36.0 s, iters = (7065, 0), opt = 0.869
+> Progress 0.0%, elapsed 39.0 s, iters = (7645, 0), opt = 0.869
+> Progress 0.0%, elapsed 42.0 s, iters = (8258, 0), opt = 0.869
+> Progress 0.0%, elapsed 45.0 s, iters = (8839, 0), opt = 0.869
+> Progress 0.0%, elapsed 48.0 s, iters = (9393, 0), opt = 0.869
+> Progress 0.0%, elapsed 51.0 s, iters = (9992, 0), opt = 0.869
+> Progress 0.0%, elapsed 54.0 s, iters = (10572, 0), opt = 0.869
+> Progress 0.0%, elapsed 57.0 s, iters = (11237, 0), opt = 0.869
+> Progress 0.0%, elapsed 60.0 s, iters = (11861, 0), opt = 0.869
+> Progress 0.0%, elapsed 63.0 s, iters = (12497, 0), opt = 0.869
+> Progress 0.0%, elapsed 66.0 s, iters = (13151, 0), opt = 0.869
+> Progress 0.0%, elapsed 69.0 s, iters = (13777, 0), opt = 0.869
+> Progress 0.0%, elapsed 72.0 s, iters = (14400, 0), opt = 0.869
+> Progress 0.0%, elapsed 75.0 s, iters = (15042, 0), opt = 0.869
+> Progress 0.0%, elapsed 78.0 s, iters = (15667, 0), opt = 0.869
+> Progress 0.0%, elapsed 81.0 s, iters = (16326, 0), opt = 0.869
+> Progress 0.0%, elapsed 84.0 s, iters = (16985, 0), opt = 0.869
+> Progress 0.0%, elapsed 87.0 s, iters = (17635, 0), opt = 0.869
+> Progress 0.0%, elapsed 90.0 s, iters = (18275, 0), opt = 0.869
+> Progress 0.0%, elapsed 93.0 s, iters = (18870, 0), opt = 0.869
+> Progress 0.0%, elapsed 96.0 s, iters = (19387, 0), opt = 0.869
+> Progress 0.0%, elapsed 99.0 s, iters = (19913, 0), opt = 0.869
+> Progress 0.0%, elapsed 102.0 s, iters = (20459, 0), opt = 0.869
+> Progress 0.0%, elapsed 105.0 s, iters = (21103, 0), opt = 0.869
+> Progress 0.0%, elapsed 108.0 s, iters = (21740, 0), opt = 0.869
+> Progress 0.0%, elapsed 111.0 s, iters = (22375, 0), opt = 0.869
+> Progress 0.0%, elapsed 114.0 s, iters = (22985, 0), opt = 0.869
+> Progress 0.0%, elapsed 117.0 s, iters = (23620, 0), opt = 0.869
+> Progress 0.0%, elapsed 120.0 s, iters = (24182, 0), opt = 0.869
+> Progress 0.0%, elapsed 123.0 s, iters = (24705, 0), opt = 0.869
+> Progress 0.0%, elapsed 126.0 s, iters = (25230, 0), opt = 0.869
+> Progress 0.0%, elapsed 129.0 s, iters = (25797, 0), opt = 0.869
+> Progress 0.0%, elapsed 132.0 s, iters = (26392, 0), opt = 0.869
+> Progress 0.0%, elapsed 135.0 s, iters = (26984, 0), opt = 0.869
+> Progress 0.0%, elapsed 138.0 s, iters = (27604, 0), opt = 0.869
+> Progress 0.0%, elapsed 141.0 s, iters = (28225, 0), opt = 0.869
+> Progress 0.0%, elapsed 144.0 s, iters = (28787, 0), opt = 0.869
+> Progress 0.0%, elapsed 147.0 s, iters = (29410, 0), opt = 0.869
+> Progress 0.0%, elapsed 150.0 s, iters = (29974, 0), opt = 0.869
+> Progress 0.0%, elapsed 153.0 s, iters = (30524, 0), opt = 0.869
+> Progress 0.0%, elapsed 156.0 s, iters = (31116, 0), opt = 0.869
+> Progress 0.0%, elapsed 159.0 s, iters = (31699, 0), opt = 0.869
+> Progress 0.0%, elapsed 162.0 s, iters = (32284, 0), opt = 0.869
+> Progress 0.0%, elapsed 165.0 s, iters = (32870, 0), opt = 0.869
+> Progress 0.0%, elapsed 168.0 s, iters = (33441, 0), opt = 0.869
+> Progress 0.0%, elapsed 171.0 s, iters = (34009, 0), opt = 0.869
+> Progress 0.0%, elapsed 174.0 s, iters = (34580, 0), opt = 0.869
+> Progress 0.0%, elapsed 177.0 s, iters = (35162, 0), opt = 0.869
+> Progress 0.0%, elapsed 180.0 s, iters = (35753, 0), opt = 0.869
+> Progress 0.0%, elapsed 183.0 s, iters = (36331, 0), opt = 0.869
+> Progress 0.0%, elapsed 186.0 s, iters = (36927, 0), opt = 0.869
+> Progress 0.0%, elapsed 189.0 s, iters = (37463, 0), opt = 0.869
+> Progress 0.0%, elapsed 192.0 s, iters = (38102, 0), opt = 0.869
+> Progress 0.0%, elapsed 195.0 s, iters = (38734, 0), opt = 0.869
+> Progress 0.0%, elapsed 198.0 s, iters = (39349, 0), opt = 0.869
+> Progress 0.0%, elapsed 201.0 s, iters = (39953, 0), opt = 0.869
+> Progress 0.0%, elapsed 204.0 s, iters = (40576, 0), opt = 0.869
+> Progress 0.0%, elapsed 207.0 s, iters = (41223, 0), opt = 0.869
+> Progress 0.0%, elapsed 210.0 s, iters = (41854, 0), opt = 0.869
+> Progress 0.0%, elapsed 213.0 s, iters = (42453, 0), opt = 0.869
+> Progress 0.0%, elapsed 216.0 s, iters = (43045, 0), opt = 0.869
+> Progress 0.0%, elapsed 219.0 s, iters = (43667, 0), opt = 0.869
+> Progress 0.0%, elapsed 222.0 s, iters = (44211, 0), opt = 0.869
+> Progress 0.0%, elapsed 225.0 s, iters = (44753, 0), opt = 0.869
+> Progress 0.0%, elapsed 228.0 s, iters = (45296, 0), opt = 0.869
+> Progress 0.0%, elapsed 231.0 s, iters = (45811, 0), opt = 0.869
+> Progress 0.0%, elapsed 234.0 s, iters = (46348, 0), opt = 0.869
+> Progress 0.0%, elapsed 237.0 s, iters = (46861, 0), opt = 0.869
+> Progress 0.0%, elapsed 240.0 s, iters = (47374, 0), opt = 0.869
+> Progress 0.0%, elapsed 243.0 s, iters = (47902, 0), opt = 0.869
+> Progress 0.0%, elapsed 246.0 s, iters = (48503, 0), opt = 0.869
+> Progress 0.0%, elapsed 249.0 s, iters = (49111, 0), opt = 0.869
+> Progress 0.0%, elapsed 252.0 s, iters = (49699, 0), opt = 0.869
+> Progress 0.0%, elapsed 255.0 s, iters = (50256, 0), opt = 0.869
+> Progress 0.0%, elapsed 258.0 s, iters = (50866, 0), opt = 0.869
+> Progress 0.0%, elapsed 261.0 s, iters = (51448, 0), opt = 0.869
+> Progress 0.0%, elapsed 264.0 s, iters = (52039, 0), opt = 0.869
+> Progress 0.0%, elapsed 267.0 s, iters = (52619, 0), opt = 0.869
+> Progress 0.0%, elapsed 270.0 s, iters = (53196, 0), opt = 0.869
+> Progress 0.0%, elapsed 273.0 s, iters = (53800, 0), opt = 0.869
+> Progress 0.0%, elapsed 276.0 s, iters = (54405, 0), opt = 0.869
+> Progress 0.0%, elapsed 279.0 s, iters = (55017, 0), opt = 0.869
+> Progress 0.0%, elapsed 282.0 s, iters = (55637, 0), opt = 0.869
+> Progress 0.0%, elapsed 285.0 s, iters = (56251, 0), opt = 0.869
+> Progress 0.0%, elapsed 288.0 s, iters = (56877, 0), opt = 0.869
+> Progress 0.0%, elapsed 291.0 s, iters = (57448, 0), opt = 0.869
+> Progress 0.0%, elapsed 294.0 s, iters = (58022, 0), opt = 0.869
+> Progress 0.0%, elapsed 297.0 s, iters = (58581, 0), opt = 0.869
+> Progress 0.0%, elapsed 300.0 s, iters = (59145, 0), opt = 0.869
+> Progress 0.0%, elapsed 303.0 s, iters = (59711, 0), opt = 0.869
+> Progress 0.0%, elapsed 306.0 s, iters = (60290, 0), opt = 0.869
+> Progress 0.0%, elapsed 309.0 s, iters = (60887, 0), opt = 0.869
+> Progress 0.0%, elapsed 312.0 s, iters = (61454, 0), opt = 0.869
+> Progress 0.0%, elapsed 315.0 s, iters = (62053, 0), opt = 0.869
+> Progress 0.0%, elapsed 318.0 s, iters = (62644, 0), opt = 0.869
+> Progress 0.0%, elapsed 321.0 s, iters = (63246, 0), opt = 0.869
+> Progress 0.0%, elapsed 324.0 s, iters = (63839, 0), opt = 0.869
+> Progress 0.0%, elapsed 327.0 s, iters = (64449, 0), opt = 0.869
+> Progress 0.0%, elapsed 330.0 s, iters = (65054, 0), opt = 0.869
+> Progress 0.0%, elapsed 333.0 s, iters = (65638, 0), opt = 0.869
+> Progress 0.0%, elapsed 336.0 s, iters = (66240, 0), opt = 0.869
+> Progress 0.0%, elapsed 339.0 s, iters = (66850, 0), opt = 0.869
+> Progress 0.0%, elapsed 342.0 s, iters = (67443, 0), opt = 0.869
+> Progress 0.0%, elapsed 345.0 s, iters = (68030, 0), opt = 0.869
+> Progress 0.0%, elapsed 348.0 s, iters = (68626, 0), opt = 0.869
+> Progress 0.0%, elapsed 351.0 s, iters = (69185, 0), opt = 0.869
+> Progress 0.0%, elapsed 354.0 s, iters = (69795, 0), opt = 0.869
+> Progress 0.0%, elapsed 357.0 s, iters = (70376, 0), opt = 0.869
+> Progress 0.0%, elapsed 360.0 s, iters = (70948, 0), opt = 0.869
+> Progress 0.0%, elapsed 363.0 s, iters = (71482, 0), opt = 0.869
+> Progress 0.0%, elapsed 366.0 s, iters = (72015, 0), opt = 0.869
+> Progress 0.0%, elapsed 369.0 s, iters = (72540, 0), opt = 0.869
+> Progress 0.0%, elapsed 372.0 s, iters = (73102, 0), opt = 0.869
+> Progress 0.0%, elapsed 375.0 s, iters = (73657, 0), opt = 0.869
+> Progress 0.0%, elapsed 378.0 s, iters = (74191, 0), opt = 0.869
+> Progress 0.0%, elapsed 381.0 s, iters = (74724, 0), opt = 0.869
+> Progress 0.0%, elapsed 384.0 s, iters = (75258, 0), opt = 0.869
+> Progress 0.0%, elapsed 387.0 s, iters = (75800, 0), opt = 0.869
+> Progress 0.0%, elapsed 390.0 s, iters = (76357, 0), opt = 0.869
+> Progress 0.0%, elapsed 393.0 s, iters = (76918, 0), opt = 0.869
+> Progress 0.0%, elapsed 396.0 s, iters = (77473, 0), opt = 0.869
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 398.59 s
+number of holes: 176, family size: 120946216077601427370101883150695991018568856850671074884599411452044761043728691050567384636666784251904, super quotient: 1247 states / 3103 actions
+explored: 0 %
+AR stats: avg MDP size: 1239, iterations: 77968
+
+optimal: 0.868611
+--------------------
+
+None
+
+hole scores:  {0: 0.00020042920477772566, 1: 0.00048721360023368346, 2: 0.0005701938513148928, 5: 8.962660336083899e-05, 6: 0.00019820720902489843, 7: 4.215622056190567e-05, 13: 0.0012439699359516757, 19: 0.00016745924210161467, 20: 6.571728819481118e-05, 21: 0.0005268867181901066, 22: 0.00031933549517995733, 24: 0.0003311300109297997, 26: 0.0002640428394706827, 27: 0.0007821407211626393, 32: 0.0003455725739974271, 36: 3.554896071588566e-05, 37: 0.000657149525237802, 40: 0.0003985981074597004, 42: 0.00023409933211518663, 44: 3.2279736058314736e-05}
+selected hole:  13
+hole has options:  [0, 1, 2, 3]
+2022-06-05 14:43:12,724 - synthesizer_pomdp.py - FSC synthesis: elapsed 1616.0 s, opt = 0.869, injections: 3.
+2022-06-05 14:43:12,724 - synthesizer_pomdp.py - Injecting memory into observation 33 ...
+2022-06-05 14:43:12,724 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 14:43:12,724 - quotient_pomdp.py - Constructed quotient MDP having 1266 states and 3202 actions.
+
+------------------------------------------------------------
+
+2022-06-05 14:43:12,809 - quotient_pomdp.py - Symmetry breaking: reduced design space from 15481115657932982703373041043289086850376813676885897585228724665861729413597272454472625233493348384243712 to 967569728620811418960815065205567928148550854805368599076795291616358088349829528404539077093334274015232
+2022-06-05 14:43:12,816 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (578, 0), opt = 0.869
+> Progress 0.0%, elapsed 6.0 s, iters = (1156, 0), opt = 0.869
+> Progress 0.0%, elapsed 9.0 s, iters = (1715, 0), opt = 0.869
+> Progress 0.0%, elapsed 12.0 s, iters = (2248, 0), opt = 0.869
+> Progress 0.0%, elapsed 15.0 s, iters = (2763, 0), opt = 0.869
+> Progress 0.0%, elapsed 18.0 s, iters = (3311, 0), opt = 0.869
+> Progress 0.0%, elapsed 21.0 s, iters = (3865, 0), opt = 0.869
+> Progress 0.0%, elapsed 24.0 s, iters = (4416, 0), opt = 0.869
+> Progress 0.0%, elapsed 27.0 s, iters = (4978, 0), opt = 0.869
+> Progress 0.0%, elapsed 30.0 s, iters = (5556, 0), opt = 0.869
+> Progress 0.0%, elapsed 33.0 s, iters = (6124, 0), opt = 0.869
+> Progress 0.0%, elapsed 36.0 s, iters = (6664, 0), opt = 0.869
+> Progress 0.0%, elapsed 39.0 s, iters = (7236, 0), opt = 0.869
+> Progress 0.0%, elapsed 42.0 s, iters = (7862, 0), opt = 0.869
+> Progress 0.0%, elapsed 45.0 s, iters = (8439, 0), opt = 0.869
+> Progress 0.0%, elapsed 48.0 s, iters = (9034, 0), opt = 0.869
+> Progress 0.0%, elapsed 51.0 s, iters = (9608, 0), opt = 0.869
+> Progress 0.0%, elapsed 54.0 s, iters = (10173, 0), opt = 0.869
+> Progress 0.0%, elapsed 57.0 s, iters = (10732, 0), opt = 0.869
+> Progress 0.0%, elapsed 60.0 s, iters = (11321, 0), opt = 0.869
+> Progress 0.0%, elapsed 63.0 s, iters = (11836, 0), opt = 0.869
+> Progress 0.0%, elapsed 66.0 s, iters = (12433, 0), opt = 0.869
+> Progress 0.0%, elapsed 69.0 s, iters = (13018, 0), opt = 0.869
+> Progress 0.0%, elapsed 72.0 s, iters = (13618, 0), opt = 0.869
+> Progress 0.0%, elapsed 75.0 s, iters = (14214, 0), opt = 0.869
+> Progress 0.0%, elapsed 78.0 s, iters = (14760, 0), opt = 0.869
+> Progress 0.0%, elapsed 81.0 s, iters = (15356, 0), opt = 0.869
+> Progress 0.0%, elapsed 84.0 s, iters = (15944, 0), opt = 0.869
+> Progress 0.0%, elapsed 87.0 s, iters = (16527, 0), opt = 0.869
+> Progress 0.0%, elapsed 90.0 s, iters = (17115, 0), opt = 0.869
+> Progress 0.0%, elapsed 93.0 s, iters = (17647, 0), opt = 0.869
+> Progress 0.0%, elapsed 96.0 s, iters = (18264, 0), opt = 0.869
+> Progress 0.0%, elapsed 99.0 s, iters = (18857, 0), opt = 0.869
+> Progress 0.0%, elapsed 102.0 s, iters = (19440, 0), opt = 0.869
+> Progress 0.0%, elapsed 105.0 s, iters = (20008, 0), opt = 0.869
+> Progress 0.0%, elapsed 108.0 s, iters = (20596, 0), opt = 0.869
+> Progress 0.0%, elapsed 111.0 s, iters = (21204, 0), opt = 0.869
+> Progress 0.0%, elapsed 114.0 s, iters = (21738, 0), opt = 0.869
+> Progress 0.0%, elapsed 117.0 s, iters = (22332, 0), opt = 0.869
+> Progress 0.0%, elapsed 120.0 s, iters = (22902, 0), opt = 0.869
+> Progress 0.0%, elapsed 123.0 s, iters = (23484, 0), opt = 0.869
+> Progress 0.0%, elapsed 126.0 s, iters = (24074, 0), opt = 0.869
+> Progress 0.0%, elapsed 129.0 s, iters = (24630, 0), opt = 0.869
+> Progress 0.0%, elapsed 132.0 s, iters = (25189, 0), opt = 0.869
+> Progress 0.0%, elapsed 135.0 s, iters = (25775, 0), opt = 0.869
+> Progress 0.0%, elapsed 138.0 s, iters = (26331, 0), opt = 0.869
+> Progress 0.0%, elapsed 141.0 s, iters = (26840, 0), opt = 0.869
+> Progress 0.0%, elapsed 144.0 s, iters = (27367, 0), opt = 0.869
+> Progress 0.0%, elapsed 147.0 s, iters = (27920, 0), opt = 0.869
+> Progress 0.0%, elapsed 150.0 s, iters = (28502, 0), opt = 0.869
+> Progress 0.0%, elapsed 153.0 s, iters = (29088, 0), opt = 0.869
+> Progress 0.0%, elapsed 156.0 s, iters = (29636, 0), opt = 0.869
+> Progress 0.0%, elapsed 159.0 s, iters = (30142, 0), opt = 0.869
+> Progress 0.0%, elapsed 162.0 s, iters = (30675, 0), opt = 0.869
+> Progress 0.0%, elapsed 165.0 s, iters = (31304, 0), opt = 0.869
+> Progress 0.0%, elapsed 168.0 s, iters = (31870, 0), opt = 0.869
+> Progress 0.0%, elapsed 171.0 s, iters = (32493, 0), opt = 0.869
+> Progress 0.0%, elapsed 174.0 s, iters = (33094, 0), opt = 0.869
+> Progress 0.0%, elapsed 177.0 s, iters = (33652, 0), opt = 0.869
+> Progress 0.0%, elapsed 180.0 s, iters = (34182, 0), opt = 0.869
+> Progress 0.0%, elapsed 183.0 s, iters = (34711, 0), opt = 0.869

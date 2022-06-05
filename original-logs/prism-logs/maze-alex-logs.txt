@@ -1,0 +1,77 @@
+PRISM
+=====
+
+Version: 4.7.dev
+Date: Thu May 26 07:10:02 CEST 2022
+Hostname: DESKTOP-12JT6ER
+Memory limits: cudd=1g, java(heap)=16g
+Command line: prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/maze-alex/sketch.templ /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/maze-alex/sketch.props --gridresolution 10 -javamaxmem 16g -maxiters 1000000
+
+Parsing model file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/maze-alex/sketch.templ"...
+
+Type:        POMDP
+Modules:     myclock maze 
+Variables:   clk x y 
+Observables: u r d l goal bad
+
+Switching to explicit engine, which supports POMDPs...
+
+Parsing properties file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/maze-alex/sketch.props"...
+
+1 property:
+(1) R{"steps"}min=? [ F goal ]
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}min=? [ F goal ]
+
+Building model...
+
+Computing reachable states... 15 states
+Reachable states exploration and model construction done in 0.008 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.013 seconds.
+
+Type:        POMDP
+States:      15 (1 initial)
+Obs/unobs:   8/15
+Transitions: 173
+Choices:     57
+Max/avg:     4/3.80
+Building reward structure...
+
+Starting expected reachability (min)...
+Starting fixed-resolution grid approximation (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 9 iterations and 0.003 seconds.
+target obs=1, inf obs=0
+Grid statistics: resolution=10, points=3029
+Building belief space approximation...
+Solving belief space approximation...
+Belief space value iteration (min) took 46 iterations and 2.341 seconds.
+Outer bound: 7.090820617104838 (exact floating point)
+
+Building strategy-induced model...
+Strategy-induced model: 50 states (1 initial), 164 transitions, 50 choices, dist max/avg = 1/1.00
+Starting expected reachability (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 9 iterations and 0.001 seconds.
+target=1, inf=0, rest=49
+For Rmin, checking for zero-reward ECs...
+Time for checking for zero-reward ECs: 0.004 seconds, no zero-reward ECs found, proceeding normally.
+Starting value iteration (min, with Power method)...
+Value iteration (min, with Power method) took 40 iterations, 6520 multiplications and 0.002 seconds.
+Expected reachability took 0.011 seconds.
+Inner bound: 7.093665131936426 (+/- 4.87908670508343E-5 estimated; rel err 6.878089977939991E-6)
+
+Fixed-resolution grid approximation (min) took 2.418 seconds.
+Result bounds: [7.090820617104838,7.093616341069375]
+Expected reachability took 2.419 seconds.
+
+Value in the initial state: 7.092218479087107
+
+Time for model checking: 2.422 seconds.
+
+Result: 7.092218479087107 (+/- 0.0013978619822685445 estimated; rel err 1.9709798653135598E-4)
+

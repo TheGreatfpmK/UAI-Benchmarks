@@ -1,0 +1,694 @@
+2022-06-05 20:16:17,477 - cli.py - This is Paynt version 0.1.0.
+2022-06-05 20:16:17,483 - sketch.py - Loading sketch from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/refuel-06/sketch.templ...
+2022-06-05 20:16:17,497 - prism_parser.py - PRISM model type: PrismModelType.POMDP
+2022-06-05 20:16:17,497 - prism_parser.py - Loading properties from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/refuel-06/sketch.props ...
+2022-06-05 20:16:17,511 - sketch.py - Constructed quotient MDP having 208 states and 565 actions.
+2022-06-05 20:16:17,512 - sketch.py - Found the following specification: constraints: none, optimality objective: Pmax=? ["notbad" U "goal"] 
+2022-06-05 20:16:17,512 - sketch.py - Initializing the quotient ...
+2022-06-05 20:16:17,512 - quotient_pomdp.py - Constructed POMDP having 50 observations.
+2022-06-05 20:16:17,512 - quotient_pomdp.py - Observation labels: ['[start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=2 & cangoeast=1 & cangosouth=1 & cangowest=1]', '[start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1]', '[start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1]', '[start & cangoeast=1 & cangonorth=1 & cangosouth=1]', '[start & fuel=1 & cangoeast=1 & cangonorth=1]', '[start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1]', '[start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1]', '[start & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=3 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=1 & cangoeast=1 & cangonorth=1 & cangowest=1]', '[start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=4 & cangoeast=1 & cangosouth=1 & cangowest=1]', '[start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1]', '[start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=1 & cangoeast=1 & cangosouth=1 & cangowest=1]', '[start & fuel=3 & cangoeast=1 & cangosouth=1 & cangowest=1]', '[start & fuel=1 & cangosouth=1 & cangowest=1]', '[start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1]', '[start & cangoeast=1 & cangosouth=1 & cangowest=1]', '[start & fuel=3 & cangoeast=1 & cangonorth=1 & cangowest=1]', '[start & fuel=2 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=2 & cangoeast=1 & cangonorth=1 & cangowest=1]', '[start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1]', '[start & cangoeast=1 & cangonorth=1 & cangowest=1]', '[!start & fuel=5 & cangoeast=1 & cangosouth=1]', '[start & fuel=2 & cangoeast=1 & cangonorth=1]', '[start & fuel=3 & amdone=1 & cangonorth=1 & cangowest=1]', '[start & cangoeast=1 & cangosouth=1 & refuelAllowed=1]', '[start & fuel=5 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & cangosouth=1 & cangowest=1]', '[start & fuel=2 & amdone=1 & cangonorth=1 & cangowest=1]', '[start & fuel=1 & cangoeast=1 & cangosouth=1 & refuelAllowed=1]', '[start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1]', '[start & fuel=3 & cangoeast=1 & cangosouth=1 & refuelAllowed=1]', '[start & amdone=1 & cangonorth=1 & cangowest=1]', '[start & fuel=4 & cangoeast=1 & cangonorth=1 & cangowest=1]', '[start & cangoeast=1 & cangonorth=1]', '[start & fuel=1 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=2 & cangosouth=1 & cangowest=1]', '[start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1]', '[start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1]', '[start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1]', '[start & fuel=5 & cangoeast=1 & cangosouth=1]', '[start & fuel=4 & cangonorth=1 & cangosouth=1 & cangowest=1]', '[start & fuel=2 & cangoeast=1 & cangosouth=1 & refuelAllowed=1]', '[start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1]', '[start & fuel=1 & amdone=1 & cangonorth=1 & cangowest=1]']
+2022-06-05 20:16:17,513 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 20:16:17,513 - quotient_pomdp.py - Constructed quotient MDP having 208 states and 565 actions.
+2022-06-05 20:16:17,518 - sketch.py - Sketch parsing complete.
+2022-06-05 20:16:17,518 - sketch.py - Sketch has 26 holes
+2022-06-05 20:16:17,518 - sketch.py - Design space size: 1410554953728
+2022-06-05 20:16:17,518 - synthesizer_pomdp.py - Synthesizing optimal k=1 controller ...
+2022-06-05 20:16:17,518 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 20:16:17,518 - quotient_pomdp.py - Constructed quotient MDP having 208 states and 565 actions.
+2022-06-05 20:16:17,522 - synthesizer.py - Synthesis initiated.
+2022-06-05 20:16:17,526 - property.py - New opt = 0.0.
+2022-06-05 20:16:17,531 - property.py - New opt = 0.023347058823529464.
+2022-06-05 20:16:17,553 - property.py - New opt = 0.2021953221173568.
+2022-06-05 20:16:17,622 - property.py - New opt = 0.26766859.
+2022-06-05 20:16:17,681 - property.py - New opt = 0.35002591509999986.
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 0.17 s
+number of holes: 26, family size: 1410554953728, super quotient: 208 states / 565 actions
+explored: 0 %
+AR stats: avg MDP size: 167, iterations: 355
+
+optimal: 0.350026
+--------------------
+
+A([start & fuel=2 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'south'}, A([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'west'}, A([start & fuel=1 & cangoeast=1 & cangonorth=1],0)={'south'}, A([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'south'}, A([start & fuel=3 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}, A([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'north'}, A([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'south'}, A([start & fuel=4 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'south'}, A([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=1 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'south'}, A([start & fuel=3 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'south'}, A([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}, A([start & fuel=2 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}, A([start & fuel=2 & cangoeast=1 & cangonorth=1],0)={'south'}, A([start & fuel=5 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'south'}, A([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}, A([start & fuel=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=2 & cangosouth=1 & cangowest=1],0)={'east'}, A([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'south'}, A([start & fuel=5 & cangoeast=1 & cangosouth=1],0)={'south'}, A([start & fuel=4 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}
+2022-06-05 20:16:17,692 - synthesizer_pomdp.py - Synthesizing optimal k=2 controller ...
+2022-06-05 20:16:17,692 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2] ...
+2022-06-05 20:16:17,692 - quotient_pomdp.py - Constructed quotient MDP having 416 states and 2260 actions.
+2022-06-05 20:16:17,741 - synthesizer.py - Synthesis initiated.
+2022-06-05 20:16:19,615 - property.py - New opt = 0.4572899999999994.
+> Progress 0.0%, elapsed 3.0 s, iters = (2532, 0), opt = 0.457
+> Progress 0.0%, elapsed 6.0 s, iters = (5369, 0), opt = 0.457
+> Progress 0.0%, elapsed 9.0 s, iters = (8324, 0), opt = 0.457
+> Progress 0.0%, elapsed 12.0 s, iters = (11004, 0), opt = 0.457
+> Progress 0.0%, elapsed 15.0 s, iters = (13564, 0), opt = 0.457
+> Progress 0.0%, elapsed 18.0 s, iters = (16299, 0), opt = 0.457
+> Progress 0.0%, elapsed 21.0 s, iters = (18868, 0), opt = 0.457
+> Progress 0.0%, elapsed 24.0 s, iters = (21513, 0), opt = 0.457
+> Progress 0.0%, elapsed 27.0 s, iters = (24272, 0), opt = 0.457
+> Progress 0.0%, elapsed 30.0 s, iters = (27110, 0), opt = 0.457
+> Progress 0.0%, elapsed 33.0 s, iters = (30099, 0), opt = 0.457
+> Progress 0.0%, elapsed 36.0 s, iters = (32944, 0), opt = 0.457
+> Progress 0.0%, elapsed 39.0 s, iters = (36099, 0), opt = 0.457
+> Progress 0.0%, elapsed 42.0 s, iters = (39158, 0), opt = 0.457
+2022-06-05 20:17:02,604 - property.py - New opt = 0.6721899999999992.
+> Progress 0.0%, elapsed 45.0 s, iters = (41410, 0), opt = 0.672
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 45.4 s
+number of holes: 100, family size: 2522200383259155377694530751330983269335622954971561984, super quotient: 416 states / 2260 actions
+explored: 0 %
+AR stats: avg MDP size: 319, iterations: 41693
+
+optimal: 0.67219
+--------------------
+
+M([start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)=0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)=0, AM([start & fuel=2 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=2 & cangoeast=1 & cangosouth=1 & cangowest=1],1)={'south'}+0, M([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],0)=0, M([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],1)=0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'south'}+0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1],1)={'west'}+0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1],0)=0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1],1)=0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1],0)={'south'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1],1)={'south'}+0, AM([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'north'}+1, M([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],0)=0, M([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],1)=1, AM([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'south'}+0, AM([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1],1)={'south'}+0, M([start & cangonorth=1 & cangosouth=1 & cangowest=1],0)=0, M([start & cangonorth=1 & cangosouth=1 & cangowest=1],1)=0, AM([start & fuel=3 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=3 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'east'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangowest=1],1)={'south'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'west'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'south'}+0, AM([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'north'}+1, AM([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'east'}+0, AM([start & fuel=4 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'east'}+1, AM([start & fuel=4 & cangoeast=1 & cangosouth=1 & cangowest=1],1)={'south'}+0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],0)=0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],1)=0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'north'}+0, AM([start & fuel=1 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=1 & cangoeast=1 & cangosouth=1 & cangowest=1],1)={'south'}+0, AM([start & fuel=3 & cangoeast=1 & cangosouth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=3 & cangoeast=1 & cangosouth=1 & cangowest=1],1)={'south'}+0, AM([start & fuel=1 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=1 & cangosouth=1 & cangowest=1],1)={'east'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'west'}+0, AM([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1],1)={'south'}+0, M([start & cangoeast=1 & cangosouth=1 & cangowest=1],0)=0, M([start & cangoeast=1 & cangosouth=1 & cangowest=1],1)=0, AM([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangowest=1],1)={'south'}+0, AM([start & fuel=2 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=2 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'east'}+0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangowest=1],1)={'south'}+0, M([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],0)=0, M([start & fuel=2 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],1)=0, M([start & cangoeast=1 & cangonorth=1 & cangowest=1],0)=0, M([start & cangoeast=1 & cangonorth=1 & cangowest=1],1)=0, M([!start & fuel=5 & cangoeast=1 & cangosouth=1],0)=0, M([!start & fuel=5 & cangoeast=1 & cangosouth=1],1)=0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1],0)={'south'}+0, AM([start & fuel=2 & cangoeast=1 & cangonorth=1],1)={'south'}+0, M([start & fuel=3 & amdone=1 & cangonorth=1 & cangowest=1],0)=0, M([start & fuel=3 & amdone=1 & cangonorth=1 & cangowest=1],1)=0, M([start & cangoeast=1 & cangosouth=1 & refuelAllowed=1],0)=0, M([start & cangoeast=1 & cangosouth=1 & refuelAllowed=1],1)=0, AM([start & fuel=5 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}+1, AM([start & fuel=5 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'south'}+1, M([start & cangosouth=1 & cangowest=1],0)=0, M([start & cangosouth=1 & cangowest=1],1)=0, M([start & fuel=2 & amdone=1 & cangonorth=1 & cangowest=1],0)=0, M([start & fuel=2 & amdone=1 & cangonorth=1 & cangowest=1],1)=0, M([start & fuel=1 & cangoeast=1 & cangosouth=1 & refuelAllowed=1],0)=0, M([start & fuel=1 & cangoeast=1 & cangosouth=1 & refuelAllowed=1],1)=0, M([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],0)=0, M([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & refuelAllowed=1],1)=0, M([start & fuel=3 & cangoeast=1 & cangosouth=1 & refuelAllowed=1],0)=0, M([start & fuel=3 & cangoeast=1 & cangosouth=1 & refuelAllowed=1],1)=0, M([start & amdone=1 & cangonorth=1 & cangowest=1],0)=0, M([start & amdone=1 & cangonorth=1 & cangowest=1],1)=0, AM([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangowest=1],0)={'south'}+0, AM([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangowest=1],1)={'south'}+0, M([start & cangoeast=1 & cangonorth=1],0)=0, M([start & cangoeast=1 & cangonorth=1],1)=0, AM([start & fuel=1 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=1 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'east'}+0, AM([start & fuel=2 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=2 & cangosouth=1 & cangowest=1],1)={'east'}+0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],0)=0, M([start & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],1)=0, M([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],0)=0, M([start & fuel=3 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],1)=0, AM([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1],0)={'south'}+0, AM([start & fuel=4 & cangoeast=1 & cangonorth=1 & cangosouth=1],1)={'south'}+0, AM([start & fuel=5 & cangoeast=1 & cangosouth=1],0)={'south'}+0, AM([start & fuel=5 & cangoeast=1 & cangosouth=1],1)={'south'}+0, AM([start & fuel=4 & cangonorth=1 & cangosouth=1 & cangowest=1],0)={'east'}+0, AM([start & fuel=4 & cangonorth=1 & cangosouth=1 & cangowest=1],1)={'east'}+0, M([start & fuel=2 & cangoeast=1 & cangosouth=1 & refuelAllowed=1],0)=0, M([start & fuel=2 & cangoeast=1 & cangosouth=1 & refuelAllowed=1],1)=0, M([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],0)=0, M([start & fuel=1 & cangoeast=1 & cangonorth=1 & cangosouth=1 & cangowest=1 & hascrash=1],1)=0, M([start & fuel=1 & amdone=1 & cangonorth=1 & cangowest=1],0)=0, M([start & fuel=1 & amdone=1 & cangonorth=1 & cangowest=1],1)=0
+2022-06-05 20:17:03,148 - synthesizer_pomdp.py - Synthesizing optimal k=3 controller ...
+2022-06-05 20:17:03,148 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3] ...
+2022-06-05 20:17:03,148 - quotient_pomdp.py - Constructed quotient MDP having 624 states and 5085 actions.
+2022-06-05 20:17:03,401 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1110, 0), opt = 0.672
+> Progress 0.0%, elapsed 6.0 s, iters = (2345, 0), opt = 0.672
+> Progress 0.0%, elapsed 9.0 s, iters = (3530, 0), opt = 0.672
+> Progress 0.0%, elapsed 12.0 s, iters = (4722, 0), opt = 0.672
+> Progress 0.0%, elapsed 15.0 s, iters = (5873, 0), opt = 0.672
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 17.12 s
+number of holes: 150, family size: 1038384601845295729961287063451254455495922898166209452803143095791937793720566160292331186892150793094299648, super quotient: 624 states / 5085 actions
+explored: 0 %
+AR stats: avg MDP size: 560, iterations: 6761
+
+optimal: 0.67219
+--------------------
+
+None
+2022-06-05 20:17:20,526 - synthesizer_pomdp.py - Synthesizing optimal k=4 controller ...
+2022-06-05 20:17:20,526 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4] ...
+2022-06-05 20:17:20,527 - quotient_pomdp.py - Constructed quotient MDP having 832 states and 9040 actions.
+2022-06-05 20:17:21,289 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (818, 0), opt = 0.672
+> Progress 0.0%, elapsed 6.0 s, iters = (1629, 0), opt = 0.672
+> Progress 0.0%, elapsed 9.0 s, iters = (2429, 0), opt = 0.672
+> Progress 0.0%, elapsed 12.0 s, iters = (3206, 0), opt = 0.672
+> Progress 0.0%, elapsed 15.0 s, iters = (3965, 0), opt = 0.672
+> Progress 0.0%, elapsed 18.0 s, iters = (4788, 0), opt = 0.672
+> Progress 0.0%, elapsed 21.0 s, iters = (5603, 0), opt = 0.672
+> Progress 0.0%, elapsed 24.0 s, iters = (6419, 0), opt = 0.672
+> Progress 0.0%, elapsed 27.0 s, iters = (7240, 0), opt = 0.672
+> Progress 0.0%, elapsed 30.0 s, iters = (8067, 0), opt = 0.672
+> Progress 0.0%, elapsed 33.0 s, iters = (8834, 0), opt = 0.672
+> Progress 0.0%, elapsed 36.0 s, iters = (9612, 0), opt = 0.672
+> Progress 0.0%, elapsed 39.0 s, iters = (10429, 0), opt = 0.672
+> Progress 0.0%, elapsed 42.0 s, iters = (11141, 0), opt = 0.672
+> Progress 0.0%, elapsed 45.0 s, iters = (11881, 0), opt = 0.672
+> Progress 0.0%, elapsed 48.0 s, iters = (12671, 0), opt = 0.672
+> Progress 0.0%, elapsed 51.0 s, iters = (13435, 0), opt = 0.672
+> Progress 0.0%, elapsed 54.0 s, iters = (14172, 0), opt = 0.672
+> Progress 0.0%, elapsed 57.0 s, iters = (14979, 0), opt = 0.672
+> Progress 0.0%, elapsed 60.0 s, iters = (15820, 0), opt = 0.672
+> Progress 0.0%, elapsed 63.0 s, iters = (16564, 0), opt = 0.672
+> Progress 0.0%, elapsed 66.0 s, iters = (17292, 0), opt = 0.672
+> Progress 0.0%, elapsed 69.0 s, iters = (18055, 0), opt = 0.672
+> Progress 0.0%, elapsed 72.0 s, iters = (18765, 0), opt = 0.672
+> Progress 0.0%, elapsed 75.0 s, iters = (19500, 0), opt = 0.672
+> Progress 0.0%, elapsed 78.0 s, iters = (20268, 0), opt = 0.672
+> Progress 0.0%, elapsed 81.0 s, iters = (21020, 0), opt = 0.672
+> Progress 0.0%, elapsed 84.0 s, iters = (21781, 0), opt = 0.672
+> Progress 0.0%, elapsed 87.0 s, iters = (22520, 0), opt = 0.672
+> Progress 0.0%, elapsed 90.0 s, iters = (23276, 0), opt = 0.672
+> Progress 0.0%, elapsed 93.0 s, iters = (24036, 0), opt = 0.672
+> Progress 0.0%, elapsed 96.0 s, iters = (24746, 0), opt = 0.672
+> Progress 0.0%, elapsed 99.0 s, iters = (25496, 0), opt = 0.672
+> Progress 0.0%, elapsed 102.0 s, iters = (26243, 0), opt = 0.672
+> Progress 0.0%, elapsed 105.0 s, iters = (26963, 0), opt = 0.672
+> Progress 0.0%, elapsed 108.0 s, iters = (27719, 0), opt = 0.672
+> Progress 0.0%, elapsed 111.0 s, iters = (28468, 0), opt = 0.672
+> Progress 0.0%, elapsed 114.0 s, iters = (29225, 0), opt = 0.672
+> Progress 0.0%, elapsed 117.0 s, iters = (29983, 0), opt = 0.672
+> Progress 0.0%, elapsed 120.0 s, iters = (30748, 0), opt = 0.672
+> Progress 0.0%, elapsed 123.0 s, iters = (31509, 0), opt = 0.672
+> Progress 0.0%, elapsed 126.0 s, iters = (32260, 0), opt = 0.672
+> Progress 0.0%, elapsed 129.0 s, iters = (33018, 0), opt = 0.672
+> Progress 0.0%, elapsed 132.0 s, iters = (33741, 0), opt = 0.672
+> Progress 0.0%, elapsed 135.0 s, iters = (34481, 0), opt = 0.672
+> Progress 0.0%, elapsed 138.0 s, iters = (35260, 0), opt = 0.672
+> Progress 0.0%, elapsed 141.0 s, iters = (36023, 0), opt = 0.672
+> Progress 0.0%, elapsed 144.0 s, iters = (36799, 0), opt = 0.672
+> Progress 0.0%, elapsed 147.0 s, iters = (37564, 0), opt = 0.672
+> Progress 0.0%, elapsed 150.0 s, iters = (38320, 0), opt = 0.672
+> Progress 0.0%, elapsed 153.0 s, iters = (39082, 0), opt = 0.672
+> Progress 0.0%, elapsed 156.0 s, iters = (39844, 0), opt = 0.672
+> Progress 0.0%, elapsed 159.0 s, iters = (40613, 0), opt = 0.672
+> Progress 0.0%, elapsed 162.0 s, iters = (41332, 0), opt = 0.672
+> Progress 0.0%, elapsed 165.0 s, iters = (42025, 0), opt = 0.672
+> Progress 0.0%, elapsed 168.0 s, iters = (42749, 0), opt = 0.672
+> Progress 0.0%, elapsed 171.0 s, iters = (43484, 0), opt = 0.672
+> Progress 0.0%, elapsed 174.0 s, iters = (44265, 0), opt = 0.672
+> Progress 0.0%, elapsed 177.0 s, iters = (45041, 0), opt = 0.672
+> Progress 0.0%, elapsed 180.0 s, iters = (45825, 0), opt = 0.672
+> Progress 0.0%, elapsed 183.0 s, iters = (46602, 0), opt = 0.672
+> Progress 0.0%, elapsed 186.0 s, iters = (47369, 0), opt = 0.672
+> Progress 0.0%, elapsed 189.0 s, iters = (48099, 0), opt = 0.672
+> Progress 0.0%, elapsed 192.0 s, iters = (48813, 0), opt = 0.672
+> Progress 0.0%, elapsed 195.0 s, iters = (49518, 0), opt = 0.672
+> Progress 0.0%, elapsed 198.0 s, iters = (50284, 0), opt = 0.672
+> Progress 0.0%, elapsed 201.0 s, iters = (51037, 0), opt = 0.672
+> Progress 0.0%, elapsed 204.0 s, iters = (51807, 0), opt = 0.672
+> Progress 0.0%, elapsed 207.0 s, iters = (52565, 0), opt = 0.672
+> Progress 0.0%, elapsed 210.0 s, iters = (53280, 0), opt = 0.672
+> Progress 0.0%, elapsed 213.0 s, iters = (54019, 0), opt = 0.672
+> Progress 0.0%, elapsed 216.0 s, iters = (54777, 0), opt = 0.672
+> Progress 0.0%, elapsed 219.0 s, iters = (55495, 0), opt = 0.672
+> Progress 0.0%, elapsed 222.0 s, iters = (56179, 0), opt = 0.672
+> Progress 0.0%, elapsed 225.0 s, iters = (56883, 0), opt = 0.672
+> Progress 0.0%, elapsed 228.0 s, iters = (57581, 0), opt = 0.672
+> Progress 0.0%, elapsed 231.0 s, iters = (58324, 0), opt = 0.672
+> Progress 0.0%, elapsed 234.0 s, iters = (59076, 0), opt = 0.672
+> Progress 0.0%, elapsed 237.0 s, iters = (59829, 0), opt = 0.672
+--------------------
+Synthesis summary
+
+optimality objective: Pmax=? ["notbad" U "goal"] 
+
+method: AR, synthesis time: 238.96 s
+number of holes: 200, family size: 10222527969590786778517394988072784750343997076485610940870927739455015487069544953664697718333448541752704613823995619446285711775511662431645182918864055661728163168256, super quotient: 832 states / 9040 actions
+explored: 0 %
+AR stats: avg MDP size: 736, iterations: 60333
+
+optimal: 0.67219
+--------------------
+
+None
+2022-06-05 20:21:20,262 - synthesizer_pomdp.py - Synthesizing optimal k=5 controller ...
+2022-06-05 20:21:20,262 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] ...
+2022-06-05 20:21:20,262 - quotient_pomdp.py - Constructed quotient MDP having 1040 states and 14125 actions.
+2022-06-05 20:21:22,494 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (544, 0), opt = 0.672
+> Progress 0.0%, elapsed 6.0 s, iters = (1077, 0), opt = 0.672
+> Progress 0.0%, elapsed 9.0 s, iters = (1579, 0), opt = 0.672
+> Progress 0.0%, elapsed 12.0 s, iters = (2050, 0), opt = 0.672
+> Progress 0.0%, elapsed 15.0 s, iters = (2554, 0), opt = 0.672
+> Progress 0.0%, elapsed 18.0 s, iters = (3074, 0), opt = 0.672
+> Progress 0.0%, elapsed 21.0 s, iters = (3573, 0), opt = 0.672
+> Progress 0.0%, elapsed 24.0 s, iters = (4094, 0), opt = 0.672
+> Progress 0.0%, elapsed 27.0 s, iters = (4619, 0), opt = 0.672
+> Progress 0.0%, elapsed 30.0 s, iters = (5134, 0), opt = 0.672
+> Progress 0.0%, elapsed 33.0 s, iters = (5641, 0), opt = 0.672
+> Progress 0.0%, elapsed 36.0 s, iters = (6159, 0), opt = 0.672
+> Progress 0.0%, elapsed 39.0 s, iters = (6663, 0), opt = 0.672
+> Progress 0.0%, elapsed 42.0 s, iters = (7147, 0), opt = 0.672
+> Progress 0.0%, elapsed 45.0 s, iters = (7690, 0), opt = 0.672
+> Progress 0.0%, elapsed 48.0 s, iters = (8193, 0), opt = 0.672
+> Progress 0.0%, elapsed 51.0 s, iters = (8687, 0), opt = 0.672
+> Progress 0.0%, elapsed 54.0 s, iters = (9177, 0), opt = 0.672
+> Progress 0.0%, elapsed 57.0 s, iters = (9645, 0), opt = 0.672
+> Progress 0.0%, elapsed 60.0 s, iters = (10132, 0), opt = 0.672
+> Progress 0.0%, elapsed 63.0 s, iters = (10637, 0), opt = 0.672
+> Progress 0.0%, elapsed 66.0 s, iters = (11148, 0), opt = 0.672
+> Progress 0.0%, elapsed 69.0 s, iters = (11634, 0), opt = 0.672
+> Progress 0.0%, elapsed 72.0 s, iters = (12116, 0), opt = 0.672
+> Progress 0.0%, elapsed 75.0 s, iters = (12589, 0), opt = 0.672
+> Progress 0.0%, elapsed 78.0 s, iters = (13106, 0), opt = 0.672
+> Progress 0.0%, elapsed 81.0 s, iters = (13615, 0), opt = 0.672
+> Progress 0.0%, elapsed 84.0 s, iters = (14118, 0), opt = 0.672
+> Progress 0.0%, elapsed 87.0 s, iters = (14612, 0), opt = 0.672
+> Progress 0.0%, elapsed 90.0 s, iters = (15129, 0), opt = 0.672
+> Progress 0.0%, elapsed 93.0 s, iters = (15649, 0), opt = 0.672
+> Progress 0.0%, elapsed 96.0 s, iters = (16161, 0), opt = 0.672
+> Progress 0.0%, elapsed 99.0 s, iters = (16738, 0), opt = 0.672
+> Progress 0.0%, elapsed 102.0 s, iters = (17211, 0), opt = 0.672
+> Progress 0.0%, elapsed 105.0 s, iters = (17682, 0), opt = 0.672
+> Progress 0.0%, elapsed 108.0 s, iters = (18207, 0), opt = 0.672
+> Progress 0.0%, elapsed 111.0 s, iters = (18717, 0), opt = 0.672
+> Progress 0.0%, elapsed 114.0 s, iters = (19223, 0), opt = 0.672
+> Progress 0.0%, elapsed 117.0 s, iters = (19744, 0), opt = 0.672
+> Progress 0.0%, elapsed 120.0 s, iters = (20285, 0), opt = 0.672
+> Progress 0.0%, elapsed 123.0 s, iters = (20819, 0), opt = 0.672
+> Progress 0.0%, elapsed 126.0 s, iters = (21343, 0), opt = 0.672
+> Progress 0.0%, elapsed 129.0 s, iters = (21868, 0), opt = 0.672
+> Progress 0.0%, elapsed 132.0 s, iters = (22384, 0), opt = 0.672
+> Progress 0.0%, elapsed 135.0 s, iters = (22887, 0), opt = 0.672
+> Progress 0.0%, elapsed 138.0 s, iters = (23394, 0), opt = 0.672
+> Progress 0.0%, elapsed 141.0 s, iters = (23928, 0), opt = 0.672
+> Progress 0.0%, elapsed 144.0 s, iters = (24445, 0), opt = 0.672
+> Progress 0.0%, elapsed 147.0 s, iters = (24944, 0), opt = 0.672
+> Progress 0.0%, elapsed 150.0 s, iters = (25459, 0), opt = 0.672
+> Progress 0.0%, elapsed 153.0 s, iters = (25968, 0), opt = 0.672
+> Progress 0.0%, elapsed 156.0 s, iters = (26460, 0), opt = 0.672
+> Progress 0.0%, elapsed 159.0 s, iters = (26994, 0), opt = 0.672
+> Progress 0.0%, elapsed 162.0 s, iters = (27486, 0), opt = 0.672
+> Progress 0.0%, elapsed 165.0 s, iters = (27993, 0), opt = 0.672
+> Progress 0.0%, elapsed 168.0 s, iters = (28526, 0), opt = 0.672
+> Progress 0.0%, elapsed 171.0 s, iters = (29065, 0), opt = 0.672
+> Progress 0.0%, elapsed 174.0 s, iters = (29614, 0), opt = 0.672
+> Progress 0.0%, elapsed 177.0 s, iters = (30153, 0), opt = 0.672
+> Progress 0.0%, elapsed 180.0 s, iters = (30678, 0), opt = 0.672
+> Progress 0.0%, elapsed 183.0 s, iters = (31149, 0), opt = 0.672
+> Progress 0.0%, elapsed 186.0 s, iters = (31664, 0), opt = 0.672
+> Progress 0.0%, elapsed 189.0 s, iters = (32195, 0), opt = 0.672
+> Progress 0.0%, elapsed 192.0 s, iters = (32689, 0), opt = 0.672
+> Progress 0.0%, elapsed 195.0 s, iters = (33185, 0), opt = 0.672
+> Progress 0.0%, elapsed 198.0 s, iters = (33705, 0), opt = 0.672
+> Progress 0.0%, elapsed 201.0 s, iters = (34226, 0), opt = 0.672
+> Progress 0.0%, elapsed 204.0 s, iters = (34751, 0), opt = 0.672
+> Progress 0.0%, elapsed 207.0 s, iters = (35284, 0), opt = 0.672
+> Progress 0.0%, elapsed 210.0 s, iters = (35804, 0), opt = 0.672
+> Progress 0.0%, elapsed 213.0 s, iters = (36388, 0), opt = 0.672
+> Progress 0.0%, elapsed 216.0 s, iters = (36897, 0), opt = 0.672
+> Progress 0.0%, elapsed 219.0 s, iters = (37379, 0), opt = 0.672
+> Progress 0.0%, elapsed 222.0 s, iters = (37855, 0), opt = 0.672
+> Progress 0.0%, elapsed 225.0 s, iters = (38345, 0), opt = 0.672
+> Progress 0.0%, elapsed 228.0 s, iters = (38867, 0), opt = 0.672
+> Progress 0.0%, elapsed 231.0 s, iters = (39391, 0), opt = 0.672
+> Progress 0.0%, elapsed 234.0 s, iters = (39927, 0), opt = 0.672
+> Progress 0.0%, elapsed 237.0 s, iters = (40432, 0), opt = 0.672
+> Progress 0.0%, elapsed 240.0 s, iters = (40936, 0), opt = 0.672
+> Progress 0.0%, elapsed 243.0 s, iters = (41436, 0), opt = 0.672
+> Progress 0.0%, elapsed 246.0 s, iters = (41936, 0), opt = 0.672
+> Progress 0.0%, elapsed 249.0 s, iters = (42439, 0), opt = 0.672
+> Progress 0.0%, elapsed 252.0 s, iters = (42918, 0), opt = 0.672
+> Progress 0.0%, elapsed 255.0 s, iters = (43422, 0), opt = 0.672
+> Progress 0.0%, elapsed 258.0 s, iters = (43936, 0), opt = 0.672
+> Progress 0.0%, elapsed 261.0 s, iters = (44438, 0), opt = 0.672
+> Progress 0.0%, elapsed 264.0 s, iters = (44946, 0), opt = 0.672
+> Progress 0.0%, elapsed 267.0 s, iters = (45474, 0), opt = 0.672
+> Progress 0.0%, elapsed 270.0 s, iters = (45974, 0), opt = 0.672
+> Progress 0.0%, elapsed 273.0 s, iters = (46480, 0), opt = 0.672
+> Progress 0.0%, elapsed 276.0 s, iters = (46986, 0), opt = 0.672
+> Progress 0.0%, elapsed 279.0 s, iters = (47491, 0), opt = 0.672
+> Progress 0.0%, elapsed 282.0 s, iters = (47953, 0), opt = 0.672
+> Progress 0.0%, elapsed 285.0 s, iters = (48443, 0), opt = 0.672
+> Progress 0.0%, elapsed 288.0 s, iters = (48974, 0), opt = 0.672
+> Progress 0.0%, elapsed 291.0 s, iters = (49497, 0), opt = 0.672
+> Progress 0.0%, elapsed 294.0 s, iters = (50009, 0), opt = 0.672
+> Progress 0.0%, elapsed 297.0 s, iters = (50532, 0), opt = 0.672
+> Progress 0.0%, elapsed 300.0 s, iters = (51065, 0), opt = 0.672
+> Progress 0.0%, elapsed 303.0 s, iters = (51572, 0), opt = 0.672
+> Progress 0.0%, elapsed 306.0 s, iters = (52093, 0), opt = 0.672
+> Progress 0.0%, elapsed 309.0 s, iters = (52603, 0), opt = 0.672
+> Progress 0.0%, elapsed 312.0 s, iters = (53084, 0), opt = 0.672
+> Progress 0.0%, elapsed 315.0 s, iters = (53573, 0), opt = 0.672
+> Progress 0.0%, elapsed 318.0 s, iters = (54070, 0), opt = 0.672
+> Progress 0.0%, elapsed 321.0 s, iters = (54577, 0), opt = 0.672
+> Progress 0.0%, elapsed 324.0 s, iters = (55099, 0), opt = 0.672
+> Progress 0.0%, elapsed 327.0 s, iters = (55592, 0), opt = 0.672
+> Progress 0.0%, elapsed 330.0 s, iters = (56101, 0), opt = 0.672
+> Progress 0.0%, elapsed 333.0 s, iters = (56603, 0), opt = 0.672
+> Progress 0.0%, elapsed 336.0 s, iters = (57103, 0), opt = 0.672
+> Progress 0.0%, elapsed 339.0 s, iters = (57593, 0), opt = 0.672
+> Progress 0.0%, elapsed 342.1 s, iters = (58065, 0), opt = 0.672
+> Progress 0.0%, elapsed 345.0 s, iters = (58564, 0), opt = 0.672
+> Progress 0.0%, elapsed 348.0 s, iters = (59076, 0), opt = 0.672
+> Progress 0.0%, elapsed 351.0 s, iters = (59569, 0), opt = 0.672
+> Progress 0.0%, elapsed 354.0 s, iters = (60068, 0), opt = 0.672
+> Progress 0.0%, elapsed 357.0 s, iters = (60559, 0), opt = 0.672
+> Progress 0.0%, elapsed 360.0 s, iters = (61067, 0), opt = 0.672
+> Progress 0.0%, elapsed 363.0 s, iters = (61567, 0), opt = 0.672
+> Progress 0.0%, elapsed 366.0 s, iters = (62059, 0), opt = 0.672
+> Progress 0.0%, elapsed 369.0 s, iters = (62575, 0), opt = 0.672
+> Progress 0.0%, elapsed 372.0 s, iters = (63091, 0), opt = 0.672
+> Progress 0.0%, elapsed 375.0 s, iters = (63617, 0), opt = 0.672
+> Progress 0.0%, elapsed 378.0 s, iters = (64155, 0), opt = 0.672
+> Progress 0.0%, elapsed 381.0 s, iters = (64680, 0), opt = 0.672
+> Progress 0.0%, elapsed 384.0 s, iters = (65218, 0), opt = 0.672
+> Progress 0.0%, elapsed 387.0 s, iters = (65743, 0), opt = 0.672
+> Progress 0.0%, elapsed 390.0 s, iters = (66276, 0), opt = 0.672
+> Progress 0.0%, elapsed 393.0 s, iters = (66804, 0), opt = 0.672
+> Progress 0.0%, elapsed 396.0 s, iters = (67339, 0), opt = 0.672
+> Progress 0.0%, elapsed 399.0 s, iters = (67830, 0), opt = 0.672
+> Progress 0.0%, elapsed 402.0 s, iters = (68317, 0), opt = 0.672
+> Progress 0.0%, elapsed 405.0 s, iters = (68812, 0), opt = 0.672
+> Progress 0.0%, elapsed 408.0 s, iters = (69340, 0), opt = 0.672
+> Progress 0.0%, elapsed 411.0 s, iters = (69865, 0), opt = 0.672
+> Progress 0.0%, elapsed 414.0 s, iters = (70367, 0), opt = 0.672
+> Progress 0.0%, elapsed 417.0 s, iters = (70879, 0), opt = 0.672
+> Progress 0.0%, elapsed 420.0 s, iters = (71383, 0), opt = 0.672
+> Progress 0.0%, elapsed 423.0 s, iters = (71884, 0), opt = 0.672
+> Progress 0.0%, elapsed 426.0 s, iters = (72424, 0), opt = 0.672
+> Progress 0.0%, elapsed 429.0 s, iters = (72952, 0), opt = 0.672
+> Progress 0.0%, elapsed 432.0 s, iters = (73424, 0), opt = 0.672
+> Progress 0.0%, elapsed 435.0 s, iters = (73930, 0), opt = 0.672
+> Progress 0.0%, elapsed 438.0 s, iters = (74450, 0), opt = 0.672
+> Progress 0.0%, elapsed 441.0 s, iters = (74963, 0), opt = 0.672
+> Progress 0.0%, elapsed 444.0 s, iters = (75502, 0), opt = 0.672
+> Progress 0.0%, elapsed 447.0 s, iters = (76027, 0), opt = 0.672
+> Progress 0.0%, elapsed 450.0 s, iters = (76537, 0), opt = 0.672
+> Progress 0.0%, elapsed 453.0 s, iters = (77055, 0), opt = 0.672
+> Progress 0.0%, elapsed 456.0 s, iters = (77581, 0), opt = 0.672
+> Progress 0.0%, elapsed 459.0 s, iters = (78103, 0), opt = 0.672
+> Progress 0.0%, elapsed 462.0 s, iters = (78560, 0), opt = 0.672
+> Progress 0.0%, elapsed 465.0 s, iters = (79045, 0), opt = 0.672
+> Progress 0.0%, elapsed 468.0 s, iters = (79558, 0), opt = 0.672
+> Progress 0.0%, elapsed 471.0 s, iters = (80071, 0), opt = 0.672
+> Progress 0.0%, elapsed 474.0 s, iters = (80636, 0), opt = 0.672
+> Progress 0.0%, elapsed 477.0 s, iters = (81188, 0), opt = 0.672
+> Progress 0.0%, elapsed 480.0 s, iters = (81697, 0), opt = 0.672
+> Progress 0.0%, elapsed 483.0 s, iters = (82213, 0), opt = 0.672
+> Progress 0.0%, elapsed 486.0 s, iters = (82714, 0), opt = 0.672
+> Progress 0.0%, elapsed 489.0 s, iters = (83227, 0), opt = 0.672
+> Progress 0.0%, elapsed 492.0 s, iters = (83702, 0), opt = 0.672
+> Progress 0.0%, elapsed 495.0 s, iters = (84206, 0), opt = 0.672
+> Progress 0.0%, elapsed 498.0 s, iters = (84735, 0), opt = 0.672
+> Progress 0.0%, elapsed 501.0 s, iters = (85245, 0), opt = 0.672
+> Progress 0.0%, elapsed 504.0 s, iters = (85773, 0), opt = 0.672
+> Progress 0.0%, elapsed 507.0 s, iters = (86309, 0), opt = 0.672
+> Progress 0.0%, elapsed 510.0 s, iters = (86816, 0), opt = 0.672
+> Progress 0.0%, elapsed 513.0 s, iters = (87338, 0), opt = 0.672
+> Progress 0.0%, elapsed 516.0 s, iters = (87854, 0), opt = 0.672
+> Progress 0.0%, elapsed 519.0 s, iters = (88365, 0), opt = 0.672
+> Progress 0.0%, elapsed 522.0 s, iters = (88855, 0), opt = 0.672
+> Progress 0.0%, elapsed 525.0 s, iters = (89367, 0), opt = 0.672
+> Progress 0.0%, elapsed 528.0 s, iters = (89892, 0), opt = 0.672
+> Progress 0.0%, elapsed 531.0 s, iters = (90406, 0), opt = 0.672
+> Progress 0.0%, elapsed 534.0 s, iters = (90928, 0), opt = 0.672
+> Progress 0.0%, elapsed 537.0 s, iters = (91454, 0), opt = 0.672
+> Progress 0.0%, elapsed 540.0 s, iters = (91969, 0), opt = 0.672
+> Progress 0.0%, elapsed 543.0 s, iters = (92476, 0), opt = 0.672
+> Progress 0.0%, elapsed 546.0 s, iters = (92966, 0), opt = 0.672
+> Progress 0.0%, elapsed 549.0 s, iters = (93493, 0), opt = 0.672
+> Progress 0.0%, elapsed 552.0 s, iters = (93983, 0), opt = 0.672
+> Progress 0.0%, elapsed 555.0 s, iters = (94479, 0), opt = 0.672
+> Progress 0.0%, elapsed 558.0 s, iters = (94986, 0), opt = 0.672
+> Progress 0.0%, elapsed 561.0 s, iters = (95495, 0), opt = 0.672
+> Progress 0.0%, elapsed 564.0 s, iters = (96015, 0), opt = 0.672
+> Progress 0.0%, elapsed 567.0 s, iters = (96529, 0), opt = 0.672
+> Progress 0.0%, elapsed 570.0 s, iters = (97041, 0), opt = 0.672
+> Progress 0.0%, elapsed 573.0 s, iters = (97550, 0), opt = 0.672
+> Progress 0.0%, elapsed 576.0 s, iters = (98060, 0), opt = 0.672
+> Progress 0.0%, elapsed 579.0 s, iters = (98573, 0), opt = 0.672
+> Progress 0.0%, elapsed 582.0 s, iters = (99051, 0), opt = 0.672
+> Progress 0.0%, elapsed 585.0 s, iters = (99556, 0), opt = 0.672
+> Progress 0.0%, elapsed 588.0 s, iters = (100101, 0), opt = 0.672
+> Progress 0.0%, elapsed 591.0 s, iters = (100607, 0), opt = 0.672
+> Progress 0.0%, elapsed 594.0 s, iters = (101115, 0), opt = 0.672
+> Progress 0.0%, elapsed 597.0 s, iters = (101621, 0), opt = 0.672
+> Progress 0.0%, elapsed 600.0 s, iters = (102119, 0), opt = 0.672
+> Progress 0.0%, elapsed 603.0 s, iters = (102636, 0), opt = 0.672
+> Progress 0.0%, elapsed 606.0 s, iters = (103143, 0), opt = 0.672
+> Progress 0.0%, elapsed 609.1 s, iters = (103650, 0), opt = 0.672
+> Progress 0.0%, elapsed 612.0 s, iters = (104123, 0), opt = 0.672
+> Progress 0.0%, elapsed 615.0 s, iters = (104614, 0), opt = 0.672
+> Progress 0.0%, elapsed 618.0 s, iters = (105136, 0), opt = 0.672
+> Progress 0.0%, elapsed 621.0 s, iters = (105651, 0), opt = 0.672
+> Progress 0.0%, elapsed 624.0 s, iters = (106167, 0), opt = 0.672
+> Progress 0.0%, elapsed 627.0 s, iters = (106663, 0), opt = 0.672
+> Progress 0.0%, elapsed 630.0 s, iters = (107164, 0), opt = 0.672
+> Progress 0.0%, elapsed 633.0 s, iters = (107685, 0), opt = 0.672
+> Progress 0.0%, elapsed 636.0 s, iters = (108213, 0), opt = 0.672
+> Progress 0.0%, elapsed 639.0 s, iters = (108731, 0), opt = 0.672
+> Progress 0.0%, elapsed 642.0 s, iters = (109236, 0), opt = 0.672
+> Progress 0.0%, elapsed 645.0 s, iters = (109713, 0), opt = 0.672
+> Progress 0.0%, elapsed 648.0 s, iters = (110220, 0), opt = 0.672
+> Progress 0.0%, elapsed 651.0 s, iters = (110721, 0), opt = 0.672
+> Progress 0.0%, elapsed 654.0 s, iters = (111243, 0), opt = 0.672
+> Progress 0.0%, elapsed 657.0 s, iters = (111753, 0), opt = 0.672
+> Progress 0.0%, elapsed 660.0 s, iters = (112264, 0), opt = 0.672
+> Progress 0.0%, elapsed 663.0 s, iters = (112788, 0), opt = 0.672
+> Progress 0.0%, elapsed 666.0 s, iters = (113302, 0), opt = 0.672
+> Progress 0.0%, elapsed 669.0 s, iters = (113813, 0), opt = 0.672
+> Progress 0.0%, elapsed 672.0 s, iters = (114285, 0), opt = 0.672
+> Progress 0.0%, elapsed 675.0 s, iters = (114783, 0), opt = 0.672
+> Progress 0.0%, elapsed 678.0 s, iters = (115299, 0), opt = 0.672
+> Progress 0.0%, elapsed 681.0 s, iters = (115805, 0), opt = 0.672
+> Progress 0.0%, elapsed 684.0 s, iters = (116328, 0), opt = 0.672
+> Progress 0.0%, elapsed 687.0 s, iters = (116851, 0), opt = 0.672
+> Progress 0.0%, elapsed 690.0 s, iters = (117358, 0), opt = 0.672
+> Progress 0.0%, elapsed 693.0 s, iters = (117881, 0), opt = 0.672
+> Progress 0.0%, elapsed 696.0 s, iters = (118390, 0), opt = 0.672
+> Progress 0.0%, elapsed 699.0 s, iters = (118886, 0), opt = 0.672
+> Progress 0.0%, elapsed 702.0 s, iters = (119357, 0), opt = 0.672
+> Progress 0.0%, elapsed 705.0 s, iters = (119851, 0), opt = 0.672
+> Progress 0.0%, elapsed 708.0 s, iters = (120365, 0), opt = 0.672
+> Progress 0.0%, elapsed 711.0 s, iters = (120849, 0), opt = 0.672
+> Progress 0.0%, elapsed 714.0 s, iters = (121334, 0), opt = 0.672
+> Progress 0.0%, elapsed 717.0 s, iters = (121837, 0), opt = 0.672
+> Progress 0.0%, elapsed 720.0 s, iters = (122353, 0), opt = 0.672
+> Progress 0.0%, elapsed 723.0 s, iters = (122874, 0), opt = 0.672
+> Progress 0.0%, elapsed 726.0 s, iters = (123392, 0), opt = 0.672
+> Progress 0.0%, elapsed 729.0 s, iters = (123913, 0), opt = 0.672
+> Progress 0.0%, elapsed 732.0 s, iters = (124431, 0), opt = 0.672
+> Progress 0.0%, elapsed 735.0 s, iters = (124935, 0), opt = 0.672
+> Progress 0.0%, elapsed 738.0 s, iters = (125438, 0), opt = 0.672
+> Progress 0.0%, elapsed 741.0 s, iters = (125961, 0), opt = 0.672
+> Progress 0.0%, elapsed 744.0 s, iters = (126503, 0), opt = 0.672
+> Progress 0.0%, elapsed 747.0 s, iters = (127003, 0), opt = 0.672
+> Progress 0.0%, elapsed 750.0 s, iters = (127496, 0), opt = 0.672
+> Progress 0.0%, elapsed 753.0 s, iters = (128078, 0), opt = 0.672
+> Progress 0.0%, elapsed 756.0 s, iters = (128633, 0), opt = 0.672
+> Progress 0.0%, elapsed 759.0 s, iters = (129146, 0), opt = 0.672
+> Progress 0.0%, elapsed 762.0 s, iters = (129658, 0), opt = 0.672
+> Progress 0.0%, elapsed 765.0 s, iters = (130159, 0), opt = 0.672
+> Progress 0.0%, elapsed 768.0 s, iters = (130685, 0), opt = 0.672
+> Progress 0.0%, elapsed 771.0 s, iters = (131224, 0), opt = 0.672
+> Progress 0.0%, elapsed 774.0 s, iters = (131760, 0), opt = 0.672
+> Progress 0.0%, elapsed 777.0 s, iters = (132267, 0), opt = 0.672
+> Progress 0.0%, elapsed 780.0 s, iters = (132764, 0), opt = 0.672
+> Progress 0.0%, elapsed 783.0 s, iters = (133289, 0), opt = 0.672
+> Progress 0.0%, elapsed 786.0 s, iters = (133821, 0), opt = 0.672
+> Progress 0.0%, elapsed 789.0 s, iters = (134310, 0), opt = 0.672
+> Progress 0.0%, elapsed 792.0 s, iters = (134791, 0), opt = 0.672
+> Progress 0.0%, elapsed 795.0 s, iters = (135279, 0), opt = 0.672
+> Progress 0.0%, elapsed 798.0 s, iters = (135778, 0), opt = 0.672
+> Progress 0.0%, elapsed 801.0 s, iters = (136287, 0), opt = 0.672
+> Progress 0.0%, elapsed 804.0 s, iters = (136799, 0), opt = 0.672
+> Progress 0.0%, elapsed 807.0 s, iters = (137312, 0), opt = 0.672
+> Progress 0.0%, elapsed 810.0 s, iters = (137814, 0), opt = 0.672
+> Progress 0.0%, elapsed 813.0 s, iters = (138325, 0), opt = 0.672
+> Progress 0.0%, elapsed 816.0 s, iters = (138845, 0), opt = 0.672
+> Progress 0.0%, elapsed 819.0 s, iters = (139350, 0), opt = 0.672
+> Progress 0.0%, elapsed 822.0 s, iters = (139817, 0), opt = 0.672
+> Progress 0.0%, elapsed 825.0 s, iters = (140304, 0), opt = 0.672
+> Progress 0.0%, elapsed 828.0 s, iters = (140815, 0), opt = 0.672
+> Progress 0.0%, elapsed 831.0 s, iters = (141324, 0), opt = 0.672
+> Progress 0.0%, elapsed 834.0 s, iters = (141846, 0), opt = 0.672
+> Progress 0.0%, elapsed 837.0 s, iters = (142363, 0), opt = 0.672
+> Progress 0.0%, elapsed 840.0 s, iters = (142889, 0), opt = 0.672
+> Progress 0.0%, elapsed 843.0 s, iters = (143393, 0), opt = 0.672
+> Progress 0.0%, elapsed 846.0 s, iters = (143910, 0), opt = 0.672
+> Progress 0.0%, elapsed 849.0 s, iters = (144423, 0), opt = 0.672
+> Progress 0.0%, elapsed 852.1 s, iters = (144914, 0), opt = 0.672
+> Progress 0.0%, elapsed 855.0 s, iters = (145396, 0), opt = 0.672
+> Progress 0.0%, elapsed 858.0 s, iters = (145908, 0), opt = 0.672
+> Progress 0.0%, elapsed 861.0 s, iters = (146442, 0), opt = 0.672
+> Progress 0.0%, elapsed 864.0 s, iters = (146948, 0), opt = 0.672
+> Progress 0.0%, elapsed 867.0 s, iters = (147443, 0), opt = 0.672
+> Progress 0.0%, elapsed 870.0 s, iters = (147950, 0), opt = 0.672
+> Progress 0.0%, elapsed 873.0 s, iters = (148477, 0), opt = 0.672
+> Progress 0.0%, elapsed 876.0 s, iters = (148988, 0), opt = 0.672
+> Progress 0.0%, elapsed 879.0 s, iters = (149504, 0), opt = 0.672
+> Progress 0.0%, elapsed 882.0 s, iters = (149990, 0), opt = 0.672
+> Progress 0.0%, elapsed 885.0 s, iters = (150484, 0), opt = 0.672
+> Progress 0.0%, elapsed 888.0 s, iters = (151002, 0), opt = 0.672
+> Progress 0.0%, elapsed 891.0 s, iters = (151530, 0), opt = 0.672
+> Progress 0.0%, elapsed 894.0 s, iters = (152057, 0), opt = 0.672
+> Progress 0.0%, elapsed 897.0 s, iters = (152575, 0), opt = 0.672
+> Progress 0.0%, elapsed 900.0 s, iters = (153098, 0), opt = 0.672
+> Progress 0.0%, elapsed 903.0 s, iters = (153641, 0), opt = 0.672
+> Progress 0.0%, elapsed 906.0 s, iters = (154168, 0), opt = 0.672
+> Progress 0.0%, elapsed 909.0 s, iters = (154685, 0), opt = 0.672
+> Progress 0.0%, elapsed 912.0 s, iters = (155167, 0), opt = 0.672
+> Progress 0.0%, elapsed 915.0 s, iters = (155672, 0), opt = 0.672
+> Progress 0.0%, elapsed 918.0 s, iters = (156199, 0), opt = 0.672
+> Progress 0.0%, elapsed 921.0 s, iters = (156735, 0), opt = 0.672
+> Progress 0.0%, elapsed 924.0 s, iters = (157267, 0), opt = 0.672
+> Progress 0.0%, elapsed 927.0 s, iters = (157793, 0), opt = 0.672
+> Progress 0.0%, elapsed 930.0 s, iters = (158328, 0), opt = 0.672
+> Progress 0.0%, elapsed 933.0 s, iters = (158819, 0), opt = 0.672
+> Progress 0.0%, elapsed 936.0 s, iters = (159330, 0), opt = 0.672
+> Progress 0.0%, elapsed 939.0 s, iters = (159854, 0), opt = 0.672
+> Progress 0.0%, elapsed 942.0 s, iters = (160351, 0), opt = 0.672
+> Progress 0.0%, elapsed 945.0 s, iters = (160863, 0), opt = 0.672
+> Progress 0.0%, elapsed 948.0 s, iters = (161384, 0), opt = 0.672
+> Progress 0.0%, elapsed 951.0 s, iters = (161914, 0), opt = 0.672
+> Progress 0.0%, elapsed 954.0 s, iters = (162434, 0), opt = 0.672
+> Progress 0.0%, elapsed 957.0 s, iters = (162961, 0), opt = 0.672
+> Progress 0.0%, elapsed 960.0 s, iters = (163497, 0), opt = 0.672
+> Progress 0.0%, elapsed 963.0 s, iters = (163999, 0), opt = 0.672
+> Progress 0.0%, elapsed 966.0 s, iters = (164501, 0), opt = 0.672
+> Progress 0.0%, elapsed 969.0 s, iters = (164997, 0), opt = 0.672
+> Progress 0.0%, elapsed 972.0 s, iters = (165489, 0), opt = 0.672
+> Progress 0.0%, elapsed 975.0 s, iters = (165993, 0), opt = 0.672
+> Progress 0.0%, elapsed 978.0 s, iters = (166498, 0), opt = 0.672
+> Progress 0.0%, elapsed 981.0 s, iters = (167024, 0), opt = 0.672
+> Progress 0.0%, elapsed 984.0 s, iters = (167526, 0), opt = 0.672
+> Progress 0.0%, elapsed 987.0 s, iters = (168021, 0), opt = 0.672
+> Progress 0.0%, elapsed 990.0 s, iters = (168523, 0), opt = 0.672
+> Progress 0.0%, elapsed 993.0 s, iters = (169033, 0), opt = 0.672
+> Progress 0.0%, elapsed 996.0 s, iters = (169624, 0), opt = 0.672
+> Progress 0.0%, elapsed 999.0 s, iters = (170131, 0), opt = 0.672
+> Progress 0.0%, elapsed 1002.0 s, iters = (170652, 0), opt = 0.672
+> Progress 0.0%, elapsed 1005.0 s, iters = (171187, 0), opt = 0.672
+> Progress 0.0%, elapsed 1008.0 s, iters = (171743, 0), opt = 0.672
+> Progress 0.0%, elapsed 1011.0 s, iters = (172293, 0), opt = 0.672
+> Progress 0.0%, elapsed 1014.0 s, iters = (172842, 0), opt = 0.672
+> Progress 0.0%, elapsed 1017.0 s, iters = (173395, 0), opt = 0.672
+> Progress 0.0%, elapsed 1020.0 s, iters = (173944, 0), opt = 0.672
+> Progress 0.0%, elapsed 1023.0 s, iters = (174496, 0), opt = 0.672
+> Progress 0.0%, elapsed 1026.0 s, iters = (175050, 0), opt = 0.672
+> Progress 0.0%, elapsed 1029.0 s, iters = (175586, 0), opt = 0.672
+> Progress 0.0%, elapsed 1032.0 s, iters = (176089, 0), opt = 0.672
+> Progress 0.0%, elapsed 1035.0 s, iters = (176609, 0), opt = 0.672
+> Progress 0.0%, elapsed 1038.0 s, iters = (177143, 0), opt = 0.672
+> Progress 0.0%, elapsed 1041.0 s, iters = (177668, 0), opt = 0.672
+> Progress 0.0%, elapsed 1044.0 s, iters = (178182, 0), opt = 0.672
+> Progress 0.0%, elapsed 1047.0 s, iters = (178716, 0), opt = 0.672
+> Progress 0.0%, elapsed 1050.0 s, iters = (179272, 0), opt = 0.672
+> Progress 0.0%, elapsed 1053.0 s, iters = (179830, 0), opt = 0.672
+> Progress 0.0%, elapsed 1056.0 s, iters = (180404, 0), opt = 0.672
+> Progress 0.0%, elapsed 1059.0 s, iters = (180953, 0), opt = 0.672
+> Progress 0.0%, elapsed 1062.0 s, iters = (181493, 0), opt = 0.672
+> Progress 0.0%, elapsed 1065.0 s, iters = (182050, 0), opt = 0.672
+> Progress 0.0%, elapsed 1068.0 s, iters = (182638, 0), opt = 0.672
+> Progress 0.0%, elapsed 1071.0 s, iters = (183178, 0), opt = 0.672
+> Progress 0.0%, elapsed 1074.0 s, iters = (183760, 0), opt = 0.672
+> Progress 0.0%, elapsed 1077.0 s, iters = (184327, 0), opt = 0.672
+> Progress 0.0%, elapsed 1080.0 s, iters = (184891, 0), opt = 0.672
+> Progress 0.0%, elapsed 1083.0 s, iters = (185462, 0), opt = 0.672
+> Progress 0.0%, elapsed 1086.0 s, iters = (185992, 0), opt = 0.672
+> Progress 0.0%, elapsed 1089.0 s, iters = (186556, 0), opt = 0.672
+> Progress 0.0%, elapsed 1092.0 s, iters = (187139, 0), opt = 0.672
+> Progress 0.0%, elapsed 1095.0 s, iters = (187650, 0), opt = 0.672
+> Progress 0.0%, elapsed 1098.0 s, iters = (188200, 0), opt = 0.672
+> Progress 0.0%, elapsed 1101.0 s, iters = (188755, 0), opt = 0.672
+> Progress 0.0%, elapsed 1104.0 s, iters = (189335, 0), opt = 0.672
+> Progress 0.0%, elapsed 1107.0 s, iters = (189894, 0), opt = 0.672
+> Progress 0.0%, elapsed 1110.0 s, iters = (190478, 0), opt = 0.672
+> Progress 0.0%, elapsed 1113.0 s, iters = (191031, 0), opt = 0.672
+> Progress 0.0%, elapsed 1116.0 s, iters = (191603, 0), opt = 0.672
+> Progress 0.0%, elapsed 1119.0 s, iters = (192163, 0), opt = 0.672
+> Progress 0.0%, elapsed 1122.0 s, iters = (192711, 0), opt = 0.672
+> Progress 0.0%, elapsed 1125.0 s, iters = (193242, 0), opt = 0.672
+> Progress 0.0%, elapsed 1128.0 s, iters = (193814, 0), opt = 0.672
+> Progress 0.0%, elapsed 1131.0 s, iters = (194375, 0), opt = 0.672
+> Progress 0.0%, elapsed 1134.0 s, iters = (194991, 0), opt = 0.672
+> Progress 0.0%, elapsed 1137.0 s, iters = (195567, 0), opt = 0.672
+> Progress 0.0%, elapsed 1140.0 s, iters = (196129, 0), opt = 0.672
+> Progress 0.0%, elapsed 1143.0 s, iters = (196700, 0), opt = 0.672
+> Progress 0.0%, elapsed 1146.0 s, iters = (197271, 0), opt = 0.672
+> Progress 0.0%, elapsed 1149.0 s, iters = (197835, 0), opt = 0.672
+> Progress 0.0%, elapsed 1152.0 s, iters = (198412, 0), opt = 0.672
+> Progress 0.0%, elapsed 1155.0 s, iters = (198992, 0), opt = 0.672
+> Progress 0.0%, elapsed 1158.0 s, iters = (199560, 0), opt = 0.672
+> Progress 0.0%, elapsed 1161.0 s, iters = (200144, 0), opt = 0.672
+> Progress 0.0%, elapsed 1164.0 s, iters = (200698, 0), opt = 0.672
+> Progress 0.0%, elapsed 1167.0 s, iters = (201270, 0), opt = 0.672
+> Progress 0.0%, elapsed 1170.0 s, iters = (201863, 0), opt = 0.672
+> Progress 0.0%, elapsed 1173.0 s, iters = (202430, 0), opt = 0.672
+> Progress 0.0%, elapsed 1176.0 s, iters = (203009, 0), opt = 0.672
+> Progress 0.0%, elapsed 1179.0 s, iters = (203569, 0), opt = 0.672
+> Progress 0.0%, elapsed 1182.0 s, iters = (204151, 0), opt = 0.672
+> Progress 0.0%, elapsed 1185.0 s, iters = (204720, 0), opt = 0.672
+> Progress 0.0%, elapsed 1188.0 s, iters = (205293, 0), opt = 0.672
+> Progress 0.0%, elapsed 1191.0 s, iters = (205864, 0), opt = 0.672
+> Progress 0.0%, elapsed 1194.0 s, iters = (206432, 0), opt = 0.672
+> Progress 0.0%, elapsed 1197.0 s, iters = (207002, 0), opt = 0.672
+> Progress 0.0%, elapsed 1200.0 s, iters = (207576, 0), opt = 0.672
+> Progress 0.0%, elapsed 1203.0 s, iters = (208162, 0), opt = 0.672
+> Progress 0.0%, elapsed 1206.0 s, iters = (208722, 0), opt = 0.672
+> Progress 0.0%, elapsed 1209.0 s, iters = (209298, 0), opt = 0.672
+> Progress 0.0%, elapsed 1212.0 s, iters = (209868, 0), opt = 0.672
+> Progress 0.0%, elapsed 1215.0 s, iters = (210442, 0), opt = 0.672
+> Progress 0.0%, elapsed 1218.0 s, iters = (210992, 0), opt = 0.672
+> Progress 0.0%, elapsed 1221.0 s, iters = (211562, 0), opt = 0.672
+> Progress 0.0%, elapsed 1224.0 s, iters = (212129, 0), opt = 0.672
+> Progress 0.0%, elapsed 1227.0 s, iters = (212707, 0), opt = 0.672
+> Progress 0.0%, elapsed 1230.0 s, iters = (213282, 0), opt = 0.672
+> Progress 0.0%, elapsed 1233.0 s, iters = (213853, 0), opt = 0.672
+> Progress 0.0%, elapsed 1236.0 s, iters = (214401, 0), opt = 0.672
+> Progress 0.0%, elapsed 1239.0 s, iters = (214967, 0), opt = 0.672
+> Progress 0.0%, elapsed 1242.0 s, iters = (215525, 0), opt = 0.672
+> Progress 0.0%, elapsed 1245.0 s, iters = (216042, 0), opt = 0.672
+> Progress 0.0%, elapsed 1248.1 s, iters = (216521, 0), opt = 0.672
+> Progress 0.0%, elapsed 1251.0 s, iters = (217015, 0), opt = 0.672
+> Progress 0.0%, elapsed 1254.0 s, iters = (217550, 0), opt = 0.672
+> Progress 0.0%, elapsed 1257.0 s, iters = (218056, 0), opt = 0.672
+> Progress 0.0%, elapsed 1260.0 s, iters = (218558, 0), opt = 0.672
+> Progress 0.0%, elapsed 1263.0 s, iters = (219085, 0), opt = 0.672
+> Progress 0.0%, elapsed 1266.0 s, iters = (219611, 0), opt = 0.672
+> Progress 0.0%, elapsed 1269.0 s, iters = (220122, 0), opt = 0.672
+> Progress 0.0%, elapsed 1272.0 s, iters = (220612, 0), opt = 0.672
+> Progress 0.0%, elapsed 1275.0 s, iters = (221103, 0), opt = 0.672
+> Progress 0.0%, elapsed 1278.0 s, iters = (221632, 0), opt = 0.672
+> Progress 0.0%, elapsed 1281.0 s, iters = (222139, 0), opt = 0.672
+> Progress 0.0%, elapsed 1284.0 s, iters = (222676, 0), opt = 0.672
+> Progress 0.0%, elapsed 1287.0 s, iters = (223214, 0), opt = 0.672
+> Progress 0.0%, elapsed 1290.0 s, iters = (223754, 0), opt = 0.672
+> Progress 0.0%, elapsed 1293.0 s, iters = (224284, 0), opt = 0.672
+> Progress 0.0%, elapsed 1296.0 s, iters = (224808, 0), opt = 0.672
+> Progress 0.0%, elapsed 1299.0 s, iters = (225333, 0), opt = 0.672
+> Progress 0.0%, elapsed 1302.0 s, iters = (225818, 0), opt = 0.672
+> Progress 0.0%, elapsed 1305.0 s, iters = (226328, 0), opt = 0.672
+> Progress 0.0%, elapsed 1308.0 s, iters = (226855, 0), opt = 0.672
+> Progress 0.0%, elapsed 1311.0 s, iters = (227380, 0), opt = 0.672
+> Progress 0.0%, elapsed 1314.0 s, iters = (227929, 0), opt = 0.672
+> Progress 0.0%, elapsed 1317.0 s, iters = (228448, 0), opt = 0.672
+> Progress 0.0%, elapsed 1320.0 s, iters = (228982, 0), opt = 0.672
+> Progress 0.0%, elapsed 1323.0 s, iters = (229526, 0), opt = 0.672
+> Progress 0.0%, elapsed 1326.0 s, iters = (230061, 0), opt = 0.672
+> Progress 0.0%, elapsed 1329.0 s, iters = (230590, 0), opt = 0.672
+> Progress 0.0%, elapsed 1332.0 s, iters = (231096, 0), opt = 0.672
+> Progress 0.0%, elapsed 1335.0 s, iters = (231613, 0), opt = 0.672
+> Progress 0.0%, elapsed 1338.0 s, iters = (232153, 0), opt = 0.672
+> Progress 0.0%, elapsed 1341.0 s, iters = (232680, 0), opt = 0.672
+> Progress 0.0%, elapsed 1344.0 s, iters = (233210, 0), opt = 0.672
+> Progress 0.0%, elapsed 1347.0 s, iters = (233752, 0), opt = 0.672
+> Progress 0.0%, elapsed 1350.0 s, iters = (234297, 0), opt = 0.672
+> Progress 0.0%, elapsed 1353.0 s, iters = (234854, 0), opt = 0.672
+> Progress 0.0%, elapsed 1356.0 s, iters = (235398, 0), opt = 0.672
+> Progress 0.0%, elapsed 1359.0 s, iters = (235945, 0), opt = 0.672
+> Progress 0.0%, elapsed 1362.0 s, iters = (236458, 0), opt = 0.672
+> Progress 0.0%, elapsed 1365.0 s, iters = (236962, 0), opt = 0.672
+> Progress 0.0%, elapsed 1368.0 s, iters = (237504, 0), opt = 0.672
+> Progress 0.0%, elapsed 1371.0 s, iters = (238004, 0), opt = 0.672
+> Progress 0.0%, elapsed 1374.0 s, iters = (238542, 0), opt = 0.672
+> Progress 0.0%, elapsed 1377.0 s, iters = (239082, 0), opt = 0.672
+> Progress 0.0%, elapsed 1380.1 s, iters = (239615, 0), opt = 0.672
+> Progress 0.0%, elapsed 1383.0 s, iters = (240144, 0), opt = 0.672
+> Progress 0.0%, elapsed 1386.0 s, iters = (240673, 0), opt = 0.672
+> Progress 0.0%, elapsed 1389.0 s, iters = (241200, 0), opt = 0.672
+> Progress 0.0%, elapsed 1392.0 s, iters = (241720, 0), opt = 0.672
+> Progress 0.0%, elapsed 1395.0 s, iters = (242228, 0), opt = 0.672
+> Progress 0.0%, elapsed 1398.0 s, iters = (242727, 0), opt = 0.672
+> Progress 0.0%, elapsed 1401.0 s, iters = (243240, 0), opt = 0.672
+> Progress 0.0%, elapsed 1404.0 s, iters = (243753, 0), opt = 0.672
+> Progress 0.0%, elapsed 1407.0 s, iters = (244267, 0), opt = 0.672
+> Progress 0.0%, elapsed 1410.0 s, iters = (244806, 0), opt = 0.672
+> Progress 0.0%, elapsed 1413.0 s, iters = (245351, 0), opt = 0.672
+> Progress 0.0%, elapsed 1416.0 s, iters = (245909, 0), opt = 0.672
+> Progress 0.0%, elapsed 1419.0 s, iters = (246435, 0), opt = 0.672
+> Progress 0.0%, elapsed 1422.0 s, iters = (246945, 0), opt = 0.672
+> Progress 0.0%, elapsed 1425.0 s, iters = (247484, 0), opt = 0.672
+> Progress 0.0%, elapsed 1428.0 s, iters = (248042, 0), opt = 0.672
+> Progress 0.0%, elapsed 1431.0 s, iters = (248607, 0), opt = 0.672
+> Progress 0.0%, elapsed 1434.0 s, iters = (249167, 0), opt = 0.672
+> Progress 0.0%, elapsed 1437.0 s, iters = (249728, 0), opt = 0.672
+> Progress 0.0%, elapsed 1440.0 s, iters = (250290, 0), opt = 0.672
+> Progress 0.0%, elapsed 1443.0 s, iters = (250849, 0), opt = 0.672
+> Progress 0.0%, elapsed 1446.0 s, iters = (251398, 0), opt = 0.672
+> Progress 0.0%, elapsed 1449.0 s, iters = (251951, 0), opt = 0.672
+> Progress 0.0%, elapsed 1452.0 s, iters = (252433, 0), opt = 0.672
+> Progress 0.0%, elapsed 1455.0 s, iters = (252935, 0), opt = 0.672
+> Progress 0.0%, elapsed 1458.0 s, iters = (253507, 0), opt = 0.672
+> Progress 0.0%, elapsed 1461.0 s, iters = (254065, 0), opt = 0.672
+> Progress 0.0%, elapsed 1464.0 s, iters = (254595, 0), opt = 0.672
+> Progress 0.0%, elapsed 1467.0 s, iters = (255125, 0), opt = 0.672
+> Progress 0.0%, elapsed 1470.0 s, iters = (255681, 0), opt = 0.672
+> Progress 0.0%, elapsed 1473.0 s, iters = (256231, 0), opt = 0.672
+> Progress 0.0%, elapsed 1476.0 s, iters = (256760, 0), opt = 0.672
+> Progress 0.0%, elapsed 1479.0 s, iters = (257265, 0), opt = 0.672
+> Progress 0.0%, elapsed 1482.0 s, iters = (257744, 0), opt = 0.672
+> Progress 0.0%, elapsed 1485.0 s, iters = (258253, 0), opt = 0.672
+> Progress 0.0%, elapsed 1488.0 s, iters = (258761, 0), opt = 0.672
+> Progress 0.0%, elapsed 1491.0 s, iters = (259277, 0), opt = 0.672
+> Progress 0.0%, elapsed 1494.0 s, iters = (259826, 0), opt = 0.672

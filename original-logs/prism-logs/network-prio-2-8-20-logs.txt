@@ -1,0 +1,77 @@
+PRISM
+=====
+
+Version: 4.7.dev
+Date: Thu May 26 07:10:05 CEST 2022
+Hostname: DESKTOP-12JT6ER
+Memory limits: cudd=1g, java(heap)=16g
+Command line: prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/network-prio-2-8-20/sketch.templ /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/network-prio-2-8-20/sketch.props --gridresolution 10 -javamaxmem 16g -maxiters 1000000
+
+Parsing model file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/network-prio-2-8-20/sketch.templ"...
+
+Type:        POMDP
+Modules:     scheduler packet1 packet2 priority1 priority2 channel1 channel2 
+Variables:   k t sched packet1 packet2 priority1 priority2 chan1 chan2 
+Observables: sched k t packet1 packet2 priority1 priority2
+
+Switching to explicit engine, which supports POMDPs...
+
+Parsing properties file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/network-prio-2-8-20/sketch.props"...
+
+1 property:
+(1) R{"priority"}max=? [ F sched=0&t=T-1&k=K-1 ]
+
+---------------------------------------------------------------------
+
+Model checking: R{"priority"}max=? [ F sched=0&t=T-1&k=K-1 ]
+
+Building model...
+
+Computing reachable states... 19373 states
+Reachable states exploration and model construction done in 0.302 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.328 seconds.
+
+Type:        POMDP
+States:      19373 (1 initial)
+Obs/unobs:   4909/4
+Transitions: 102420
+Choices:     34157
+Max/avg:     3/1.76
+Building reward structure...
+
+Starting expected reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+Starting Prob1 (max)...
+Prob1 (max) took 319 iterations and 0.518 seconds.
+target obs=16, inf obs=0
+Grid statistics: resolution=10, points=1361713
+Building belief space approximation...
+Solving belief space approximation...
+Belief space value iteration (max) took 319 iterations and 433.268 seconds.
+Outer bound: 557.1532263706438 (exact floating point)
+
+Building strategy-induced model...
+Strategy-induced model: 80048 states (1 initial), 157737 transitions, 80048 choices, dist max/avg = 1/1.00
+Starting expected reachability (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 319 iterations and 1.561 seconds.
+target=205, inf=0, rest=79843
+For Rmin, checking for zero-reward ECs...
+Time for checking for zero-reward ECs: 0.064 seconds, no zero-reward ECs found, proceeding normally.
+Starting value iteration (min, with Power method)...
+Value iteration (min, with Power method) took 319 iterations, 50252708 multiplications and 1.425 seconds.
+Expected reachability took 3.058 seconds.
+Inner bound: 556.7310225523514 (exact floating point)
+
+Fixed-resolution grid approximation (max) took 1099.021 seconds.
+Result bounds: [556.7310225523513,557.1532263706438]
+Expected reachability took 1099.021 seconds.
+
+Value in the initial state: 556.9421244614975
+
+Time for model checking: 1099.064 seconds.
+
+Result: 556.9421244614975 (+/- 0.21110190914617988; rel err 3.790374257474104E-4)
+

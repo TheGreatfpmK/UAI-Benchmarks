@@ -1,0 +1,56 @@
+#!/bin/bash
+
+storm=""
+paynt=""
+prism=""
+#logs="logs"
+
+
+function storm_log_dirs() {  
+    mkdir -p "logs/storm-logs/best"
+    mkdir -p "logs/storm-logs/first"
+    mkdir -p "logs/storm-logs/over-approximation"
+}
+
+function paynt_log_dirs() {
+    mkdir -p "logs/paynt-logs/best"
+    mkdir -p "logs/paynt-logs/fastest"
+}
+
+function prism_log_dirs() {
+    mkdir -p "logs/prism-logs"
+}
+
+while getopts s:p:i:l: flag
+do
+    case "${flag}" in
+        s) storm=${OPTARG};;
+        p) paynt=${OPTARG};;
+        i) prism=${OPTARG};;
+    esac
+done
+
+
+if [ "${storm}" != "" ]
+then
+    storm_log_dirs
+
+    python3 storm-benchmark.py "${storm}"
+fi
+
+if [ "${paynt}" != "" ]
+then
+    paynt_log_dirs
+
+    python3 paynt-benchmark.py "${paynt}"
+fi
+
+if [ "${prism}" != "" ]
+then
+    prism_log_dirs
+
+    python3 prism-benchmark.py "${prism}"
+fi
+
+
+

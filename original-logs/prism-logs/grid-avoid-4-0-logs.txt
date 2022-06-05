@@ -1,0 +1,74 @@
+PRISM
+=====
+
+Version: 4.7.dev
+Date: Thu May 26 05:09:59 CEST 2022
+Hostname: DESKTOP-12JT6ER
+Memory limits: cudd=1g, java(heap)=16g
+Command line: prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/grid-avoid-4-0/sketch.templ /mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/grid-avoid-4-0/sketch.props --gridresolution 3 -javamaxmem 16g -maxiters 1000000
+
+Parsing model file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/grid-avoid-4-0/sketch.templ"...
+
+Type:        POMDP
+Modules:     grid 
+Variables:   x y o 
+Observables: o
+
+Switching to explicit engine, which supports POMDPs...
+
+Parsing properties file "/mnt/d/src/PP/new_storm/artifact/benchmark/uai-prism/grid-avoid-4-0/sketch.props"...
+
+1 property:
+(1) Pmax=? [ !"bad" U "goal" ]
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !"bad" U "goal" ]
+
+Building model...
+
+Computing reachable states... 17 states
+Reachable states exploration and model construction done in 0.005 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.01 seconds.
+
+Type:        POMDP
+States:      17 (1 initial)
+Obs/unobs:   4/16
+Transitions: 72
+Choices:     59
+Max/avg:     4/3.47
+
+Starting probabilistic reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+target obs=1, remain obs=3
+Grid statistics: resolution=3, points=561
+Building belief space approximation...
+Solving belief space approximation...
+Belief space value iteration (max) took 9 iterations and 0.117 seconds.
+Outer bound: 0.9999999999999997 (exact floating point)
+
+Building strategy-induced model...
+Strategy-induced model: 7 states (1 initial), 12 transitions, 7 choices, dist max/avg = 1/1.00
+Starting probabilistic reachability (min)...
+Starting Prob0 (min)...
+Prob0 (min) took 3 iterations and 0.0 seconds.
+Starting Prob1 (min)...
+Prob1 (min) took 5 iterations and 0.002 seconds.
+target=1, yes=1, no=2, maybe=4
+Starting value iteration (min, with Power method)...
+Value iteration (min, with Power method) took 5 iterations, 45 multiplications and 0.001 seconds.
+Probabilistic reachability took 0.008 seconds.
+Inner bound: 0.21428571428571427 (exact floating point)
+
+Fixed-resolution grid approximation (max) took 0.158 seconds.
+Result bounds: [0.2142857142857143,0.9999999999999997]
+Probabilistic reachability took 0.159 seconds.
+
+Value in the initial state: 0.607142857142857
+
+Time for model checking: 0.161 seconds.
+
+Result: 0.607142857142857 (+/- 0.3928571428571427; rel err 0.6470588235294117)
+

@@ -1,0 +1,1832 @@
+2022-06-05 16:46:17,107 - cli.py - This is Paynt version 0.1.0.
+2022-06-05 16:46:17,112 - sketch.py - Loading sketch from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/hallway/sketch.templ...
+2022-06-05 16:46:17,119 - prism_parser.py - Loading properties from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai/hallway/sketch.props ...
+2022-06-05 16:46:17,124 - sketch.py - Found the following specification: constraints: none, optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+2022-06-05 16:46:17,125 - sketch.py - Initializing the quotient ...
+2022-06-05 16:46:17,125 - quotient_pomdp.py - Constructed POMDP having 23 observations.
+2022-06-05 16:46:17,125 - quotient_pomdp.py - Observation labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+2022-06-05 16:46:17,125 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,125 - quotient_pomdp.py - Constructed quotient MDP having 61 states and 301 actions.
+2022-06-05 16:46:17,126 - sketch.py - Sketch parsing complete.
+2022-06-05 16:46:17,126 - sketch.py - Sketch has 14 holes
+2022-06-05 16:46:17,126 - sketch.py - Design space size: 6103515625
+2022-06-05 16:46:17,126 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,127 - quotient_pomdp.py - Constructed quotient MDP having 61 states and 301 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,128 - quotient_pomdp.py - Symmetry breaking: reduced design space from 6103515625 to 6103515625
+2022-06-05 16:46:17,129 - synthesizer.py - Synthesis initiated.
+2022-06-05 16:46:17,133 - property.py - New opt = 971.1655775692717.
+2022-06-05 16:46:17,136 - property.py - New opt = 402.8845337593776.
+2022-06-05 16:46:17,143 - property.py - New opt = 142.12958388656443.
+2022-06-05 16:46:17,147 - property.py - New opt = 109.62589133124706.
+2022-06-05 16:46:17,150 - property.py - New opt = 18.51412882346231.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 14, family size: 6103515625, super quotient: 61 states / 301 actions
+explored: 0 %
+AR stats: avg MDP size: 59, iterations: 29
+
+optimal: 18.514129
+--------------------
+
+A(1,0)={'1'}, A(4,0)={'4'}, A(5,0)={'1'}, A(7,0)={'1'}, A(8,0)={'3'}, A(10,0)={'4'}, A(11,0)={'2'}, A(13,0)={'3'}, A(14,0)={'4'}, A(16,0)={'4'}, A(17,0)={'4'}, A(18,0)={'4'}, A(19,0)={'1'}, A(20,0)={'0'}
+
+hole scores:  {0: 1.0262986688627338, 1: 0.10602931198489227, 2: 0.30888511792217904, 4: 0.1190490273432322, 5: 0.010674578400851408}
+selected hole:  0
+hole has options:  [1, 2]
+2022-06-05 16:46:17,153 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 18.514, injections: 0.
+2022-06-05 16:46:17,153 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,153 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,153 - quotient_pomdp.py - Constructed quotient MDP having 65 states and 522 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,157 - quotient_pomdp.py - Symmetry breaking: reduced design space from 62500000000000 to 40000000000000
+2022-06-05 16:46:17,158 - synthesizer.py - Synthesis initiated.
+2022-06-05 16:46:17,165 - property.py - New opt = 16.834863999589164.
+2022-06-05 16:46:17,167 - property.py - New opt = 16.310234860371395.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.01 s
+number of holes: 16, family size: 62500000000000, super quotient: 65 states / 522 actions
+explored: 0 %
+AR stats: avg MDP size: 63, iterations: 20
+
+optimal: 16.310235
+--------------------
+
+AM(1,0)={'1'}+0, AM(1,1)={'2'}+1, AM(4,0)={'4'}+1, AM(5,0)={'1'}+1, A(7,0)={'1'}, AM(8,0)={'2'}+0, AM(10,0)={'2'}+0, A(11,0)={'2'}, A(13,0)={'3'}, A(14,0)={'4'}, AM(16,0)={'4'}+0, AM(17,0)={'4'}+0, AM(18,0)={'4'}+0, AM(19,0)={'1'}+0, A(20,0)={'0'}, M(22,0)=0
+
+hole scores:  {0: 0.10958898374819666, 1: 0.5212480388689854, 2: 0.17292037779138575, 3: 0.23884202916853053, 5: 0.061500256746719405, 6: 0.010674522494263778}
+selected hole:  1
+hole has options:  [0, 5]
+2022-06-05 16:46:17,170 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 16.31, injections: 1.
+2022-06-05 16:46:17,170 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,170 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,170 - quotient_pomdp.py - Constructed quotient MDP having 69 states and 783 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,177 - quotient_pomdp.py - Symmetry breaking: reduced design space from 81091461181640625 to 17515755615234375
+2022-06-05 16:46:17,179 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 17, family size: 81091461181640625, super quotient: 69 states / 783 actions
+explored: 0 %
+AR stats: avg MDP size: 66, iterations: 27
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.3364035026414929, 2: 0.04407117031974372, 3: 0.17683044903650746, 4: 0.7350582587802528, 6: 0.19184148845981303, 7: 0.03328861503216066}
+selected hole:  1
+hole has options:  [11, 4]
+2022-06-05 16:46:17,196 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 16.31, injections: 2.
+2022-06-05 16:46:17,196 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,196 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,196 - quotient_pomdp.py - Constructed quotient MDP having 73 states and 1084 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,208 - quotient_pomdp.py - Symmetry breaking: reduced design space from 51200000000000000000 to 1310720000000000000
+2022-06-05 16:46:17,209 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 18, family size: 51200000000000000000, super quotient: 73 states / 1084 actions
+explored: 0 %
+AR stats: avg MDP size: 70, iterations: 27
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.299216984253014, 2: 0.051864661919899746, 4: 0.18322811257889188, 5: 0.7351330864984924, 7: 0.2001769160765956, 8: 0.033288615086144155}
+selected hole:  1
+hole has options:  [18, 5]
+2022-06-05 16:46:17,230 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 16.31, injections: 3.
+2022-06-05 16:46:17,230 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,230 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,230 - quotient_pomdp.py - Constructed quotient MDP having 77 states and 1425 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,251 - quotient_pomdp.py - Symmetry breaking: reduced design space from 23283064365386962890625 to 7450580596923828125
+2022-06-05 16:46:17,253 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 19, family size: 23283064365386962890625, super quotient: 77 states / 1425 actions
+explored: 0 %
+AR stats: avg MDP size: 74, iterations: 33
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 0.11859745447657502, 2: 0.17288167174433255, 5: 0.33206800913088874, 6: 0.7667574446609937, 8: 0.2698639563759787, 9: 0.033896776263931803}
+selected hole:  6
+hole has options:  [7, 5, 6, 15]
+2022-06-05 16:46:17,277 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 16.31, injections: 4.
+2022-06-05 16:46:17,277 - synthesizer_pomdp.py - Injecting memory into observation 5 ...
+2022-06-05 16:46:17,277 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 5, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,277 - quotient_pomdp.py - Constructed quotient MDP having 87 states and 1775 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,309 - quotient_pomdp.py - Symmetry breaking: reduced design space from 9313225746154785156250000 to 1907348632812500000000
+2022-06-05 16:46:17,311 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.05 s
+number of holes: 20, family size: 9313225746154785156250000, super quotient: 87 states / 1775 actions
+explored: 0 %
+AR stats: avg MDP size: 84, iterations: 52
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {0: 0.1653016259033966, 2: 0.2019249740127029, 5: 0.35233746469619487, 6: 0.7983315686497136, 7: 0.1310772185904414, 9: 0.2859491394602785, 10: 0.07412103787373706}
+selected hole:  6
+hole has options:  [5, 6, 7, 10, 20]
+2022-06-05 16:46:17,361 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.2 s, opt = 16.31, injections: 5.
+2022-06-05 16:46:17,361 - synthesizer_pomdp.py - Injecting memory into observation 5 ...
+2022-06-05 16:46:17,361 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 5, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,361 - quotient_pomdp.py - Constructed quotient MDP having 97 states and 2125 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,407 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1178705133497714996337890625 to 36209821701049804687500
+2022-06-05 16:46:17,409 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.03 s
+number of holes: 21, family size: 1178705133497714996337890625, super quotient: 97 states / 2125 actions
+explored: 0 %
+AR stats: avg MDP size: 95, iterations: 29
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {0: 0.16362950404330967, 2: 0.18249514667006916, 5: 0.33022928980079597, 6: 0.7505666974649197, 8: 0.17858811819012912, 10: 0.2742286607309332, 11: 0.07412458991068271}
+selected hole:  6
+hole has options:  [20, 5, 6, 7]
+2022-06-05 16:46:17,439 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.3 s, opt = 16.31, injections: 6.
+2022-06-05 16:46:17,439 - synthesizer_pomdp.py - Injecting memory into observation 5 ...
+2022-06-05 16:46:17,439 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 5, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,440 - quotient_pomdp.py - Constructed quotient MDP having 107 states and 2475 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,501 - quotient_pomdp.py - Symmetry breaking: reduced design space from 93132257461547851562500000000 to 762939453125000000000000
+2022-06-05 16:46:17,503 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.03 s
+number of holes: 22, family size: 93132257461547851562500000000, super quotient: 107 states / 2475 actions
+explored: 0 %
+AR stats: avg MDP size: 105, iterations: 29
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {0: 0.16375625032314742, 2: 0.1839750173550428, 5: 0.3319127607126424, 6: 0.6599283150942344, 8: 0.16742759654834613, 11: 0.2751203469050201, 12: 0.05750020234053542}
+selected hole:  6
+hole has options:  [2, 5, 6, 7]
+2022-06-05 16:46:17,537 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.4 s, opt = 16.31, injections: 7.
+2022-06-05 16:46:17,538 - synthesizer_pomdp.py - Injecting memory into observation 5 ...
+2022-06-05 16:46:17,538 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 5, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,538 - quotient_pomdp.py - Constructed quotient MDP having 117 states and 2825 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,623 - quotient_pomdp.py - Symmetry breaking: reduced design space from 5684341886080801486968994140625 to 582076609134674072265625
+2022-06-05 16:46:17,625 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 23, family size: 5684341886080801486968994140625, super quotient: 117 states / 2825 actions
+explored: 0 %
+AR stats: avg MDP size: 115, iterations: 14
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4406941688289863, 2: 0.19217228543901996, 5: 0.39450165552397637, 7: 0.6366431288367114, 9: 0.04569711263083725, 11: 0.04409676538052844, 12: 0.2934106202602067, 13: 0.10184283724349814}
+selected hole:  1
+hole has options:  [8, 6]
+2022-06-05 16:46:17,642 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.5 s, opt = 16.31, injections: 8.
+2022-06-05 16:46:17,642 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,642 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 6, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,642 - quotient_pomdp.py - Constructed quotient MDP having 121 states and 3406 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,757 - quotient_pomdp.py - Symmetry breaking: reduced design space from 4540083855468750000000000000000000 to 92980917360000000000000000
+2022-06-05 16:46:17,759 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 24, family size: 4540083855468750000000000000000000, super quotient: 121 states / 3406 actions
+explored: 0 %
+AR stats: avg MDP size: 119, iterations: 14
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4406941667181263, 2: 0.19217228537990635, 6: 0.3945016552317759, 8: 0.6366431281188952, 10: 0.04569711259548309, 12: 0.04409676538052844, 13: 0.2934106198564944, 14: 0.10184283701505308}
+selected hole:  1
+hole has options:  [9, 7]
+2022-06-05 16:46:17,778 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.7 s, opt = 16.31, injections: 9.
+2022-06-05 16:46:17,778 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,778 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 7, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,778 - quotient_pomdp.py - Constructed quotient MDP having 125 states and 4027 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:17,942 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2972493555307835377752780914306640625 to 12175333602540893707275390625
+2022-06-05 16:46:17,944 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.04 s
+number of holes: 25, family size: 2972493555307835377752780914306640625, super quotient: 125 states / 4027 actions
+explored: 0 %
+AR stats: avg MDP size: 123, iterations: 26
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4406939203689164, 2: 0.19217228202834125, 7: 0.39450162307805825, 9: 0.6366430439864439, 11: 0.045697109351728826, 13: 0.044096765380528466, 14: 0.29341057023877926, 15: 0.10184280712144336}
+selected hole:  1
+hole has options:  [8, 10]
+2022-06-05 16:46:17,983 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.9 s, opt = 16.31, injections: 10.
+2022-06-05 16:46:17,984 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:17,984 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 8, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:17,984 - quotient_pomdp.py - Constructed quotient MDP having 129 states and 4688 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:18,220 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1717986918400000000000000000000000000000 to 1407374883553280000000000000000
+2022-06-05 16:46:18,223 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.07 s
+number of holes: 26, family size: 1717986918400000000000000000000000000000, super quotient: 129 states / 4688 actions
+explored: 0 %
+AR stats: avg MDP size: 126, iterations: 44
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 8: 0.38513912797235994, 10: 0.6623149824630018, 12: 0.04438374911932846, 14: 0.044096632841388136, 15: 0.2906193845511774, 16: 0.06469271108551121}
+selected hole:  1
+hole has options:  [9, 11]
+2022-06-05 16:46:18,293 - synthesizer_pomdp.py - FSC synthesis: elapsed 1.2 s, opt = 16.31, injections: 11.
+2022-06-05 16:46:18,293 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:18,293 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 9, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:18,293 - quotient_pomdp.py - Constructed quotient MDP having 133 states and 5389 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:18,594 - quotient_pomdp.py - Symmetry breaking: reduced design space from 917139372028048367128707468509674072265625 to 150264114713075444470367431640625
+2022-06-05 16:46:18,596 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.07 s
+number of holes: 27, family size: 917139372028048367128707468509674072265625, super quotient: 133 states / 5389 actions
+explored: 0 %
+AR stats: avg MDP size: 130, iterations: 44
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 9: 0.38513912797235994, 11: 0.6623149824630018, 13: 0.04438374911932846, 15: 0.044096632841388136, 16: 0.2906193845511774, 17: 0.06469271108551121}
+selected hole:  1
+hole has options:  [10, 12]
+2022-06-05 16:46:18,668 - synthesizer_pomdp.py - FSC synthesis: elapsed 1.5 s, opt = 16.31, injections: 12.
+2022-06-05 16:46:18,668 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:18,668 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 10, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:18,668 - quotient_pomdp.py - Constructed quotient MDP having 137 states and 6130 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:19,060 - quotient_pomdp.py - Symmetry breaking: reduced design space from 465661287307739257812500000000000000000000000 to 15258789062500000000000000000000000
+2022-06-05 16:46:19,063 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.08 s
+number of holes: 28, family size: 465661287307739257812500000000000000000000000, super quotient: 137 states / 6130 actions
+explored: 0 %
+AR stats: avg MDP size: 134, iterations: 44
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 10: 0.38513912797235994, 12: 0.6623149824630018, 14: 0.04438374911932846, 16: 0.044096632841388136, 17: 0.2906193845511774, 18: 0.06469271108551121}
+selected hole:  1
+hole has options:  [11, 13]
+2022-06-05 16:46:19,140 - synthesizer_pomdp.py - FSC synthesis: elapsed 2.0 s, opt = 16.31, injections: 13.
+2022-06-05 16:46:19,140 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:19,140 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 11, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:19,140 - quotient_pomdp.py - Constructed quotient MDP having 141 states and 6911 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:19,610 - quotient_pomdp.py - Symmetry breaking: reduced design space from 229331959872683768503177934326231479644775390625 to 1502949932221620345262426910400390625
+2022-06-05 16:46:19,613 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.09 s
+number of holes: 29, family size: 229331959872683768503177934326231479644775390625, super quotient: 141 states / 6911 actions
+explored: 0 %
+AR stats: avg MDP size: 138, iterations: 44
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 11: 0.38513912797235994, 13: 0.6623149824630018, 15: 0.04438374911932846, 17: 0.044096632841388136, 18: 0.2906193845511774, 19: 0.06469271108551121}
+selected hole:  1
+hole has options:  [12, 14]
+2022-06-05 16:46:19,703 - synthesizer_pomdp.py - FSC synthesis: elapsed 2.6 s, opt = 16.31, injections: 14.
+2022-06-05 16:46:19,703 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:19,703 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 12, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:19,704 - quotient_pomdp.py - Constructed quotient MDP having 145 states and 7732 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:20,303 - quotient_pomdp.py - Symmetry breaking: reduced design space from 111055812616912896000000000000000000000000000000000 to 145563074713240071045120000000000000000
+2022-06-05 16:46:20,306 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.13 s
+number of holes: 30, family size: 111055812616912896000000000000000000000000000000000, super quotient: 145 states / 7732 actions
+explored: 0 %
+AR stats: avg MDP size: 143, iterations: 58
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 12: 0.38513912797235994, 14: 0.6623149824630018, 16: 0.04438374911932846, 18: 0.044096632841388136, 19: 0.2906193845511774, 20: 0.06469271108551121}
+selected hole:  1
+hole has options:  [13, 15]
+2022-06-05 16:46:20,433 - synthesizer_pomdp.py - FSC synthesis: elapsed 3.3 s, opt = 16.31, injections: 15.
+2022-06-05 16:46:20,433 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:20,433 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 13, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:20,433 - quotient_pomdp.py - Constructed quotient MDP having 149 states and 8593 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:21,167 - quotient_pomdp.py - Symmetry breaking: reduced design space from 53395825783529212150256857281201519072055816650390625 to 13997395354197481789916933595123291015625
+2022-06-05 16:46:21,170 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.13 s
+number of holes: 31, family size: 53395825783529212150256857281201519072055816650390625, super quotient: 149 states / 8593 actions
+explored: 0 %
+AR stats: avg MDP size: 147, iterations: 58
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 13: 0.38513912797235994, 15: 0.6623149824630018, 17: 0.04438374911932846, 19: 0.044096632841388136, 20: 0.2906193845511774, 21: 0.06469271108551121}
+selected hole:  1
+hole has options:  [16, 14]
+2022-06-05 16:46:21,305 - synthesizer_pomdp.py - FSC synthesis: elapsed 4.2 s, opt = 16.31, injections: 16.
+2022-06-05 16:46:21,305 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:21,305 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 14, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:21,306 - quotient_pomdp.py - Constructed quotient MDP having 153 states and 9494 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:22,234 - quotient_pomdp.py - Symmetry breaking: reduced design space from 25668891548255578179508984375000000000000000000000000000 to 1345789181205182057257840640000000000000000
+2022-06-05 16:46:22,238 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.14 s
+number of holes: 32, family size: 25668891548255578179508984375000000000000000000000000000, super quotient: 153 states / 9494 actions
+explored: 0 %
+AR stats: avg MDP size: 151, iterations: 58
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 14: 0.38513912797235994, 16: 0.6623149824630018, 18: 0.04438374911932846, 20: 0.044096632841388136, 21: 0.2906193845511774, 22: 0.06469271108551121}
+selected hole:  1
+hole has options:  [17, 15]
+2022-06-05 16:46:22,374 - synthesizer_pomdp.py - FSC synthesis: elapsed 5.2 s, opt = 16.31, injections: 17.
+2022-06-05 16:46:22,374 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:22,375 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 15, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:22,376 - quotient_pomdp.py - Constructed quotient MDP having 157 states and 10435 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:23,464 - quotient_pomdp.py - Symmetry breaking: reduced design space from 12401534039584356274021903487891904660500586032867431640625 to 130039509570912059643887914717197418212890625
+2022-06-05 16:46:23,468 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.15 s
+number of holes: 33, family size: 12401534039584356274021903487891904660500586032867431640625, super quotient: 157 states / 10435 actions
+explored: 0 %
+AR stats: avg MDP size: 155, iterations: 58
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 15: 0.38513912797235994, 17: 0.6623149824630018, 19: 0.04438374911932846, 21: 0.044096632841388136, 22: 0.2906193845511774, 23: 0.06469271108551121}
+selected hole:  1
+hole has options:  [16, 18]
+2022-06-05 16:46:23,616 - synthesizer_pomdp.py - FSC synthesis: elapsed 6.5 s, opt = 16.31, injections: 18.
+2022-06-05 16:46:23,616 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:23,616 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 16, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:23,617 - quotient_pomdp.py - Constructed quotient MDP having 161 states and 11416 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:24,922 - quotient_pomdp.py - Symmetry breaking: reduced design space from 6044629098073145873530880000000000000000000000000000000000000 to 12676506002282294014967032053760000000000000000
+2022-06-05 16:46:24,925 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.16 s
+number of holes: 34, family size: 6044629098073145873530880000000000000000000000000000000000000, super quotient: 161 states / 11416 actions
+explored: 0 %
+AR stats: avg MDP size: 159, iterations: 58
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 16: 0.38513912797235994, 18: 0.6623149824630018, 20: 0.04438374911932846, 22: 0.044096632841388136, 23: 0.2906193845511774, 24: 0.06469271108551121}
+selected hole:  1
+hole has options:  [17, 19]
+2022-06-05 16:46:25,085 - synthesizer_pomdp.py - FSC synthesis: elapsed 8.0 s, opt = 16.31, injections: 19.
+2022-06-05 16:46:25,085 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:25,085 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 17, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:25,086 - quotient_pomdp.py - Constructed quotient MDP having 165 states and 12437 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:26,633 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2980765466714643682845781233042441762881935574114322662353515625 to 1250223652010309685753479160887484565582275390625
+2022-06-05 16:46:26,637 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.2 s
+number of holes: 35, family size: 2980765466714643682845781233042441762881935574114322662353515625, super quotient: 165 states / 12437 actions
+explored: 0 %
+AR stats: avg MDP size: 163, iterations: 72
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 17: 0.38513912797235994, 19: 0.6623149824630018, 21: 0.04438374911932846, 23: 0.044096632841388136, 24: 0.2906193845511774, 25: 0.06469271108551121}
+selected hole:  1
+hole has options:  [18, 20]
+2022-06-05 16:46:26,837 - synthesizer_pomdp.py - FSC synthesis: elapsed 9.7 s, opt = 16.31, injections: 20.
+2022-06-05 16:46:26,837 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:26,837 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 18, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:26,838 - quotient_pomdp.py - Constructed quotient MDP having 169 states and 13498 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:28,645 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1490314158113069654799413667222656250000000000000000000000000000000 to 125016612692605610108075998841733120000000000000000
+2022-06-05 16:46:28,649 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.23 s
+number of holes: 36, family size: 1490314158113069654799413667222656250000000000000000000000000000000, super quotient: 169 states / 13498 actions
+explored: 0 %
+AR stats: avg MDP size: 167, iterations: 72
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 18: 0.38513912797235994, 20: 0.6623149824630018, 22: 0.04438374911932846, 24: 0.044096632841388136, 25: 0.2906193845511774, 26: 0.06469271108551121}
+selected hole:  1
+hole has options:  [19, 21]
+2022-06-05 16:46:28,881 - synthesizer_pomdp.py - FSC synthesis: elapsed 11.8 s, opt = 16.31, injections: 21.
+2022-06-05 16:46:28,881 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:28,882 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 19, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:28,883 - quotient_pomdp.py - Constructed quotient MDP having 173 states and 14599 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:31,041 - quotient_pomdp.py - Symmetry breaking: reduced design space from 756685486166020133454630345163804294477458824985660612583160400390625 to 12695075845472331639317159500967700030175933837890625
+2022-06-05 16:46:31,045 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.24 s
+number of holes: 37, family size: 756685486166020133454630345163804294477458824985660612583160400390625, super quotient: 173 states / 14599 actions
+explored: 0 %
+AR stats: avg MDP size: 171, iterations: 72
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 19: 0.38513912797235994, 21: 0.6623149824630018, 23: 0.04438374911932846, 25: 0.044096632841388136, 26: 0.2906193845511774, 27: 0.06469271108551121}
+selected hole:  1
+hole has options:  [20, 22]
+2022-06-05 16:46:31,290 - synthesizer_pomdp.py - FSC synthesis: elapsed 14.2 s, opt = 16.31, injections: 22.
+2022-06-05 16:46:31,290 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:31,290 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 20, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:31,291 - quotient_pomdp.py - Constructed quotient MDP having 177 states and 15740 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:33,789 - quotient_pomdp.py - Symmetry breaking: reduced design space from 390625000000000000000000000000000000000000000000000000000000000000000000 to 1310720000000000000000000000000000000000000000000000000
+2022-06-05 16:46:33,794 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.25 s
+number of holes: 38, family size: 390625000000000000000000000000000000000000000000000000000000000000000000, super quotient: 177 states / 15740 actions
+explored: 0 %
+AR stats: avg MDP size: 175, iterations: 72
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 20: 0.38513912797235994, 22: 0.6623149824630018, 24: 0.04438374911932846, 26: 0.044096632841388136, 27: 0.2906193845511774, 28: 0.06469271108551121}
+selected hole:  1
+hole has options:  [21, 23]
+2022-06-05 16:46:34,040 - synthesizer_pomdp.py - FSC synthesis: elapsed 16.9 s, opt = 16.31, injections: 23.
+2022-06-05 16:46:34,040 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:34,040 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 21, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:34,042 - quotient_pomdp.py - Constructed quotient MDP having 181 states and 16921 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:36,908 - quotient_pomdp.py - Symmetry breaking: reduced design space from 205208905044354467334696915578037163555440447680666693486273288726806640625 to 137713365002104979161566177887459773959878094635009765625
+2022-06-05 16:46:36,913 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.26 s
+number of holes: 39, family size: 205208905044354467334696915578037163555440447680666693486273288726806640625, super quotient: 181 states / 16921 actions
+explored: 0 %
+AR stats: avg MDP size: 179, iterations: 72
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 21: 0.38513912797235994, 23: 0.6623149824630018, 25: 0.04438374911932846, 27: 0.044096632841388136, 28: 0.2906193845511774, 29: 0.06469271108551121}
+selected hole:  1
+hole has options:  [24, 22]
+2022-06-05 16:46:37,169 - synthesizer_pomdp.py - FSC synthesis: elapsed 20.0 s, opt = 16.31, injections: 24.
+2022-06-05 16:46:37,169 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:37,170 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 22, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:37,171 - quotient_pomdp.py - Constructed quotient MDP having 185 states and 18142 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:40,571 - quotient_pomdp.py - Symmetry breaking: reduced design space from 109775143937750968166453668099742376992187500000000000000000000000000000000000 to 14733770410197908377101737149613499225210880000000000000000
+2022-06-05 16:46:40,576 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.32 s
+number of holes: 40, family size: 109775143937750968166453668099742376992187500000000000000000000000000000000000, super quotient: 185 states / 18142 actions
+explored: 0 %
+AR stats: avg MDP size: 183, iterations: 86
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 22: 0.38513912797235994, 24: 0.6623149824630018, 26: 0.04438374911932846, 28: 0.044096632841388136, 29: 0.2906193845511774, 30: 0.06469271108551121}
+selected hole:  1
+hole has options:  [25, 23]
+2022-06-05 16:46:40,898 - synthesizer_pomdp.py - FSC synthesis: elapsed 23.8 s, opt = 16.31, injections: 25.
+2022-06-05 16:46:40,898 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:40,899 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 23, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:40,900 - quotient_pomdp.py - Constructed quotient MDP having 189 states and 19403 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:44,707 - quotient_pomdp.py - Symmetry breaking: reduced design space from 59824942162402790921062412230094724289554912594218194499262608587741851806640625 to 1605913562953821923656804863144545423786094899926910400390625
+2022-06-05 16:46:44,712 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.33 s
+number of holes: 41, family size: 59824942162402790921062412230094724289554912594218194499262608587741851806640625, super quotient: 189 states / 19403 actions
+explored: 0 %
+AR stats: avg MDP size: 187, iterations: 86
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 23: 0.38513912797235994, 25: 0.6623149824630018, 27: 0.04438374911932846, 29: 0.044096632841388136, 30: 0.2906193845511774, 31: 0.06469271108551121}
+selected hole:  1
+hole has options:  [24, 26]
+2022-06-05 16:46:45,047 - synthesizer_pomdp.py - FSC synthesis: elapsed 27.9 s, opt = 16.31, injections: 26.
+2022-06-05 16:46:45,047 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:45,047 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 24, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:45,049 - quotient_pomdp.py - Constructed quotient MDP having 193 states and 20704 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:49,483 - quotient_pomdp.py - Symmetry breaking: reduced design space from 33225087889926180252250514391073554432000000000000000000000000000000000000000000000 to 178375832367448240047021237136047838269894819840000000000000000
+2022-06-05 16:46:49,489 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.35 s
+number of holes: 42, family size: 33225087889926180252250514391073554432000000000000000000000000000000000000000000000, super quotient: 193 states / 20704 actions
+explored: 0 %
+AR stats: avg MDP size: 191, iterations: 86
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 24: 0.38513912797235994, 26: 0.6623149824630018, 28: 0.04438374911932846, 30: 0.044096632841388136, 31: 0.2906193845511774, 32: 0.06469271108551121}
+selected hole:  1
+hole has options:  [25, 27]
+2022-06-05 16:46:49,840 - synthesizer_pomdp.py - FSC synthesis: elapsed 32.7 s, opt = 16.31, injections: 27.
+2022-06-05 16:46:49,840 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:49,840 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 25, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:49,842 - quotient_pomdp.py - Constructed quotient MDP having 197 states and 22045 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:46:54,848 - quotient_pomdp.py - Symmetry breaking: reduced design space from 18807909613156600127499784595555930845098648908353400344140027300454676151275634765625 to 20194839173657902218540251271239327479634084738790988922119140625
+2022-06-05 16:46:54,854 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.37 s
+number of holes: 43, family size: 18807909613156600127499784595555930845098648908353400344140027300454676151275634765625, super quotient: 197 states / 22045 actions
+explored: 0 %
+AR stats: avg MDP size: 195, iterations: 86
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 25: 0.38513912797235994, 27: 0.6623149824630018, 29: 0.04438374911932846, 31: 0.044096632841388136, 32: 0.2906193845511774, 33: 0.06469271108551121}
+selected hole:  1
+hole has options:  [26, 28]
+2022-06-05 16:46:55,223 - synthesizer_pomdp.py - FSC synthesis: elapsed 38.1 s, opt = 16.31, injections: 28.
+2022-06-05 16:46:55,223 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:46:55,224 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 26, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:46:55,226 - quotient_pomdp.py - Constructed quotient MDP having 201 states and 23426 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:00,855 - quotient_pomdp.py - Symmetry breaking: reduced design space from 10853024281386161235875026371434499896163389453125000000000000000000000000000000000000000 to 2330669217562373202753309010422436283006857678684160000000000000000
+2022-06-05 16:47:00,861 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.4 s
+number of holes: 44, family size: 10853024281386161235875026371434499896163389453125000000000000000000000000000000000000000, super quotient: 201 states / 23426 actions
+explored: 0 %
+AR stats: avg MDP size: 199, iterations: 86
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 26: 0.38513912797235994, 28: 0.6623149824630018, 30: 0.04438374911932846, 32: 0.044096632841388136, 33: 0.2906193845511774, 34: 0.06469271108551121}
+selected hole:  1
+hole has options:  [27, 29]
+2022-06-05 16:47:01,266 - synthesizer_pomdp.py - FSC synthesis: elapsed 44.1 s, opt = 16.31, injections: 29.
+2022-06-05 16:47:01,266 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:47:01,267 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 27, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:47:01,268 - quotient_pomdp.py - Constructed quotient MDP having 205 states and 24847 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:07,742 - quotient_pomdp.py - Symmetry breaking: reduced design space from 6384263073451390405968126023273630095401200987971361323051411318374448455870151519775390625 to 274202011095341676393612644883667761189495182424598862671051025390625
+2022-06-05 16:47:07,748 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.47 s
+number of holes: 45, family size: 6384263073451390405968126023273630095401200987971361323051411318374448455870151519775390625, super quotient: 205 states / 24847 actions
+explored: 0 %
+AR stats: avg MDP size: 203, iterations: 100
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 27: 0.38513912797235994, 29: 0.6623149824630018, 31: 0.04438374911932846, 33: 0.044096632841388136, 34: 0.2906193845511774, 35: 0.06469271108551121}
+selected hole:  1
+hole has options:  [28, 30]
+2022-06-05 16:47:08,220 - synthesizer_pomdp.py - FSC synthesis: elapsed 51.1 s, opt = 16.31, injections: 30.
+2022-06-05 16:47:08,220 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:47:08,220 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 28, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:47:08,222 - quotient_pomdp.py - Constructed quotient MDP having 209 states and 26308 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:15,746 - quotient_pomdp.py - Symmetry breaking: reduced design space from 3828331153232413860187150552910120755857981440000000000000000000000000000000000000000000000000 to 32885114202782364433281856128354572547641661410749972480000000000000000
+2022-06-05 16:47:15,753 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.49 s
+number of holes: 46, family size: 3828331153232413860187150552910120755857981440000000000000000000000000000000000000000000000000, super quotient: 209 states / 26308 actions
+explored: 0 %
+AR stats: avg MDP size: 207, iterations: 100
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 28: 0.38513912797235994, 30: 0.6623149824630018, 32: 0.04438374911932846, 34: 0.044096632841388136, 35: 0.2906193845511774, 36: 0.06469271108551121}
+selected hole:  1
+hole has options:  [29, 31]
+2022-06-05 16:47:16,244 - synthesizer_pomdp.py - FSC synthesis: elapsed 59.1 s, opt = 16.31, injections: 31.
+2022-06-05 16:47:16,245 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:47:16,246 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 29, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:47:16,248 - quotient_pomdp.py - Constructed quotient MDP having 213 states and 27809 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:24,839 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2340001460953557286176664254530069398435758262859998724511147205618044608854688704013824462890625 to 4020091898955099807596514340631547165956790118378186379350836334228515625
+2022-06-05 16:47:24,845 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.53 s
+number of holes: 47, family size: 2340001460953557286176664254530069398435758262859998724511147205618044608854688704013824462890625, super quotient: 213 states / 27809 actions
+explored: 0 %
+AR stats: avg MDP size: 211, iterations: 100
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 29: 0.38513912797235994, 31: 0.6623149824630018, 33: 0.04438374911932846, 35: 0.044096632841388136, 36: 0.2906193845511774, 37: 0.06469271108551121}
+selected hole:  1
+hole has options:  [32, 30]
+2022-06-05 16:47:25,372 - synthesizer_pomdp.py - FSC synthesis: elapsed 68.2 s, opt = 16.31, injections: 32.
+2022-06-05 16:47:25,372 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:47:25,373 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 30, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:47:25,376 - quotient_pomdp.py - Constructed quotient MDP having 217 states and 29350 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:35,159 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1457753772780177382037969380235153948888182640075683593750000000000000000000000000000000000000000000 to 500880382376918148234558105468750000000000000000000000000000000000000000000
+2022-06-05 16:47:35,167 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.56 s
+number of holes: 48, family size: 1457753772780177382037969380235153948888182640075683593750000000000000000000000000000000000000000000, super quotient: 217 states / 29350 actions
+explored: 0 %
+AR stats: avg MDP size: 215, iterations: 100
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 30: 0.38513912797235994, 32: 0.6623149824630018, 34: 0.04438374911932846, 36: 0.044096632841388136, 37: 0.2906193845511774, 38: 0.06469271108551121}
+selected hole:  1
+hole has options:  [33, 31]
+2022-06-05 16:47:35,730 - synthesizer_pomdp.py - FSC synthesis: elapsed 78.6 s, opt = 16.31, injections: 33.
+2022-06-05 16:47:35,730 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:47:35,731 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 31, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:47:35,732 - quotient_pomdp.py - Constructed quotient MDP having 221 states and 30931 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:46,711 - quotient_pomdp.py - Symmetry breaking: reduced design space from 925453823788137905014034675574664720595677212652779027935066370960104364939979859627783298492431640625 to 63596702514051186156371733641650479697974580277057973255932487597808837890625
+2022-06-05 16:47:46,718 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.58 s
+number of holes: 49, family size: 925453823788137905014034675574664720595677212652779027935066370960104364939979859627783298492431640625, super quotient: 221 states / 30931 actions
+explored: 0 %
+AR stats: avg MDP size: 219, iterations: 100
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 31: 0.38513912797235994, 33: 0.6623149824630018, 35: 0.04438374911932846, 37: 0.044096632841388136, 38: 0.2906193845511774, 39: 0.06469271108551121}
+selected hole:  1
+hole has options:  [32, 34]
+2022-06-05 16:47:47,297 - synthesizer_pomdp.py - FSC synthesis: elapsed 90.2 s, opt = 16.31, injections: 34.
+2022-06-05 16:47:47,298 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:47:47,298 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 32, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:47:47,301 - quotient_pomdp.py - Constructed quotient MDP having 225 states and 32552 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:47:59,452 - quotient_pomdp.py - Symmetry breaking: reduced design space from 598631070650737835296229307480589524851069969602969600000000000000000000000000000000000000000000000000000 to 8227522786606030210774845912786752524913679328167899316743045120000000000000000
+2022-06-05 16:47:59,460 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.71 s
+number of holes: 50, family size: 598631070650737835296229307480589524851069969602969600000000000000000000000000000000000000000000000000000, super quotient: 225 states / 32552 actions
+explored: 0 %
+AR stats: avg MDP size: 223, iterations: 114
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 32: 0.38513912797235994, 34: 0.6623149824630018, 36: 0.04438374911932846, 38: 0.044096632841388136, 39: 0.2906193845511774, 40: 0.06469271108551121}
+selected hole:  1
+hole has options:  [33, 35]
+2022-06-05 16:48:00,168 - synthesizer_pomdp.py - FSC synthesis: elapsed 103.0 s, opt = 16.31, injections: 35.
+2022-06-05 16:48:00,168 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:48:00,170 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 33, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:48:00,172 - quotient_pomdp.py - Constructed quotient MDP having 229 states and 34213 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:48:13,591 - quotient_pomdp.py - Symmetry breaking: reduced design space from 394476801809301119230818043684071708449460299608635711745759420817901086397938570371479727327823638916015625 to 1084329576193038038856038510687863900101938467628449267920460658621943511962890625
+2022-06-05 16:48:13,599 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.68 s
+number of holes: 51, family size: 394476801809301119230818043684071708449460299608635711745759420817901086397938570371479727327823638916015625, super quotient: 229 states / 34213 actions
+explored: 0 %
+AR stats: avg MDP size: 227, iterations: 114
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 33: 0.38513912797235994, 35: 0.6623149824630018, 37: 0.04438374911932846, 39: 0.044096632841388136, 40: 0.2906193845511774, 41: 0.06469271108551121}
+selected hole:  1
+hole has options:  [34, 36]
+2022-06-05 16:48:14,282 - synthesizer_pomdp.py - FSC synthesis: elapsed 117.2 s, opt = 16.31, injections: 36.
+2022-06-05 16:48:14,283 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:48:14,283 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 34, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:48:14,286 - quotient_pomdp.py - Constructed quotient MDP having 233 states and 35914 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:48:28,881 - quotient_pomdp.py - Symmetry breaking: reduced design space from 264764247374208242010599846560011304767121244300729975479414062500000000000000000000000000000000000000000000000 to 145555684303651618986134992168686931886729553963323089102203560919040000000000000000
+2022-06-05 16:48:28,889 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.76 s
+number of holes: 52, family size: 264764247374208242010599846560011304767121244300729975479414062500000000000000000000000000000000000000000000000, super quotient: 233 states / 35914 actions
+explored: 0 %
+AR stats: avg MDP size: 231, iterations: 114
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 34: 0.38513912797235994, 36: 0.6623149824630018, 38: 0.04438374911932846, 40: 0.044096632841388136, 41: 0.2906193845511774, 42: 0.06469271108551121}
+selected hole:  1
+hole has options:  [35, 37]
+2022-06-05 16:48:29,650 - synthesizer_pomdp.py - FSC synthesis: elapsed 132.5 s, opt = 16.31, injections: 37.
+2022-06-05 16:48:29,650 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:48:29,651 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 35, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:48:29,654 - quotient_pomdp.py - Constructed quotient MDP having 237 states and 37655 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:48:46,031 - quotient_pomdp.py - Symmetry breaking: reduced design space from 180961576728467238257175128780538081831527552489323657866458847993368212227205393816120704286731779575347900390625 to 19896935779362853389363384715699185222373955063412953592205667519010603427886962890625
+2022-06-05 16:48:46,040 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.77 s
+number of holes: 53, family size: 180961576728467238257175128780538081831527552489323657866458847993368212227205393816120704286731779575347900390625, super quotient: 237 states / 37655 actions
+explored: 0 %
+AR stats: avg MDP size: 235, iterations: 114
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 35: 0.38513912797235994, 37: 0.6623149824630018, 39: 0.04438374911932846, 41: 0.044096632841388136, 42: 0.2906193845511774, 43: 0.06469271108551121}
+selected hole:  1
+hole has options:  [36, 38]
+2022-06-05 16:48:46,812 - synthesizer_pomdp.py - FSC synthesis: elapsed 149.7 s, opt = 16.31, injections: 38.
+2022-06-05 16:48:46,812 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:48:46,813 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 36, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:48:46,816 - quotient_pomdp.py - Constructed quotient MDP having 241 states and 39436 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:49:04,361 - quotient_pomdp.py - Symmetry breaking: reduced design space from 125925239275380659035194614665588935758361563435798498377728000000000000000000000000000000000000000000000000000000000 to 2769125296275121502756289448878215452987432312320941804432644171691458560000000000000000
+2022-06-05 16:49:04,370 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.78 s
+number of holes: 54, family size: 125925239275380659035194614665588935758361563435798498377728000000000000000000000000000000000000000000000000000000000, super quotient: 241 states / 39436 actions
+explored: 0 %
+AR stats: avg MDP size: 239, iterations: 114
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 36: 0.38513912797235994, 38: 0.6623149824630018, 40: 0.04438374911932846, 42: 0.044096632841388136, 43: 0.2906193845511774, 44: 0.06469271108551121}
+selected hole:  1
+hole has options:  [37, 39]
+2022-06-05 16:49:05,148 - synthesizer_pomdp.py - FSC synthesis: elapsed 168.0 s, opt = 16.31, injections: 39.
+2022-06-05 16:49:05,148 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:49:05,149 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 37, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:49:05,152 - quotient_pomdp.py - Constructed quotient MDP having 245 states and 41257 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:49:24,484 - quotient_pomdp.py - Symmetry breaking: reduced design space from 89196220988228698631671663496039955208509551784097181010367434551681758403566015191987759180847206152975559234619140625 to 392289128520940607069869818394018440324969867075907425613128057183123019922523345947265625
+2022-06-05 16:49:24,493 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.92 s
+number of holes: 55, family size: 89196220988228698631671663496039955208509551784097181010367434551681758403566015191987759180847206152975559234619140625, super quotient: 245 states / 41257 actions
+explored: 0 %
+AR stats: avg MDP size: 243, iterations: 128
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 37: 0.38513912797235994, 39: 0.6623149824630018, 41: 0.04438374911932846, 43: 0.044096632841388136, 44: 0.2906193845511774, 45: 0.06469271108551121}
+selected hole:  1
+hole has options:  [40, 38]
+2022-06-05 16:49:25,418 - synthesizer_pomdp.py - FSC synthesis: elapsed 188.3 s, opt = 16.31, injections: 40.
+2022-06-05 16:49:25,420 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:49:25,421 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 38, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:49:25,424 - quotient_pomdp.py - Constructed quotient MDP having 249 states and 43118 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:49:46,278 - quotient_pomdp.py - Symmetry breaking: reduced design space from 64297440211919193010248721020636340642622703899222399734271129304296875000000000000000000000000000000000000000000000000000 to 56556626519389848242939914160017576789848092040038786393975519387431385169920000000000000000
+2022-06-05 16:49:46,288 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 0.96 s
+number of holes: 56, family size: 64297440211919193010248721020636340642622703899222399734271129304296875000000000000000000000000000000000000000000000000000, super quotient: 249 states / 43118 actions
+explored: 0 %
+AR stats: avg MDP size: 247, iterations: 128
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 38: 0.38513912797235994, 40: 0.6623149824630018, 42: 0.04438374911932846, 44: 0.044096632841388136, 45: 0.2906193845511774, 46: 0.06469271108551121}
+selected hole:  1
+hole has options:  [41, 39]
+2022-06-05 16:49:47,252 - synthesizer_pomdp.py - FSC synthesis: elapsed 210.1 s, opt = 16.31, injections: 41.
+2022-06-05 16:49:47,252 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:49:47,254 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 39, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:49:47,257 - quotient_pomdp.py - Constructed quotient MDP having 253 states and 45019 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:50:09,953 - quotient_pomdp.py - Symmetry breaking: reduced design space from 47158482927327562346336149027077580398704196507511886658758739522353491632807482720514402618761096164234913885593414306640625 to 8296208052299621374235229613829342259906361949295450993894502326382219571786456225738525390625
+2022-06-05 16:50:09,963 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.01 s
+number of holes: 57, family size: 47158482927327562346336149027077580398704196507511886658758739522353491632807482720514402618761096164234913885593414306640625, super quotient: 253 states / 45019 actions
+explored: 0 %
+AR stats: avg MDP size: 251, iterations: 128
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 39: 0.38513912797235994, 41: 0.6623149824630018, 43: 0.04438374911932846, 45: 0.044096632841388136, 46: 0.2906193845511774, 47: 0.06469271108551121}
+selected hole:  1
+hole has options:  [40, 42]
+2022-06-05 16:50:10,968 - synthesizer_pomdp.py - FSC synthesis: elapsed 233.8 s, opt = 16.31, injections: 42.
+2022-06-05 16:50:10,968 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:50:10,970 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 40, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:50:10,974 - quotient_pomdp.py - Constructed quotient MDP having 257 states and 46960 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:50:35,640 - quotient_pomdp.py - Symmetry breaking: reduced design space from 35184372088832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 to 1237940039285380274899124224000000000000000000000000000000000000000000000000000000000000000000000
+2022-06-05 16:50:35,651 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.06 s
+number of holes: 58, family size: 35184372088832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 257 states / 46960 actions
+explored: 0 %
+AR stats: avg MDP size: 255, iterations: 128
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 40: 0.38513912797235994, 42: 0.6623149824630018, 44: 0.04438374911932846, 46: 0.044096632841388136, 47: 0.2906193845511774, 48: 0.06469271108551121}
+selected hole:  1
+hole has options:  [41, 43]
+2022-06-05 16:50:36,708 - synthesizer_pomdp.py - FSC synthesis: elapsed 259.6 s, opt = 16.31, injections: 43.
+2022-06-05 16:50:36,708 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:50:36,710 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 41, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:50:36,713 - quotient_pomdp.py - Constructed quotient MDP having 261 states and 48941 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:51:03,986 - quotient_pomdp.py - Symmetry breaking: reduced design space from 26697373151171787813510197295131643675473978854186616805778589565119056018078839808983456806379397363571115420199930667877197265625 to 187866062149044294020100332495008677234091583861108034538214237797078151895516121873132476806640625
+2022-06-05 16:51:03,998 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.09 s
+number of holes: 59, family size: 26697373151171787813510197295131643675473978854186616805778589565119056018078839808983456806379397363571115420199930667877197265625, super quotient: 261 states / 48941 actions
+explored: 0 %
+AR stats: avg MDP size: 259, iterations: 128
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 41: 0.38513912797235994, 43: 0.6623149824630018, 45: 0.04438374911932846, 47: 0.044096632841388136, 48: 0.2906193845511774, 49: 0.06469271108551121}
+selected hole:  1
+hole has options:  [42, 44]
+2022-06-05 16:51:05,093 - synthesizer_pomdp.py - FSC synthesis: elapsed 288.0 s, opt = 16.31, injections: 44.
+2022-06-05 16:51:05,093 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:51:05,094 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 42, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:51:05,098 - quotient_pomdp.py - Constructed quotient MDP having 265 states and 50962 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:51:33,991 - quotient_pomdp.py - Symmetry breaking: reduced design space from 20597819356660455571812317494706530405086806052268761965439864742244043363281250000000000000000000000000000000000000000000000000000000 to 28988853618531505424759155290843775371666215415181868808265040305390104050433660026880000000000000000
+2022-06-05 16:51:34,002 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.21 s
+number of holes: 60, family size: 20597819356660455571812317494706530405086806052268761965439864742244043363281250000000000000000000000000000000000000000000000000000000, super quotient: 265 states / 50962 actions
+explored: 0 %
+AR stats: avg MDP size: 263, iterations: 142
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 42: 0.38513912797235994, 44: 0.6623149824630018, 46: 0.04438374911932846, 48: 0.044096632841388136, 49: 0.2906193845511774, 50: 0.06469271108551121}
+selected hole:  1
+hole has options:  [43, 45]
+2022-06-05 16:51:35,215 - synthesizer_pomdp.py - FSC synthesis: elapsed 318.1 s, opt = 16.31, injections: 45.
+2022-06-05 16:51:35,216 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:51:35,218 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 43, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:51:35,221 - quotient_pomdp.py - Constructed quotient MDP having 269 states and 53023 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:52:06,632 - quotient_pomdp.py - Symmetry breaking: reduced design space from 16155253977163193577413313352576239338632703700293385889324068444659146509144615655548088504881755478326255115462117828428745269775390625 to 4547299736976742630680653012947112119900316090290554666991927264246275776449654893777298462066650390625
+2022-06-05 16:52:06,643 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.19 s
+number of holes: 61, family size: 16155253977163193577413313352576239338632703700293385889324068444659146509144615655548088504881755478326255115462117828428745269775390625, super quotient: 269 states / 53023 actions
+explored: 0 %
+AR stats: avg MDP size: 267, iterations: 142
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 43: 0.38513912797235994, 45: 0.6623149824630018, 47: 0.04438374911932846, 49: 0.044096632841388136, 50: 0.2906193845511774, 51: 0.06469271108551121}
+selected hole:  1
+hole has options:  [44, 46]
+2022-06-05 16:52:07,837 - synthesizer_pomdp.py - FSC synthesis: elapsed 350.7 s, opt = 16.31, injections: 46.
+2022-06-05 16:52:07,837 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:52:07,839 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 44, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:52:07,843 - quotient_pomdp.py - Constructed quotient MDP having 273 states and 55124 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:52:41,256 - quotient_pomdp.py - Symmetry breaking: reduced design space from 12878131089217582962228361622228582702988282406289611839481287893681648435200000000000000000000000000000000000000000000000000000000000000000 to 724974329682858830082049526348293987968823517593286312658292350744309334862116621113098240000000000000000
+2022-06-05 16:52:41,270 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.32 s
+number of holes: 62, family size: 12878131089217582962228361622228582702988282406289611839481287893681648435200000000000000000000000000000000000000000000000000000000000000000, super quotient: 273 states / 55124 actions
+explored: 0 %
+AR stats: avg MDP size: 271, iterations: 142
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 44: 0.38513912797235994, 46: 0.6623149824630018, 48: 0.04438374911932846, 50: 0.044096632841388136, 51: 0.2906193845511774, 52: 0.06469271108551121}
+selected hole:  1
+hole has options:  [45, 47]
+2022-06-05 16:52:42,592 - synthesizer_pomdp.py - FSC synthesis: elapsed 385.5 s, opt = 16.31, injections: 47.
+2022-06-05 16:52:42,592 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:52:42,594 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 45, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:52:42,597 - quotient_pomdp.py - Constructed quotient MDP having 277 states and 57265 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:53:19,007 - quotient_pomdp.py - Symmetry breaking: reduced design space from 10431483732932733296864906388878841166113588589328864361272093553857225092896595112586236104977536879624688825884959442191757261753082275390625 to 117448065631393120722419796594749815953388644368033374589376451762635922282385081416578032076358795166015625
+2022-06-05 16:53:19,019 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.36 s
+number of holes: 63, family size: 10431483732932733296864906388878841166113588589328864361272093553857225092896595112586236104977536879624688825884959442191757261753082275390625, super quotient: 277 states / 57265 actions
+explored: 0 %
+AR stats: avg MDP size: 275, iterations: 142
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 45: 0.38513912797235994, 47: 0.6623149824630018, 49: 0.04438374911932846, 51: 0.044096632841388136, 52: 0.2906193845511774, 53: 0.06469271108551121}
+selected hole:  1
+hole has options:  [48, 46]
+2022-06-05 16:53:20,383 - synthesizer_pomdp.py - FSC synthesis: elapsed 423.3 s, opt = 16.31, injections: 48.
+2022-06-05 16:53:20,383 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:53:20,385 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 46, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:53:20,388 - quotient_pomdp.py - Constructed quotient MDP having 281 states and 59446 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:53:59,539 - quotient_pomdp.py - Symmetry breaking: reduced design space from 8584250051015430151122700637494631922071019885559446484901809460783173077324737773437500000000000000000000000000000000000000000000000000000000000 to 19330012665504126253370880515761921317065274686357365229625241452039175098449226843391220776960000000000000000
+2022-06-05 16:53:59,552 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.35 s
+number of holes: 64, family size: 8584250051015430151122700637494631922071019885559446484901809460783173077324737773437500000000000000000000000000000000000000000000000000000000000, super quotient: 281 states / 59446 actions
+explored: 0 %
+AR stats: avg MDP size: 279, iterations: 142
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 46: 0.38513912797235994, 48: 0.6623149824630018, 50: 0.04438374911932846, 52: 0.044096632841388136, 53: 0.2906193845511774, 54: 0.06469271108551121}
+selected hole:  1
+hole has options:  [49, 47]
+2022-06-05 16:54:00,903 - synthesizer_pomdp.py - FSC synthesis: elapsed 463.8 s, opt = 16.31, injections: 49.
+2022-06-05 16:54:00,903 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:54:00,905 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 47, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:54:00,909 - quotient_pomdp.py - Constructed quotient MDP having 285 states and 61667 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:54:43,586 - quotient_pomdp.py - Symmetry breaking: reduced design space from 7175162991676452968084273438910432609289399969204988940141809147653916238743712357744481383337718685854118329248141350262812920846045017242431640625 to 3231406137563664687951153588290638255762693807637668520835234858684614481986461127372292737300309326324462890625
+2022-06-05 16:54:43,603 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.84 s
+number of holes: 65, family size: 7175162991676452968084273438910432609289399969204988940141809147653916238743712357744481383337718685854118329248141350262812920846045017242431640625, super quotient: 285 states / 61667 actions
+explored: 0 %
+AR stats: avg MDP size: 283, iterations: 156
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 47: 0.38513912797235994, 49: 0.6623149824630018, 51: 0.04438374911932846, 53: 0.044096632841388136, 54: 0.2906193845511774, 55: 0.06469271108551121}
+selected hole:  1
+hole has options:  [48, 50]
+2022-06-05 16:54:45,438 - synthesizer_pomdp.py - FSC synthesis: elapsed 508.3 s, opt = 16.31, injections: 50.
+2022-06-05 16:54:45,439 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:54:45,441 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 48, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:54:45,446 - quotient_pomdp.py - Constructed quotient MDP having 289 states and 63928 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:55:31,143 - quotient_pomdp.py - Symmetry breaking: reduced design space from 6090399471460214631075328015952847345444941377160361143248906750027283865224085504000000000000000000000000000000000000000000000000000000000000000000000 to 548574415804113768008578270830055561662644885306284755287869503394196096210088366203211395817799680000000000000000
+2022-06-05 16:55:31,156 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.62 s
+number of holes: 66, family size: 6090399471460214631075328015952847345444941377160361143248906750027283865224085504000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 289 states / 63928 actions
+explored: 0 %
+AR stats: avg MDP size: 287, iterations: 156
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 48: 0.38513912797235994, 50: 0.6623149824630018, 52: 0.04438374911932846, 54: 0.044096632841388136, 55: 0.2906193845511774, 56: 0.06469271108551121}
+selected hole:  1
+hole has options:  [49, 51]
+2022-06-05 16:55:32,772 - synthesizer_pomdp.py - FSC synthesis: elapsed 555.6 s, opt = 16.31, injections: 51.
+2022-06-05 16:55:32,772 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:55:32,774 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 49, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:55:32,778 - quotient_pomdp.py - Constructed quotient MDP having 293 states and 66229 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:56:20,967 - quotient_pomdp.py - Symmetry breaking: reduced design space from 5248766649799489169937893953910796514371557853703734469410198859933090106472511371872221472348027345042828042975292801575193379903794266283512115478515625 to 94553374112766664396827801454014113326979130218950655294034533206276363541107050608818537951044549327758941650390625
+2022-06-05 16:56:20,981 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.66 s
+number of holes: 67, family size: 5248766649799489169937893953910796514371557853703734469410198859933090106472511371872221472348027345042828042975292801575193379903794266283512115478515625, super quotient: 293 states / 66229 actions
+explored: 0 %
+AR stats: avg MDP size: 291, iterations: 156
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 49: 0.38513912797235994, 51: 0.6623149824630018, 53: 0.04438374911932846, 55: 0.044096632841388136, 56: 0.2906193845511774, 57: 0.06469271108551121}
+selected hole:  1
+hole has options:  [50, 52]
+2022-06-05 16:56:22,647 - synthesizer_pomdp.py - FSC synthesis: elapsed 605.5 s, opt = 16.31, injections: 52.
+2022-06-05 16:56:22,647 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:56:22,649 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 50, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:56:22,653 - quotient_pomdp.py - Constructed quotient MDP having 297 states and 68570 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:57:14,122 - quotient_pomdp.py - Symmetry breaking: reduced design space from 4591774807899560578002877098524397178979162331140966880893561352650067419745028018951416015625000000000000000000000000000000000000000000000000000000000000000 to 16543612251060553497428173841399257071316242218017578125000000000000000000000000000000000000000000000000000000000000000
+2022-06-05 16:57:14,137 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.67 s
+number of holes: 68, family size: 4591774807899560578002877098524397178979162331140966880893561352650067419745028018951416015625000000000000000000000000000000000000000000000000000000000000000, super quotient: 297 states / 68570 actions
+explored: 0 %
+AR stats: avg MDP size: 295, iterations: 156
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 50: 0.38513912797235994, 52: 0.6623149824630018, 54: 0.04438374911932846, 56: 0.044096632841388136, 57: 0.2906193845511774, 58: 0.06469271108551121}
+selected hole:  1
+hole has options:  [51, 53]
+2022-06-05 16:57:15,812 - synthesizer_pomdp.py - FSC synthesis: elapsed 658.7 s, opt = 16.31, injections: 53.
+2022-06-05 16:57:15,812 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:57:15,815 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 51, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:57:15,819 - quotient_pomdp.py - Constructed quotient MDP having 301 states and 70951 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:58:10,759 - quotient_pomdp.py - Symmetry breaking: reduced design space from 4076914301226064792645651283328502898632572811833333220950661249078069249460616834559705791170963214430015121879491272506579324641506900661624968051910400390625 to 2937726356451704237405414330269817630498904117656754300245297473884909272942309163513787584813491613206946289215087890625
+2022-06-05 16:58:10,773 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.78 s
+number of holes: 69, family size: 4076914301226064792645651283328502898632572811833333220950661249078069249460616834559705791170963214430015121879491272506579324641506900661624968051910400390625, super quotient: 301 states / 70951 actions
+explored: 0 %
+AR stats: avg MDP size: 299, iterations: 156
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 51: 0.38513912797235994, 53: 0.6623149824630018, 55: 0.04438374911932846, 57: 0.044096632841388136, 58: 0.2906193845511774, 59: 0.06469271108551121}
+selected hole:  1
+hole has options:  [52, 54]
+2022-06-05 16:58:12,552 - synthesizer_pomdp.py - FSC synthesis: elapsed 715.4 s, opt = 16.31, injections: 54.
+2022-06-05 16:58:12,552 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:58:12,554 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 52, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:58:12,560 - quotient_pomdp.py - Constructed quotient MDP having 305 states and 73372 actions.
+
+------------------------------------------------------------
+
+2022-06-05 16:59:11,611 - quotient_pomdp.py - Symmetry breaking: reduced design space from 3673056871736786102324164029221941132720130831575135290259863582994274565576211339107368960000000000000000000000000000000000000000000000000000000000000000000000000 to 529343281883661747563420200283438229174558432332200214664451830078208540630709093642394923440041654086533120000000000000000
+2022-06-05 16:59:11,627 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 1.96 s
+number of holes: 70, family size: 3673056871736786102324164029221941132720130831575135290259863582994274565576211339107368960000000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 305 states / 73372 actions
+explored: 0 %
+AR stats: avg MDP size: 303, iterations: 170
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 52: 0.38513912797235994, 54: 0.6623149824630018, 56: 0.04438374911932846, 58: 0.044096632841388136, 59: 0.2906193845511774, 60: 0.06469271108551121}
+selected hole:  1
+hole has options:  [53, 55]
+2022-06-05 16:59:13,582 - synthesizer_pomdp.py - FSC synthesis: elapsed 776.5 s, opt = 16.31, injections: 55.
+2022-06-05 16:59:13,582 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 16:59:13,585 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 53, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 16:59:13,591 - quotient_pomdp.py - Constructed quotient MDP having 309 states and 75833 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:00:16,670 - quotient_pomdp.py - Symmetry breaking: reduced design space from 3357281169077895907906622062352717606349064357066850461669232567031848205707018358817386860886153438091874324293785686489284027234081264623455354012548923492431640625 to 96767041421038049208395350996079626252821833808429859208154709855407923619185784223192083850687923684263738258045806884765625
+2022-06-05 17:00:16,685 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.01 s
+number of holes: 71, family size: 3357281169077895907906622062352717606349064357066850461669232567031848205707018358817386860886153438091874324293785686489284027234081264623455354012548923492431640625, super quotient: 309 states / 75833 actions
+explored: 0 %
+AR stats: avg MDP size: 307, iterations: 170
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 53: 0.38513912797235994, 55: 0.6623149824630018, 57: 0.04438374911932846, 59: 0.044096632841388136, 60: 0.2906193845511774, 61: 0.06469271108551121}
+selected hole:  1
+hole has options:  [56, 54]
+2022-06-05 17:00:18,693 - synthesizer_pomdp.py - FSC synthesis: elapsed 841.6 s, opt = 16.31, injections: 56.
+2022-06-05 17:00:18,693 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:00:18,695 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 54, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:00:18,700 - quotient_pomdp.py - Constructed quotient MDP having 313 states and 78334 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:01:26,118 - quotient_pomdp.py - Symmetry breaking: reduced design space from 3112663932139157453188843617606792501905079523281966749702050332879990127749634956965445691921886718750000000000000000000000000000000000000000000000000000000000000000000 to 17943285919886710213731040456437676990969547680312099344438312695284685075491383249851482909496365704669497917440000000000000000
+2022-06-05 17:01:26,133 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.12 s
+number of holes: 72, family size: 3112663932139157453188843617606792501905079523281966749702050332879990127749634956965445691921886718750000000000000000000000000000000000000000000000000000000000000000000, super quotient: 313 states / 78334 actions
+explored: 0 %
+AR stats: avg MDP size: 311, iterations: 170
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 54: 0.38513912797235994, 56: 0.6623149824630018, 58: 0.04438374911932846, 60: 0.044096632841388136, 61: 0.2906193845511774, 62: 0.06469271108551121}
+selected hole:  1
+hole has options:  [57, 55]
+2022-06-05 17:01:28,259 - synthesizer_pomdp.py - FSC synthesis: elapsed 911.1 s, opt = 16.31, injections: 57.
+2022-06-05 17:01:28,259 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:01:28,261 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 55, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:01:28,271 - quotient_pomdp.py - Constructed quotient MDP having 317 states and 80875 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:02:40,010 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2926733746163971767877305845946325222242519954305326656856896028191826389717735206185558333618335042897591926350776068969624507860351203536453112974413670599460601806640625 to 3374294274211000084651400210862146570140629677898109657324590144000343901194882001906409120517427169261281960643827915191650390625
+2022-06-05 17:02:40,026 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.15 s
+number of holes: 73, family size: 2926733746163971767877305845946325222242519954305326656856896028191826389717735206185558333618335042897591926350776068969624507860351203536453112974413670599460601806640625, super quotient: 317 states / 80875 actions
+explored: 0 %
+AR stats: avg MDP size: 315, iterations: 170
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 55: 0.38513912797235994, 57: 0.6623149824630018, 59: 0.04438374911932846, 61: 0.044096632841388136, 62: 0.2906193845511774, 63: 0.06469271108551121}
+selected hole:  1
+hole has options:  [56, 58]
+2022-06-05 17:02:42,179 - synthesizer_pomdp.py - FSC synthesis: elapsed 985.0 s, opt = 16.31, injections: 58.
+2022-06-05 17:02:42,179 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:02:42,181 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 56, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:02:42,186 - quotient_pomdp.py - Constructed quotient MDP having 321 states and 83456 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:03:58,495 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2790385440999167207741315492785379360390712753284545083357612388099929361809992446677401685773516800000000000000000000000000000000000000000000000000000000000000000000000000000 to 643419076213960017328273787883360363690195171402943374055164819141687453282063434575990711444632170594845618193039360000000000000000
+2022-06-05 17:03:58,512 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.25 s
+number of holes: 74, family size: 2790385440999167207741315492785379360390712753284545083357612388099929361809992446677401685773516800000000000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 321 states / 83456 actions
+explored: 0 %
+AR stats: avg MDP size: 319, iterations: 170
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 56: 0.38513912797235994, 58: 0.6623149824630018, 60: 0.04438374911932846, 62: 0.044096632841388136, 63: 0.2906193845511774, 64: 0.06469271108551121}
+selected hole:  1
+hole has options:  [57, 59]
+2022-06-05 17:04:00,758 - synthesizer_pomdp.py - FSC synthesis: elapsed 1063.6 s, opt = 16.31, injections: 59.
+2022-06-05 17:04:00,758 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:04:00,761 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 57, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:04:00,767 - quotient_pomdp.py - Constructed quotient MDP having 325 states and 86077 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:05:21,906 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2697119787689176251361184480995787482948898534299632474455100743331363364933902568035797450118081488381184006840047592531247114400121491807615914382267874316312372684478759765625 to 124382696149100190212374299804826936343049662242972739886663222980303542197443433331864685412826457181266471384498984306526031494140625
+2022-06-05 17:05:21,923 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.43 s
+number of holes: 75, family size: 2697119787689176251361184480995787482948898534299632474455100743331363364933902568035797450118081488381184006840047592531247114400121491807615914382267874316312372684478759765625, super quotient: 325 states / 86077 actions
+explored: 0 %
+AR stats: avg MDP size: 323, iterations: 184
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 57: 0.38513912797235994, 59: 0.6623149824630018, 61: 0.04438374911932846, 63: 0.044096632841388136, 64: 0.2906193845511774, 65: 0.06469271108551121}
+selected hole:  1
+hole has options:  [58, 60]
+2022-06-05 17:05:24,348 - synthesizer_pomdp.py - FSC synthesis: elapsed 1147.2 s, opt = 16.31, injections: 60.
+2022-06-05 17:05:24,348 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:05:24,351 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 58, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:05:24,356 - quotient_pomdp.py - Constructed quotient MDP having 329 states and 88738 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:06:50,010 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2642517581665937541317606449463277830008202389067817605906726768440937553900978194634260713986811886743320312500000000000000000000000000000000000000000000000000000000000000000000000 to 24372922769634714713334113668390134383662400039430248857611546261216338698401856291348657705228236295261473711938307358720000000000000000
+2022-06-05 17:06:50,029 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.43 s
+number of holes: 76, family size: 2642517581665937541317606449463277830008202389067817605906726768440937553900978194634260713986811886743320312500000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 329 states / 88738 actions
+explored: 0 %
+AR stats: avg MDP size: 327, iterations: 184
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 58: 0.38513912797235994, 60: 0.6623149824630018, 62: 0.04438374911932846, 64: 0.044096632841388136, 65: 0.2906193845511774, 66: 0.06469271108551121}
+selected hole:  1
+hole has options:  [59, 61]
+2022-06-05 17:06:52,455 - synthesizer_pomdp.py - FSC synthesis: elapsed 1235.3 s, opt = 16.31, injections: 61.
+2022-06-05 17:06:52,455 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:06:52,458 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 59, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:06:52,464 - quotient_pomdp.py - Constructed quotient MDP having 333 states and 91439 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:08:23,024 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2623887346088880335099905956048921389180477640929339292992917939187598195672510205220046655443915442330724161651025058703905681443174362864182748433794500897420221008360385894775390625 to 4840217835154653655932976037900359892647043939687228464059639986283962385143332190407302312498389610969308463420706053137047924957275390625
+2022-06-05 17:08:23,042 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.59 s
+number of holes: 77, family size: 2623887346088880335099905956048921389180477640929339292992917939187598195672510205220046655443915442330724161651025058703905681443174362864182748433794500897420221008360385894775390625, super quotient: 333 states / 91439 actions
+explored: 0 %
+AR stats: avg MDP size: 331, iterations: 184
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 59: 0.38513912797235994, 61: 0.6623149824630018, 63: 0.04438374911932846, 65: 0.044096632841388136, 66: 0.2906193845511774, 67: 0.06469271108551121}
+selected hole:  1
+hole has options:  [60, 62]
+2022-06-05 17:08:25,630 - synthesizer_pomdp.py - FSC synthesis: elapsed 1328.5 s, opt = 16.31, injections: 62.
+2022-06-05 17:08:25,630 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:08:25,632 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 60, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:08:25,639 - quotient_pomdp.py - Constructed quotient MDP having 337 states and 94180 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:10:02,257 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2640046821672559501387517329074918867187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 to 974005361240080488351868979667264346986400045439385600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+2022-06-05 17:10:02,277 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.67 s
+number of holes: 78, family size: 2640046821672559501387517329074918867187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 337 states / 94180 actions
+explored: 0 %
+AR stats: avg MDP size: 335, iterations: 184
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 60: 0.38513912797235994, 62: 0.6623149824630018, 64: 0.04438374911932846, 66: 0.044096632841388136, 67: 0.2906193845511774, 68: 0.06469271108551121}
+selected hole:  1
+hole has options:  [61, 63]
+2022-06-05 17:10:04,945 - synthesizer_pomdp.py - FSC synthesis: elapsed 1427.8 s, opt = 16.31, injections: 63.
+2022-06-05 17:10:04,945 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:10:04,949 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 61, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:10:04,956 - quotient_pomdp.py - Constructed quotient MDP having 341 states and 96961 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:11:48,332 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2691213460743632250892267604238936545806003803676515565450665993258590044686276268706274491095119891586877745922620905565733337582436954643828574116649898773090399117791093885898590087890625 to 198576503832239885026840732861419353290648718197933308550680539383040910747784998305146735544011925735403038211851684061537668925787506103515625
+2022-06-05 17:11:48,352 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 2.73 s
+number of holes: 79, family size: 2691213460743632250892267604238936545806003803676515565450665993258590044686276268706274491095119891586877745922620905565733337582436954643828574116649898773090399117791093885898590087890625, super quotient: 341 states / 96961 actions
+explored: 0 %
+AR stats: avg MDP size: 339, iterations: 184
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 61: 0.38513912797235994, 63: 0.6623149824630018, 65: 0.04438374911932846, 67: 0.044096632841388136, 68: 0.2906193845511774, 69: 0.06469271108551121}
+selected hole:  1
+hole has options:  [64, 62]
+2022-06-05 17:11:51,081 - synthesizer_pomdp.py - FSC synthesis: elapsed 1533.9 s, opt = 16.31, injections: 64.
+2022-06-05 17:11:51,082 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:11:51,084 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 62, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:11:51,091 - quotient_pomdp.py - Constructed quotient MDP having 345 states and 99782 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:13:38,310 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2778990564741488359279053393104679069229153358100549508768324285632651827943040180052126631598606426276744990137109375000000000000000000000000000000000000000000000000000000000000000000000000000 to 41010662184831848331832358735900734895118199742465823862773775312456519863090868727887806310556772019734147966125452073284539514880000000000000000
+2022-06-05 17:13:38,330 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (198, 0), opt = 16.31
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 3.01 s
+number of holes: 80, family size: 2778990564741488359279053393104679069229153358100549508768324285632651827943040180052126631598606426276744990137109375000000000000000000000000000000000000000000000000000000000000000000000000000, super quotient: 345 states / 99782 actions
+explored: 0 %
+AR stats: avg MDP size: 343, iterations: 198
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 62: 0.38513912797235994, 64: 0.6623149824630018, 66: 0.04438374911932846, 68: 0.044096632841388136, 69: 0.2906193845511774, 70: 0.06469271108551121}
+selected hole:  1
+hole has options:  [65, 63]
+2022-06-05 17:13:41,341 - synthesizer_pomdp.py - FSC synthesis: elapsed 1644.2 s, opt = 16.31, injections: 65.
+2022-06-05 17:13:41,341 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:13:41,343 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 63, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:13:41,351 - quotient_pomdp.py - Constructed quotient MDP having 349 states and 102643 actions.
+
+------------------------------------------------------------
+
+2022-06-05 17:15:35,785 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2906445091568051929568658019387510871024803265952932849179464741592331333536040658311908655090513455314181982600492192722929614430835499921132508423403579579658018161580912419594824314117431640625 to 8578311802951228323114277597807655156945219960153843754561164066936894094491200841043224289912839836577199566218710415434678194230420507965087890625
+2022-06-05 17:15:35,804 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (194, 0), opt = 16.31
+--------------------
+Synthesis summary
+
+optimality objective: R[exp]{"rew0"}min=? [F "target"] 
+
+method: AR, synthesis time: 3.08 s
+number of holes: 81, family size: 2906445091568051929568658019387510871024803265952932849179464741592331333536040658311908655090513455314181982600492192722929614430835499921132508423403579579658018161580912419594824314117431640625, super quotient: 349 states / 102643 actions
+explored: 0 %
+AR stats: avg MDP size: 347, iterations: 198
+
+optimal: 16.310235
+--------------------
+
+None
+
+hole scores:  {1: 1.4192709720611816, 7: 0.16019922198211398, 63: 0.38513912797235994, 65: 0.6623149824630018, 67: 0.04438374911932846, 69: 0.044096632841388136, 70: 0.2906193845511774, 71: 0.06469271108551121}
+selected hole:  1
+hole has options:  [64, 66]
+2022-06-05 17:15:38,887 - synthesizer_pomdp.py - FSC synthesis: elapsed 1761.8 s, opt = 16.31, injections: 66.
+2022-06-05 17:15:38,887 - synthesizer_pomdp.py - Injecting memory into observation 1 ...
+2022-06-05 17:15:38,890 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 64, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-05 17:15:38,898 - quotient_pomdp.py - Constructed quotient MDP having 353 states and 105544 actions.

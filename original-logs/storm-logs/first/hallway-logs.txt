@@ -1,0 +1,66 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 18:17:21 2022
+Command line arguments: --explicit-drn /mnt/d/src/PP/new_storm/artifact/benchmark/uai/hallway/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/hallway/sketch.props --belief-exploration unfold --size-threshold 0 --gap-threshold 0 --clipping-threshold 0 --expl-heuristic bfs -tm --signal-timeout 60 --buildchoicelab
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model construction: 0.052s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	61
+Transitions: 	995
+Choices: 	301
+Observations: 	23
+Reward Models:  rew0
+State Labels: 	2 labels
+   * init -> 1 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	5 labels
+   * 4 -> 60 item(s)
+   * 2 -> 60 item(s)
+   * 3 -> 60 item(s)
+   * 1 -> 60 item(s)
+   * 0 -> 61 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"rew0"}min=? [F "target"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 610.
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	61
+Transitions: 	995
+Choices: 	301
+Observations: 	23
+Reward Models:  rew0
+State Labels: 	2 labels
+   * init -> 1 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	5 labels
+   * 4 -> 60 item(s)
+   * 2 -> 60 item(s)
+   * 3 -> 60 item(s)
+   * 1 -> 60 item(s)
+   * 0 -> 61 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 10
+# Total check time: 0.083s
+# Number of states in the belief MDP for the under-approximation: 610
+# Truncated states for the under-approximation: 392
+# Exploration state limit for under-approximation: 610
+# Time spend for building the under-approx grid MDP(s): 0.004s
+# Time spend for checking the under-approx grid MDP(s): 0.013s
+##########################################
+
+Result: ≤ 19.32198062
+Time for POMDP analysis: 0.095ss.
+
+Performance statistics:
+  * peak memory usage: 38MB
+  * CPU time: 0.086s
+  * wallclock time: 0.217s

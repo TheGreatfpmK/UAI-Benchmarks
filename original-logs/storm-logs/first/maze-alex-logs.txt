@@ -1,0 +1,70 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 18:17:21 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/maze-alex/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/maze-alex/sketch.props --belief-exploration unfold --size-threshold 0 --gap-threshold 0 --clipping-threshold 0 --expl-heuristic bfs -tm --signal-timeout 60
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.075s.
+
+Time for model construction: 0.049s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	166
+Choices: 	54
+Observations: 	8
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * ((x = 2) & (y = 0)) -> 1 item(s)
+Choice Labels: 	5 labels
+   * place -> 1 item(s)
+   * up -> 13 item(s)
+   * right -> 13 item(s)
+   * down -> 13 item(s)
+   * left -> 13 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"steps"}min=? [F ((x = 2) & (y = 0))]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 90.
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	166
+Choices: 	54
+Observations: 	8
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * ((x = 2) & (y = 0)) -> 1 item(s)
+Choice Labels: 	5 labels
+   * place -> 1 item(s)
+   * up -> 13 item(s)
+   * right -> 13 item(s)
+   * down -> 13 item(s)
+   * left -> 13 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 6
+# Total check time: 0.037s
+# Number of states in the belief MDP for the under-approximation: 90
+# Truncated states for the under-approximation: 52
+# Exploration state limit for under-approximation: 90
+# Time spend for building the under-approx grid MDP(s): 0.000s
+# Time spend for checking the under-approx grid MDP(s): 0.008s
+##########################################
+
+Result: ≤ 7.675695236
+Time for POMDP analysis: 0.041ss.
+
+Performance statistics:
+  * peak memory usage: 52MB
+  * CPU time: 0.073s
+  * wallclock time: 0.203s

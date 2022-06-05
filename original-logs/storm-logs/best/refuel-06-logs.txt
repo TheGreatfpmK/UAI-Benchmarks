@@ -1,0 +1,83 @@
+Storm-pomdp 1.6.3
+
+Date: Tue May 24 23:05:31 2022
+Command line arguments: --prism /mnt/d/src/PP/new_storm/artifact/benchmark/uai/refuel-06/sketch.templ --prop /mnt/d/src/PP/new_storm/artifact/benchmark/uai/refuel-06/sketch.props --belief-exploration unfold --timeout 1800 --gap-threshold 0 --size-threshold 0 --clip-resolution 2 --expl-heuristic bfs --clipping-mode grid -tm --signal-timeout 60 --sound --lpsolver glpk '--glpk:inttol' 1e-9 '--topological:minmax' svi
+Current working directory: /mnt/d/src/PP/new_storm/artifact
+
+Time for model input parsing: 0.121s.
+
+Time for model construction: 0.066s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	208
+Transitions: 	989
+Choices: 	565
+Observations: 	50
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * notbad -> 159 item(s)
+   * goal -> 4 item(s)
+Choice Labels: 	6 labels
+   * placement -> 1 item(s)
+   * south -> 126 item(s)
+   * refuel -> 12 item(s)
+   * east -> 126 item(s)
+   * north -> 124 item(s)
+   * west -> 124 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... 
+Heuristically selected an under-approximation mdp size threshold of 4576.
+Use Belief Clipping with grid beliefs
+ WARN (BeliefManager.cpp:749): LP solver returned an optimal value of 0. This should definitely not happen when using a grid
+ WARN (BeliefManager.cpp:750): Origin{ 39: 0.999601818755495808, 132: 0.000398181244504221938 }
+ WARN (BeliefManager.cpp:751): Target [Bel 22] { 39: 1 }
+ WARN (BeliefManager.cpp:749): LP solver returned an optimal value of 0. This should definitely not happen when using a grid
+ WARN (BeliefManager.cpp:750): Origin{ 39: 0.99998118663480462, 132: 1.88133651952772417e-05 }
+ WARN (BeliefManager.cpp:751): Target [Bel 22] { 39: 1 }
+Finished exploring Underapproximation MDP.
+Start analysis...
+ WARN (SparseMdpPrctlHelper.cpp:357): A non-empty hint was provided, but its information will be disregarded.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	208
+Transitions: 	989
+Choices: 	565
+Observations: 	50
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * notbad -> 159 item(s)
+   * goal -> 4 item(s)
+Choice Labels: 	6 labels
+   * placement -> 1 item(s)
+   * south -> 126 item(s)
+   * refuel -> 12 item(s)
+   * east -> 126 item(s)
+   * north -> 124 item(s)
+   * west -> 124 item(s)
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 22
+# Total check time: 10.322s
+# Number of states in the belief MDP for the under-approximation: 4832
+# Clipping attempts (clipped states) for the under-approximation: 2979 (2862)
+# Total clipping preprocessing time: 0.000s
+# Total clipping time: 0.000s
+# Exploration state limit for under-approximation: 4576
+# Time spend for building the under-approx grid MDP(s): 10.262s
+# Time spend for checking the under-approx grid MDP(s): 0.020s
+##########################################
+
+Result: ≥ 0.67219
+Time for POMDP analysis: 10.326ss.
+
+Performance statistics:
+  * peak memory usage: 57MB
+  * CPU time: 10.402s
+  * wallclock time: 10.565s
