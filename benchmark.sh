@@ -64,6 +64,3 @@ then
 
     python3 prism-benchmark.py "${prism}"
 fi
-
-
-mkdir -p "lol"
