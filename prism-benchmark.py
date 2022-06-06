@@ -4,7 +4,7 @@ import sys
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-directory = os.fsencode(dir_path + '/uai-prism')
+directory = os.fsencode(dir_path + '/models/uai-prism')
 models = [ f.path for f in os.scandir(directory) if f.is_dir() ]
 logs_dir = os.fsencode(dir_path + '/logs/prism-logs/')
 

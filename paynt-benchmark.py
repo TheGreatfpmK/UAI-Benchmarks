@@ -4,7 +4,7 @@ import sys
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-directory = os.fsencode(dir_path + '/uai')
+directory = os.fsencode(dir_path + '/models/uai')
 models = [ f.path for f in os.scandir(directory) if f.is_dir() ]
 logs_dir_fast = os.fsencode(dir_path + '/logs/paynt-logs/fastest/')
 logs_dir_best = os.fsencode(dir_path + '/logs/paynt-logs/best/')

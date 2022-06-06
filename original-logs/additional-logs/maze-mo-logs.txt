@@ -1,0 +1,1260 @@
+2022-06-06 14:10:11,161 - cli.py - This is Paynt version 0.1.0.
+2022-06-06 14:10:11,165 - sketch.py - Loading sketch from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai-additional/maze-mo/sketch.templ...
+2022-06-06 14:10:11,174 - prism_parser.py - PRISM model type: PrismModelType.POMDP
+2022-06-06 14:10:11,174 - prism_parser.py - Loading properties from /mnt/d/src/PP/synthesis/workspace/uai-benchmark/uai-additional/maze-mo/sketch.props ...
+2022-06-06 14:10:11,191 - sketch.py - Constructed quotient MDP having 15 states and 57 actions.
+2022-06-06 14:10:11,191 - sketch.py - Found the following specification: constraints: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))], optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+2022-06-06 14:10:11,191 - sketch.py - Initializing the quotient ...
+2022-06-06 14:10:11,191 - quotient_pomdp.py - Constructed POMDP having 9 observations.
+2022-06-06 14:10:11,192 - quotient_pomdp.py - Observation labels: ['[d=1 & u=1]', '[]', '[d=1 & l=1]', '[d=1 & r=1]', '[u=1]', '[l=1 & r=1]', '[bad=1 & u=1]', '[d=1 & l=1 & r=1]', '[goal=1 & u=1]']
+2022-06-06 14:10:11,192 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,192 - quotient_pomdp.py - Constructed quotient MDP having 15 states and 57 actions.
+2022-06-06 14:10:11,192 - sketch.py - Sketch parsing complete.
+2022-06-06 14:10:11,192 - sketch.py - Sketch has 8 holes
+2022-06-06 14:10:11,192 - sketch.py - Design space size: 65536
+2022-06-06 14:10:11,192 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [1, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,192 - quotient_pomdp.py - Constructed quotient MDP having 15 states and 57 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,192 - quotient_pomdp.py - Symmetry breaking: reduced design space from 65536 to 65536
+2022-06-06 14:10:11,195 - synthesizer.py - Synthesis initiated.
+2022-06-06 14:10:11,200 - property.py - New opt = 225.20574669772637.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.01 s
+number of holes: 8, family size: 65536, super quotient: 15 states / 57 actions
+explored: 0 %
+AR stats: avg MDP size: 15, iterations: 3
+
+optimal: 225.205747
+--------------------
+
+A([d=1 & u=1],0)={'down'}, A([d=1 & l=1],0)={'left'}, A([d=1 & r=1],0)={'down'}, A([u=1],0)={'up'}, A([l=1 & r=1],0)={'left'}, A([bad=1 & u=1],0)={'up'}, A([d=1 & l=1 & r=1],0)={'down'}, A([goal=1 & u=1],0)={'up'}
+
+hole scores:  {0: 0.0438280251861787}
+selected hole:  0
+hole has options:  [0, 2]
+2022-06-06 14:10:11,202 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 225.206, injections: 0.
+2022-06-06 14:10:11,202 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,202 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [2, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,202 - quotient_pomdp.py - Constructed quotient MDP having 21 states and 154 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,203 - quotient_pomdp.py - Symmetry breaking: reduced design space from 134217728 to 75497472
+2022-06-06 14:10:11,207 - synthesizer.py - Synthesis initiated.
+2022-06-06 14:10:11,216 - property.py - New opt = 121.13708313886673.
+2022-06-06 14:10:11,216 - property.py - New opt = 5.315981339055316.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.01 s
+number of holes: 10, family size: 134217728, super quotient: 21 states / 154 actions
+explored: 0 %
+AR stats: avg MDP size: 21, iterations: 5
+
+optimal: 5.315981
+--------------------
+
+AM([d=1 & u=1],0)={'up'}+0, AM([d=1 & u=1],1)={'down'}+1, M([],0)=1, AM([d=1 & l=1],0)={'left'}+0, AM([d=1 & r=1],0)={'down'}+1, AM([u=1],0)={'up'}+0, A([l=1 & r=1],0)={'left'}, AM([bad=1 & u=1],0)={'up'}+0, AM([d=1 & l=1 & r=1],0)={'down'}+1, AM([goal=1 & u=1],0)={'up'}+0
+
+hole scores:  {0: 0.069226464767237, 1: 0.08114063560146814}
+selected hole:  1
+hole has options:  [2, 5]
+2022-06-06 14:10:11,219 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.0 s, opt = 5.316, injections: 1.
+2022-06-06 14:10:11,219 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,219 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [3, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,219 - quotient_pomdp.py - Constructed quotient MDP having 27 states and 299 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,221 - quotient_pomdp.py - Symmetry breaking: reduced design space from 61917364224 to 7739670528
+2022-06-06 14:10:11,227 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 11, family size: 61917364224, super quotient: 27 states / 299 actions
+explored: 0 %
+AR stats: avg MDP size: 27, iterations: 7
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {0: 0.12085258047579911, 2: 0.12702057045008375}
+selected hole:  2
+hole has options:  [8, 9]
+2022-06-06 14:10:11,245 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 5.316, injections: 2.
+2022-06-06 14:10:11,246 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,246 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [4, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,246 - quotient_pomdp.py - Constructed quotient MDP having 33 states and 492 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,250 - quotient_pomdp.py - Symmetry breaking: reduced design space from 17592186044416 to 68719476736
+2022-06-06 14:10:11,257 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 12, family size: 17592186044416, super quotient: 33 states / 492 actions
+explored: 0 %
+AR stats: avg MDP size: 33, iterations: 11
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {0: 0.09786003440136502, 2: 0.08294324212149416}
+selected hole:  0
+hole has options:  [0, 2]
+2022-06-06 14:10:11,281 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 5.316, injections: 3.
+2022-06-06 14:10:11,281 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,281 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [5, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,281 - quotient_pomdp.py - Constructed quotient MDP having 39 states and 733 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,288 - quotient_pomdp.py - Symmetry breaking: reduced design space from 4096000000000000 to 4000000000000
+2022-06-06 14:10:11,298 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.02 s
+number of holes: 13, family size: 4096000000000000, super quotient: 39 states / 733 actions
+explored: 0 %
+AR stats: avg MDP size: 39, iterations: 9
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {2: 0.08294312977510314}
+selected hole:  2
+hole has options:  [12, 14]
+2022-06-06 14:10:11,321 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.1 s, opt = 5.316, injections: 4.
+2022-06-06 14:10:11,321 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,321 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [6, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,321 - quotient_pomdp.py - Constructed quotient MDP having 45 states and 1022 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,332 - quotient_pomdp.py - Symmetry breaking: reduced design space from 876488338465357824 to 213986410758144
+2022-06-06 14:10:11,343 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.03 s
+number of holes: 14, family size: 876488338465357824, super quotient: 45 states / 1022 actions
+explored: 0 %
+AR stats: avg MDP size: 45, iterations: 17
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {2: 0.08294312977510314}
+selected hole:  2
+hole has options:  [16, 14]
+2022-06-06 14:10:11,376 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.2 s, opt = 5.316, injections: 5.
+2022-06-06 14:10:11,376 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,376 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [7, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,376 - quotient_pomdp.py - Constructed quotient MDP having 51 states and 1359 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,396 - quotient_pomdp.py - Symmetry breaking: reduced design space from 182059119829942534144 to 11112006825558016
+2022-06-06 14:10:11,412 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.07 s
+number of holes: 15, family size: 182059119829942534144, super quotient: 51 states / 1359 actions
+explored: 0 %
+AR stats: avg MDP size: 51, iterations: 35
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [16, 18]
+2022-06-06 14:10:11,478 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.3 s, opt = 5.316, injections: 6.
+2022-06-06 14:10:11,478 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,478 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [8, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,478 - quotient_pomdp.py - Constructed quotient MDP having 57 states and 1744 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,508 - quotient_pomdp.py - Symmetry breaking: reduced design space from 37778931862957161709568 to 576460752303423488
+2022-06-06 14:10:11,527 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.1 s
+number of holes: 16, family size: 37778931862957161709568, super quotient: 57 states / 1744 actions
+explored: 0 %
+AR stats: avg MDP size: 57, iterations: 67
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [18, 20]
+2022-06-06 14:10:11,629 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.4 s, opt = 5.316, injections: 7.
+2022-06-06 14:10:11,629 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,629 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [9, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,629 - quotient_pomdp.py - Constructed quotient MDP having 63 states and 2177 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,681 - quotient_pomdp.py - Symmetry breaking: reduced design space from 7958661109946400884391936 to 30359882774148562944
+2022-06-06 14:10:11,708 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.13 s
+number of holes: 17, family size: 7958661109946400884391936, super quotient: 63 states / 2177 actions
+explored: 0 %
+AR stats: avg MDP size: 63, iterations: 67
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [20, 22]
+2022-06-06 14:10:11,835 - synthesizer_pomdp.py - FSC synthesis: elapsed 0.6 s, opt = 5.316, injections: 8.
+2022-06-06 14:10:11,835 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:11,835 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [10, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:11,835 - quotient_pomdp.py - Constructed quotient MDP having 69 states and 2658 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:11,919 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1717986918400000000000000000 to 1638400000000000000000
+2022-06-06 14:10:11,949 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.21 s
+number of holes: 18, family size: 1717986918400000000000000000, super quotient: 69 states / 2658 actions
+explored: 0 %
+AR stats: avg MDP size: 69, iterations: 131
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [24, 22]
+2022-06-06 14:10:12,163 - synthesizer_pomdp.py - FSC synthesis: elapsed 1.0 s, opt = 5.316, injections: 9.
+2022-06-06 14:10:12,163 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:12,164 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [11, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:12,164 - quotient_pomdp.py - Constructed quotient MDP having 75 states and 3187 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:12,271 - quotient_pomdp.py - Symmetry breaking: reduced design space from 382074608478613020175306326016 to 91093685264256720584704
+2022-06-06 14:10:12,305 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.43 s
+number of holes: 19, family size: 382074608478613020175306326016, super quotient: 75 states / 3187 actions
+explored: 0 %
+AR stats: avg MDP size: 75, iterations: 263
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [24, 26]
+2022-06-06 14:10:12,738 - synthesizer_pomdp.py - FSC synthesis: elapsed 1.5 s, opt = 5.316, injections: 10.
+2022-06-06 14:10:12,738 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:12,738 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [12, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:12,739 - quotient_pomdp.py - Constructed quotient MDP having 81 states and 3764 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:12,873 - quotient_pomdp.py - Symmetry breaking: reduced design space from 87817993537467267453437463232512 to 5234360309688286033477632
+2022-06-06 14:10:12,912 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.85 s
+number of holes: 20, family size: 87817993537467267453437463232512, super quotient: 81 states / 3764 actions
+explored: 0 %
+AR stats: avg MDP size: 81, iterations: 519
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [26, 28]
+2022-06-06 14:10:13,760 - synthesizer_pomdp.py - FSC synthesis: elapsed 2.6 s, opt = 5.316, injections: 11.
+2022-06-06 14:10:13,760 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:13,760 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [13, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:13,761 - quotient_pomdp.py - Constructed quotient MDP having 87 states and 4389 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:13,959 - quotient_pomdp.py - Symmetry breaking: reduced design space from 20896178655943101411324274803736576 to 311377326487647018005315584
+2022-06-06 14:10:14,004 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 0.92 s
+number of holes: 21, family size: 20896178655943101411324274803736576, super quotient: 87 states / 4389 actions
+explored: 0 %
+AR stats: avg MDP size: 87, iterations: 519
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [28, 30]
+2022-06-06 14:10:14,923 - synthesizer_pomdp.py - FSC synthesis: elapsed 3.7 s, opt = 5.316, injections: 12.
+2022-06-06 14:10:14,923 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:14,923 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [14, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:14,924 - quotient_pomdp.py - Constructed quotient MDP having 93 states and 5062 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:15,172 - quotient_pomdp.py - Symmetry breaking: reduced design space from 5151676304086649977486675518376902656 to 19191489756430126642758680576
+2022-06-06 14:10:15,221 - synthesizer.py - Synthesis initiated.
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 1.81 s
+number of holes: 22, family size: 5151676304086649977486675518376902656, super quotient: 93 states / 5062 actions
+explored: 0 %
+AR stats: avg MDP size: 93, iterations: 1031
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [32, 30]
+2022-06-06 14:10:17,029 - synthesizer_pomdp.py - FSC synthesis: elapsed 5.8 s, opt = 5.316, injections: 13.
+2022-06-06 14:10:17,029 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:17,029 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [15, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:17,029 - quotient_pomdp.py - Constructed quotient MDP having 99 states and 5783 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:17,368 - quotient_pomdp.py - Symmetry breaking: reduced design space from 1316217038422671360000000000000000000000 to 1225822640976562500000000000000
+2022-06-06 14:10:17,424 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1600, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 3.81 s
+number of holes: 23, family size: 1316217038422671360000000000000000000000, super quotient: 99 states / 5783 actions
+explored: 0 %
+AR stats: avg MDP size: 99, iterations: 2063
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [32, 34]
+2022-06-06 14:10:21,231 - synthesizer_pomdp.py - FSC synthesis: elapsed 10.0 s, opt = 5.316, injections: 14.
+2022-06-06 14:10:21,231 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:21,231 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [16, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:21,231 - quotient_pomdp.py - Constructed quotient MDP having 105 states and 6552 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:21,666 - quotient_pomdp.py - Symmetry breaking: reduced design space from 348449143727040986586495598010130648530944 to 81129638414606681695789005144064
+2022-06-06 14:10:21,728 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1572, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (3183, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 7.7 s
+number of holes: 24, family size: 348449143727040986586495598010130648530944, super quotient: 105 states / 6552 actions
+explored: 0 %
+AR stats: avg MDP size: 105, iterations: 4111
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [34, 36]
+2022-06-06 14:10:29,424 - synthesizer_pomdp.py - FSC synthesis: elapsed 18.2 s, opt = 5.316, injections: 15.
+2022-06-06 14:10:29,424 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:29,425 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [17, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:29,425 - quotient_pomdp.py - Constructed quotient MDP having 111 states and 7369 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:29,974 - quotient_pomdp.py - Symmetry breaking: reduced design space from 95546306852743509270601447628868725952741376 to 5561527030818601445679171454910464
+2022-06-06 14:10:30,045 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1411, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2838, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 8.62 s
+number of holes: 25, family size: 95546306852743509270601447628868725952741376, super quotient: 111 states / 7369 actions
+explored: 0 %
+AR stats: avg MDP size: 111, iterations: 4111
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [36, 38]
+2022-06-06 14:10:38,669 - synthesizer_pomdp.py - FSC synthesis: elapsed 27.5 s, opt = 5.316, injections: 16.
+2022-06-06 14:10:38,669 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:38,670 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [18, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:38,670 - quotient_pomdp.py - Constructed quotient MDP having 117 states and 8234 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:39,334 - quotient_pomdp.py - Symmetry breaking: reduced design space from 27121419161564558068894103990026016011617042432 to 394668592512091826485908008035418112
+2022-06-06 14:10:39,412 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1373, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2752, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (4123, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (5523, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (6900, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 17.88 s
+number of holes: 26, family size: 27121419161564558068894103990026016011617042432, super quotient: 117 states / 8234 actions
+explored: 0 %
+AR stats: avg MDP size: 117, iterations: 8207
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [40, 38]
+2022-06-06 14:10:57,296 - synthesizer_pomdp.py - FSC synthesis: elapsed 46.1 s, opt = 5.316, injections: 17.
+2022-06-06 14:10:57,297 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:10:57,297 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [19, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:10:57,297 - quotient_pomdp.py - Constructed quotient MDP having 123 states and 9147 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:10:58,124 - quotient_pomdp.py - Symmetry breaking: reduced design space from 7964406154673052346817325665203701142942778392576 to 28974340801771367648388425241878216704
+2022-06-06 14:10:58,211 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1268, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2612, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (3951, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (5259, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (6586, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (7933, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (9239, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (10567, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (11876, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (13206, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (14505, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (15844, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 37.25 s
+number of holes: 27, family size: 7964406154673052346817325665203701142942778392576, super quotient: 123 states / 9147 actions
+explored: 0 %
+AR stats: avg MDP size: 123, iterations: 16415
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [40, 42]
+2022-06-06 14:11:35,459 - synthesizer_pomdp.py - FSC synthesis: elapsed 84.3 s, opt = 5.316, injections: 18.
+2022-06-06 14:11:35,459 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:11:35,459 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [20, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:11:35,460 - quotient_pomdp.py - Constructed quotient MDP having 129 states and 10108 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:11:36,479 - quotient_pomdp.py - Symmetry breaking: reduced design space from 2417851639229258349412352000000000000000000000000000 to 2199023255552000000000000000000000000000
+2022-06-06 14:11:36,571 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1242, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2507, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (3819, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (5100, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (6365, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (7668, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (8942, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (10245, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (11471, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (12703, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (14007, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (15255, 0), opt = 5.316
+> Progress 0.0%, elapsed 39.0 s, iters = (16506, 0), opt = 5.316
+> Progress 0.0%, elapsed 42.0 s, iters = (17748, 0), opt = 5.316
+> Progress 0.0%, elapsed 45.0 s, iters = (18975, 0), opt = 5.316
+> Progress 0.0%, elapsed 48.0 s, iters = (20243, 0), opt = 5.316
+> Progress 0.0%, elapsed 51.0 s, iters = (21477, 0), opt = 5.316
+> Progress 0.0%, elapsed 54.0 s, iters = (22730, 0), opt = 5.316
+> Progress 0.0%, elapsed 57.0 s, iters = (24010, 0), opt = 5.316
+> Progress 0.0%, elapsed 60.0 s, iters = (25267, 0), opt = 5.316
+> Progress 0.0%, elapsed 63.0 s, iters = (26526, 0), opt = 5.316
+> Progress 0.0%, elapsed 66.0 s, iters = (27787, 0), opt = 5.316
+> Progress 0.0%, elapsed 69.0 s, iters = (29057, 0), opt = 5.316
+> Progress 0.0%, elapsed 72.0 s, iters = (30350, 0), opt = 5.316
+> Progress 0.0%, elapsed 75.0 s, iters = (31623, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 77.7 s
+number of holes: 28, family size: 2417851639229258349412352000000000000000000000000000, super quotient: 129 states / 10108 actions
+explored: 0 %
+AR stats: avg MDP size: 129, iterations: 32799
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [42, 44]
+2022-06-06 14:12:54,274 - synthesizer_pomdp.py - FSC synthesis: elapsed 163.1 s, opt = 5.316, injections: 19.
+2022-06-06 14:12:54,274 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:12:54,274 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [21, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:12:54,275 - quotient_pomdp.py - Constructed quotient MDP having 135 states and 11117 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:12:55,495 - quotient_pomdp.py - Symmetry breaking: reduced design space from 758263253073010241157973569975696406218966848080183296 to 172409102804751965131339049998063366324224
+2022-06-06 14:12:55,594 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1106, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2229, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (3379, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (4510, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (5625, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (6748, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (7863, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (8984, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (10119, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (11187, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (12314, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (13454, 0), opt = 5.316
+> Progress 0.0%, elapsed 39.0 s, iters = (14536, 0), opt = 5.316
+> Progress 0.0%, elapsed 42.0 s, iters = (15686, 0), opt = 5.316
+> Progress 0.0%, elapsed 45.0 s, iters = (16808, 0), opt = 5.316
+> Progress 0.0%, elapsed 48.0 s, iters = (17957, 0), opt = 5.316
+> Progress 0.0%, elapsed 51.0 s, iters = (19090, 0), opt = 5.316
+> Progress 0.0%, elapsed 54.0 s, iters = (20245, 0), opt = 5.316
+> Progress 0.0%, elapsed 57.0 s, iters = (21375, 0), opt = 5.316
+> Progress 0.0%, elapsed 60.0 s, iters = (22545, 0), opt = 5.316
+> Progress 0.0%, elapsed 63.0 s, iters = (23678, 0), opt = 5.316
+> Progress 0.0%, elapsed 66.0 s, iters = (24755, 0), opt = 5.316
+> Progress 0.0%, elapsed 69.0 s, iters = (25895, 0), opt = 5.316
+> Progress 0.0%, elapsed 72.0 s, iters = (26999, 0), opt = 5.316
+> Progress 0.0%, elapsed 75.0 s, iters = (28138, 0), opt = 5.316
+> Progress 0.0%, elapsed 78.0 s, iters = (29266, 0), opt = 5.316
+> Progress 0.0%, elapsed 81.0 s, iters = (30417, 0), opt = 5.316
+> Progress 0.0%, elapsed 84.0 s, iters = (31536, 0), opt = 5.316
+> Progress 0.0%, elapsed 87.0 s, iters = (32673, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 87.33 s
+number of holes: 29, family size: 758263253073010241157973569975696406218966848080183296, super quotient: 135 states / 11117 actions
+explored: 0 %
+AR stats: avg MDP size: 135, iterations: 32799
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [44, 46]
+2022-06-06 14:14:22,921 - synthesizer_pomdp.py - FSC synthesis: elapsed 251.7 s, opt = 5.316, injections: 20.
+2022-06-06 14:14:22,921 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:14:22,922 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [22, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:14:22,922 - quotient_pomdp.py - Constructed quotient MDP having 141 states and 12174 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:14:24,376 - quotient_pomdp.py - Symmetry breaking: reduced design space from 245469474207405031577576997869272765489296172102029672448 to 13953324139913833708850290683430601205219328
+2022-06-06 14:14:24,489 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (1006, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2073, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (3210, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (4282, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (5292, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (6412, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (7561, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (8686, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (9837, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (11002, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (12166, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (13247, 0), opt = 5.316
+> Progress 0.0%, elapsed 39.0 s, iters = (14398, 0), opt = 5.316
+> Progress 0.0%, elapsed 42.0 s, iters = (15525, 0), opt = 5.316
+> Progress 0.0%, elapsed 45.0 s, iters = (16571, 0), opt = 5.316
+> Progress 0.0%, elapsed 48.0 s, iters = (17656, 0), opt = 5.316
+> Progress 0.0%, elapsed 51.0 s, iters = (18784, 0), opt = 5.316
+> Progress 0.0%, elapsed 54.0 s, iters = (19888, 0), opt = 5.316
+> Progress 0.0%, elapsed 57.0 s, iters = (21002, 0), opt = 5.316
+> Progress 0.0%, elapsed 60.0 s, iters = (22136, 0), opt = 5.316
+> Progress 0.0%, elapsed 63.0 s, iters = (23214, 0), opt = 5.316
+> Progress 0.0%, elapsed 66.0 s, iters = (24352, 0), opt = 5.316
+> Progress 0.0%, elapsed 69.0 s, iters = (25451, 0), opt = 5.316
+> Progress 0.0%, elapsed 72.0 s, iters = (26601, 0), opt = 5.316
+> Progress 0.0%, elapsed 75.0 s, iters = (27735, 0), opt = 5.316
+> Progress 0.0%, elapsed 78.0 s, iters = (28801, 0), opt = 5.316
+> Progress 0.0%, elapsed 81.0 s, iters = (29933, 0), opt = 5.316
+> Progress 0.0%, elapsed 84.0 s, iters = (31079, 0), opt = 5.316
+> Progress 0.0%, elapsed 87.0 s, iters = (32231, 0), opt = 5.316
+> Progress 0.0%, elapsed 90.0 s, iters = (33342, 0), opt = 5.316
+> Progress 0.0%, elapsed 93.0 s, iters = (34501, 0), opt = 5.316
+> Progress 0.0%, elapsed 96.0 s, iters = (35625, 0), opt = 5.316
+> Progress 0.0%, elapsed 99.0 s, iters = (36772, 0), opt = 5.316
+> Progress 0.0%, elapsed 102.0 s, iters = (37899, 0), opt = 5.316
+> Progress 0.0%, elapsed 105.0 s, iters = (38987, 0), opt = 5.316
+> Progress 0.0%, elapsed 108.0 s, iters = (40120, 0), opt = 5.316
+> Progress 0.0%, elapsed 111.0 s, iters = (41208, 0), opt = 5.316
+> Progress 0.0%, elapsed 114.0 s, iters = (42285, 0), opt = 5.316
+> Progress 0.0%, elapsed 117.0 s, iters = (43370, 0), opt = 5.316
+> Progress 0.0%, elapsed 120.0 s, iters = (44466, 0), opt = 5.316
+> Progress 0.0%, elapsed 123.0 s, iters = (45518, 0), opt = 5.316
+> Progress 0.0%, elapsed 126.0 s, iters = (46614, 0), opt = 5.316
+> Progress 0.0%, elapsed 129.0 s, iters = (47672, 0), opt = 5.316
+> Progress 0.0%, elapsed 132.0 s, iters = (48718, 0), opt = 5.316
+> Progress 0.0%, elapsed 135.0 s, iters = (49764, 0), opt = 5.316
+> Progress 0.0%, elapsed 138.0 s, iters = (50880, 0), opt = 5.316
+> Progress 0.0%, elapsed 141.0 s, iters = (52013, 0), opt = 5.316
+> Progress 0.0%, elapsed 144.0 s, iters = (53090, 0), opt = 5.316
+> Progress 0.0%, elapsed 147.0 s, iters = (54105, 0), opt = 5.316
+> Progress 0.0%, elapsed 150.0 s, iters = (55212, 0), opt = 5.316
+> Progress 0.0%, elapsed 153.0 s, iters = (56305, 0), opt = 5.316
+> Progress 0.0%, elapsed 156.0 s, iters = (57410, 0), opt = 5.316
+> Progress 0.0%, elapsed 159.0 s, iters = (58516, 0), opt = 5.316
+> Progress 0.0%, elapsed 162.0 s, iters = (59669, 0), opt = 5.316
+> Progress 0.0%, elapsed 165.0 s, iters = (60771, 0), opt = 5.316
+> Progress 0.0%, elapsed 168.0 s, iters = (61868, 0), opt = 5.316
+> Progress 0.0%, elapsed 171.0 s, iters = (63025, 0), opt = 5.316
+> Progress 0.0%, elapsed 174.0 s, iters = (64128, 0), opt = 5.316
+> Progress 0.0%, elapsed 177.0 s, iters = (65279, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 177.81 s
+number of holes: 30, family size: 245469474207405031577576997869272765489296172102029672448, super quotient: 141 states / 12174 actions
+explored: 0 %
+AR stats: avg MDP size: 141, iterations: 65567
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [48, 46]
+2022-06-06 14:17:22,300 - synthesizer_pomdp.py - FSC synthesis: elapsed 431.1 s, opt = 5.316, injections: 21.
+2022-06-06 14:17:22,300 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:17:22,300 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [23, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:17:22,301 - quotient_pomdp.py - Constructed quotient MDP having 147 states and 13279 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:17:23,992 - quotient_pomdp.py - Symmetry breaking: reduced design space from 81966203577338201924328653819419157670749425717340457140224 to 1164809810594223931791598457428721611545788416
+2022-06-06 14:17:24,117 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (958, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2034, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (3133, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (4203, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (5247, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (6291, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (7308, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (8306, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (9307, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (10348, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (11306, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (12324, 0), opt = 5.316
+> Progress 0.0%, elapsed 39.0 s, iters = (13348, 0), opt = 5.316
+> Progress 0.0%, elapsed 42.0 s, iters = (14392, 0), opt = 5.316
+> Progress 0.0%, elapsed 45.0 s, iters = (15482, 0), opt = 5.316
+> Progress 0.0%, elapsed 48.0 s, iters = (16560, 0), opt = 5.316
+> Progress 0.0%, elapsed 51.0 s, iters = (17636, 0), opt = 5.316
+> Progress 0.0%, elapsed 54.0 s, iters = (18685, 0), opt = 5.316
+> Progress 0.0%, elapsed 57.0 s, iters = (19723, 0), opt = 5.316
+> Progress 0.0%, elapsed 60.0 s, iters = (20762, 0), opt = 5.316
+> Progress 0.0%, elapsed 63.0 s, iters = (21827, 0), opt = 5.316
+> Progress 0.0%, elapsed 66.0 s, iters = (22911, 0), opt = 5.316
+> Progress 0.0%, elapsed 69.0 s, iters = (24020, 0), opt = 5.316
+> Progress 0.0%, elapsed 72.0 s, iters = (25102, 0), opt = 5.316
+> Progress 0.0%, elapsed 75.0 s, iters = (26195, 0), opt = 5.316
+> Progress 0.0%, elapsed 78.0 s, iters = (27309, 0), opt = 5.316
+> Progress 0.0%, elapsed 81.0 s, iters = (28408, 0), opt = 5.316
+> Progress 0.0%, elapsed 84.0 s, iters = (29487, 0), opt = 5.316
+> Progress 0.0%, elapsed 87.0 s, iters = (30550, 0), opt = 5.316
+> Progress 0.0%, elapsed 90.0 s, iters = (31620, 0), opt = 5.316
+> Progress 0.0%, elapsed 93.0 s, iters = (32660, 0), opt = 5.316
+> Progress 0.0%, elapsed 96.0 s, iters = (33629, 0), opt = 5.316
+> Progress 0.0%, elapsed 99.0 s, iters = (34675, 0), opt = 5.316
+> Progress 0.0%, elapsed 102.0 s, iters = (35782, 0), opt = 5.316
+> Progress 0.0%, elapsed 105.0 s, iters = (36868, 0), opt = 5.316
+> Progress 0.0%, elapsed 108.0 s, iters = (37870, 0), opt = 5.316
+> Progress 0.0%, elapsed 111.0 s, iters = (38964, 0), opt = 5.316
+> Progress 0.0%, elapsed 114.0 s, iters = (39993, 0), opt = 5.316
+> Progress 0.0%, elapsed 117.0 s, iters = (41009, 0), opt = 5.316
+> Progress 0.0%, elapsed 120.0 s, iters = (42109, 0), opt = 5.316
+> Progress 0.0%, elapsed 123.0 s, iters = (43189, 0), opt = 5.316
+> Progress 0.0%, elapsed 126.0 s, iters = (44285, 0), opt = 5.316
+> Progress 0.0%, elapsed 129.0 s, iters = (45298, 0), opt = 5.316
+> Progress 0.0%, elapsed 132.0 s, iters = (46375, 0), opt = 5.316
+> Progress 0.0%, elapsed 135.0 s, iters = (47420, 0), opt = 5.316
+> Progress 0.0%, elapsed 138.0 s, iters = (48484, 0), opt = 5.316
+> Progress 0.0%, elapsed 141.0 s, iters = (49505, 0), opt = 5.316
+> Progress 0.0%, elapsed 144.0 s, iters = (50597, 0), opt = 5.316
+> Progress 0.0%, elapsed 147.0 s, iters = (51694, 0), opt = 5.316
+> Progress 0.0%, elapsed 150.0 s, iters = (52726, 0), opt = 5.316
+> Progress 0.0%, elapsed 153.0 s, iters = (53724, 0), opt = 5.316
+> Progress 0.0%, elapsed 156.0 s, iters = (54767, 0), opt = 5.316
+> Progress 0.0%, elapsed 159.0 s, iters = (55841, 0), opt = 5.316
+> Progress 0.0%, elapsed 162.0 s, iters = (56868, 0), opt = 5.316
+> Progress 0.0%, elapsed 165.0 s, iters = (57842, 0), opt = 5.316
+> Progress 0.0%, elapsed 168.0 s, iters = (58890, 0), opt = 5.316
+> Progress 0.0%, elapsed 171.0 s, iters = (59975, 0), opt = 5.316
+> Progress 0.0%, elapsed 174.0 s, iters = (60972, 0), opt = 5.316
+> Progress 0.0%, elapsed 177.0 s, iters = (61970, 0), opt = 5.316
+> Progress 0.0%, elapsed 180.0 s, iters = (63075, 0), opt = 5.316
+> Progress 0.0%, elapsed 183.0 s, iters = (64187, 0), opt = 5.316
+> Progress 0.0%, elapsed 186.0 s, iters = (65299, 0), opt = 5.316
+> Progress 0.0%, elapsed 189.0 s, iters = (66375, 0), opt = 5.316
+> Progress 0.0%, elapsed 192.0 s, iters = (67372, 0), opt = 5.316
+> Progress 0.0%, elapsed 195.0 s, iters = (68469, 0), opt = 5.316
+> Progress 0.0%, elapsed 198.0 s, iters = (69577, 0), opt = 5.316
+> Progress 0.0%, elapsed 201.0 s, iters = (70645, 0), opt = 5.316
+> Progress 0.0%, elapsed 204.0 s, iters = (71743, 0), opt = 5.316
+> Progress 0.0%, elapsed 207.0 s, iters = (72849, 0), opt = 5.316
+> Progress 0.0%, elapsed 210.0 s, iters = (73925, 0), opt = 5.316
+> Progress 0.0%, elapsed 213.0 s, iters = (75033, 0), opt = 5.316
+> Progress 0.0%, elapsed 216.0 s, iters = (76127, 0), opt = 5.316
+> Progress 0.0%, elapsed 219.0 s, iters = (77236, 0), opt = 5.316
+> Progress 0.0%, elapsed 222.0 s, iters = (78313, 0), opt = 5.316
+> Progress 0.0%, elapsed 225.0 s, iters = (79401, 0), opt = 5.316
+> Progress 0.0%, elapsed 228.0 s, iters = (80504, 0), opt = 5.316
+> Progress 0.0%, elapsed 231.0 s, iters = (81612, 0), opt = 5.316
+> Progress 0.0%, elapsed 234.0 s, iters = (82683, 0), opt = 5.316
+> Progress 0.0%, elapsed 237.0 s, iters = (83787, 0), opt = 5.316
+> Progress 0.0%, elapsed 240.0 s, iters = (84894, 0), opt = 5.316
+> Progress 0.0%, elapsed 243.0 s, iters = (85987, 0), opt = 5.316
+> Progress 0.0%, elapsed 246.0 s, iters = (87060, 0), opt = 5.316
+> Progress 0.0%, elapsed 249.0 s, iters = (88165, 0), opt = 5.316
+> Progress 0.0%, elapsed 252.0 s, iters = (89277, 0), opt = 5.316
+> Progress 0.0%, elapsed 255.0 s, iters = (90351, 0), opt = 5.316
+> Progress 0.0%, elapsed 258.0 s, iters = (91455, 0), opt = 5.316
+> Progress 0.0%, elapsed 261.0 s, iters = (92561, 0), opt = 5.316
+> Progress 0.0%, elapsed 264.0 s, iters = (93670, 0), opt = 5.316
+> Progress 0.0%, elapsed 267.0 s, iters = (94743, 0), opt = 5.316
+> Progress 0.0%, elapsed 270.0 s, iters = (95857, 0), opt = 5.316
+> Progress 0.0%, elapsed 273.0 s, iters = (96972, 0), opt = 5.316
+> Progress 0.0%, elapsed 276.0 s, iters = (98069, 0), opt = 5.316
+> Progress 0.0%, elapsed 279.0 s, iters = (99137, 0), opt = 5.316
+> Progress 0.0%, elapsed 282.0 s, iters = (100251, 0), opt = 5.316
+> Progress 0.0%, elapsed 285.0 s, iters = (101350, 0), opt = 5.316
+> Progress 0.0%, elapsed 288.0 s, iters = (102391, 0), opt = 5.316
+> Progress 0.0%, elapsed 291.0 s, iters = (103378, 0), opt = 5.316
+> Progress 0.0%, elapsed 294.0 s, iters = (104395, 0), opt = 5.316
+> Progress 0.0%, elapsed 297.0 s, iters = (105399, 0), opt = 5.316
+> Progress 0.0%, elapsed 300.0 s, iters = (106501, 0), opt = 5.316
+> Progress 0.0%, elapsed 303.0 s, iters = (107583, 0), opt = 5.316
+> Progress 0.0%, elapsed 306.0 s, iters = (108698, 0), opt = 5.316
+> Progress 0.0%, elapsed 309.0 s, iters = (109776, 0), opt = 5.316
+> Progress 0.0%, elapsed 312.0 s, iters = (110857, 0), opt = 5.316
+> Progress 0.0%, elapsed 315.0 s, iters = (111981, 0), opt = 5.316
+> Progress 0.0%, elapsed 318.0 s, iters = (113093, 0), opt = 5.316
+> Progress 0.0%, elapsed 321.0 s, iters = (114193, 0), opt = 5.316
+> Progress 0.0%, elapsed 324.0 s, iters = (115269, 0), opt = 5.316
+> Progress 0.0%, elapsed 327.0 s, iters = (116380, 0), opt = 5.316
+> Progress 0.0%, elapsed 330.0 s, iters = (117488, 0), opt = 5.316
+> Progress 0.0%, elapsed 333.0 s, iters = (118599, 0), opt = 5.316
+> Progress 0.0%, elapsed 336.0 s, iters = (119682, 0), opt = 5.316
+> Progress 0.0%, elapsed 339.0 s, iters = (120794, 0), opt = 5.316
+> Progress 0.0%, elapsed 342.0 s, iters = (121893, 0), opt = 5.316
+> Progress 0.0%, elapsed 345.0 s, iters = (122970, 0), opt = 5.316
+> Progress 0.0%, elapsed 348.0 s, iters = (124085, 0), opt = 5.316
+> Progress 0.0%, elapsed 351.0 s, iters = (125195, 0), opt = 5.316
+> Progress 0.0%, elapsed 354.0 s, iters = (126309, 0), opt = 5.316
+> Progress 0.0%, elapsed 357.0 s, iters = (127394, 0), opt = 5.316
+> Progress 0.0%, elapsed 360.0 s, iters = (128503, 0), opt = 5.316
+> Progress 0.0%, elapsed 363.0 s, iters = (129608, 0), opt = 5.316
+> Progress 0.0%, elapsed 366.0 s, iters = (130725, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 367.12 s
+number of holes: 31, family size: 81966203577338201924328653819419157670749425717340457140224, super quotient: 147 states / 13279 actions
+explored: 0 %
+AR stats: avg MDP size: 147, iterations: 131135
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [48, 50]
+2022-06-06 14:23:31,237 - synthesizer_pomdp.py - FSC synthesis: elapsed 800.0 s, opt = 5.316, injections: 22.
+2022-06-06 14:23:31,237 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:23:31,238 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [24, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:23:31,238 - quotient_pomdp.py - Constructed quotient MDP having 153 states and 14432 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:23:33,235 - quotient_pomdp.py - Symmetry breaking: reduced design space from 28210333750147755832761816289148129201353281873410779508637696 to 100223238597677365052482714308539361529971081216
+2022-06-06 14:23:33,356 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (995, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (2063, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (3124, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (4192, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (5259, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (6314, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (7382, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (8423, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (9487, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (10549, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (11614, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (12676, 0), opt = 5.316
+> Progress 0.0%, elapsed 39.0 s, iters = (13745, 0), opt = 5.316
+> Progress 0.0%, elapsed 42.0 s, iters = (14812, 0), opt = 5.316
+> Progress 0.0%, elapsed 45.0 s, iters = (15883, 0), opt = 5.316
+> Progress 0.0%, elapsed 48.0 s, iters = (16924, 0), opt = 5.316
+> Progress 0.0%, elapsed 51.0 s, iters = (17985, 0), opt = 5.316
+> Progress 0.0%, elapsed 54.0 s, iters = (19054, 0), opt = 5.316
+> Progress 0.0%, elapsed 57.0 s, iters = (20125, 0), opt = 5.316
+> Progress 0.0%, elapsed 60.0 s, iters = (21190, 0), opt = 5.316
+> Progress 0.0%, elapsed 63.0 s, iters = (22256, 0), opt = 5.316
+> Progress 0.0%, elapsed 66.0 s, iters = (23323, 0), opt = 5.316
+> Progress 0.0%, elapsed 69.0 s, iters = (24397, 0), opt = 5.316
+> Progress 0.0%, elapsed 72.0 s, iters = (25426, 0), opt = 5.316
+> Progress 0.0%, elapsed 75.0 s, iters = (26499, 0), opt = 5.316
+> Progress 0.0%, elapsed 78.0 s, iters = (27570, 0), opt = 5.316
+> Progress 0.0%, elapsed 81.0 s, iters = (28648, 0), opt = 5.316
+> Progress 0.0%, elapsed 84.0 s, iters = (29708, 0), opt = 5.316
+> Progress 0.0%, elapsed 87.0 s, iters = (30772, 0), opt = 5.316
+> Progress 0.0%, elapsed 90.0 s, iters = (31841, 0), opt = 5.316
+> Progress 0.0%, elapsed 93.0 s, iters = (32880, 0), opt = 5.316
+> Progress 0.0%, elapsed 96.0 s, iters = (33940, 0), opt = 5.316
+> Progress 0.0%, elapsed 99.0 s, iters = (35003, 0), opt = 5.316
+> Progress 0.0%, elapsed 102.0 s, iters = (36067, 0), opt = 5.316
+> Progress 0.0%, elapsed 105.0 s, iters = (37122, 0), opt = 5.316
+> Progress 0.0%, elapsed 108.0 s, iters = (38186, 0), opt = 5.316
+> Progress 0.0%, elapsed 111.0 s, iters = (39245, 0), opt = 5.316
+> Progress 0.0%, elapsed 114.0 s, iters = (40306, 0), opt = 5.316
+> Progress 0.0%, elapsed 117.0 s, iters = (41335, 0), opt = 5.316
+> Progress 0.0%, elapsed 120.0 s, iters = (42399, 0), opt = 5.316
+> Progress 0.0%, elapsed 123.0 s, iters = (43459, 0), opt = 5.316
+> Progress 0.0%, elapsed 126.0 s, iters = (44528, 0), opt = 5.316
+> Progress 0.0%, elapsed 129.0 s, iters = (45588, 0), opt = 5.316
+> Progress 0.0%, elapsed 132.0 s, iters = (46624, 0), opt = 5.316
+> Progress 0.0%, elapsed 135.0 s, iters = (47680, 0), opt = 5.316
+> Progress 0.0%, elapsed 138.0 s, iters = (48748, 0), opt = 5.316
+> Progress 0.0%, elapsed 141.0 s, iters = (49765, 0), opt = 5.316
+> Progress 0.0%, elapsed 144.0 s, iters = (50830, 0), opt = 5.316
+> Progress 0.0%, elapsed 147.0 s, iters = (51899, 0), opt = 5.316
+> Progress 0.0%, elapsed 150.0 s, iters = (52959, 0), opt = 5.316
+> Progress 0.0%, elapsed 153.0 s, iters = (54028, 0), opt = 5.316
+> Progress 0.0%, elapsed 156.0 s, iters = (55073, 0), opt = 5.316
+> Progress 0.0%, elapsed 159.0 s, iters = (56135, 0), opt = 5.316
+> Progress 0.0%, elapsed 162.0 s, iters = (57191, 0), opt = 5.316
+> Progress 0.0%, elapsed 165.0 s, iters = (58222, 0), opt = 5.316
+> Progress 0.0%, elapsed 168.0 s, iters = (59290, 0), opt = 5.316
+> Progress 0.0%, elapsed 171.0 s, iters = (60328, 0), opt = 5.316
+> Progress 0.0%, elapsed 174.0 s, iters = (61394, 0), opt = 5.316
+> Progress 0.0%, elapsed 177.0 s, iters = (62460, 0), opt = 5.316
+> Progress 0.0%, elapsed 180.0 s, iters = (63524, 0), opt = 5.316
+> Progress 0.0%, elapsed 183.0 s, iters = (64589, 0), opt = 5.316
+> Progress 0.0%, elapsed 186.0 s, iters = (65612, 0), opt = 5.316
+> Progress 0.0%, elapsed 189.0 s, iters = (66676, 0), opt = 5.316
+> Progress 0.0%, elapsed 192.0 s, iters = (67728, 0), opt = 5.316
+> Progress 0.0%, elapsed 195.0 s, iters = (68786, 0), opt = 5.316
+> Progress 0.0%, elapsed 198.0 s, iters = (69846, 0), opt = 5.316
+> Progress 0.0%, elapsed 201.0 s, iters = (70906, 0), opt = 5.316
+> Progress 0.0%, elapsed 204.0 s, iters = (71973, 0), opt = 5.316
+> Progress 0.0%, elapsed 207.0 s, iters = (73033, 0), opt = 5.316
+> Progress 0.0%, elapsed 210.0 s, iters = (74070, 0), opt = 5.316
+> Progress 0.0%, elapsed 213.0 s, iters = (75136, 0), opt = 5.316
+> Progress 0.0%, elapsed 216.0 s, iters = (76186, 0), opt = 5.316
+> Progress 0.0%, elapsed 219.0 s, iters = (77249, 0), opt = 5.316
+> Progress 0.0%, elapsed 222.0 s, iters = (78314, 0), opt = 5.316
+> Progress 0.0%, elapsed 225.0 s, iters = (79372, 0), opt = 5.316
+> Progress 0.0%, elapsed 228.0 s, iters = (80433, 0), opt = 5.316
+> Progress 0.0%, elapsed 231.0 s, iters = (81486, 0), opt = 5.316
+> Progress 0.0%, elapsed 234.0 s, iters = (82519, 0), opt = 5.316
+> Progress 0.0%, elapsed 237.0 s, iters = (83593, 0), opt = 5.316
+> Progress 0.0%, elapsed 240.0 s, iters = (84655, 0), opt = 5.316
+> Progress 0.0%, elapsed 243.0 s, iters = (85713, 0), opt = 5.316
+> Progress 0.0%, elapsed 246.0 s, iters = (86778, 0), opt = 5.316
+> Progress 0.0%, elapsed 249.0 s, iters = (87838, 0), opt = 5.316
+> Progress 0.0%, elapsed 252.0 s, iters = (88876, 0), opt = 5.316
+> Progress 0.0%, elapsed 255.0 s, iters = (89944, 0), opt = 5.316
+> Progress 0.0%, elapsed 258.0 s, iters = (90973, 0), opt = 5.316
+> Progress 0.0%, elapsed 261.0 s, iters = (92028, 0), opt = 5.316
+> Progress 0.0%, elapsed 264.0 s, iters = (93086, 0), opt = 5.316
+> Progress 0.0%, elapsed 267.0 s, iters = (94145, 0), opt = 5.316
+> Progress 0.0%, elapsed 270.0 s, iters = (95213, 0), opt = 5.316
+> Progress 0.0%, elapsed 273.0 s, iters = (96283, 0), opt = 5.316
+> Progress 0.0%, elapsed 276.0 s, iters = (97334, 0), opt = 5.316
+> Progress 0.0%, elapsed 279.0 s, iters = (98369, 0), opt = 5.316
+> Progress 0.0%, elapsed 282.0 s, iters = (99422, 0), opt = 5.316
+> Progress 0.0%, elapsed 285.0 s, iters = (100479, 0), opt = 5.316
+> Progress 0.0%, elapsed 288.0 s, iters = (101540, 0), opt = 5.316
+> Progress 0.0%, elapsed 291.0 s, iters = (102601, 0), opt = 5.316
+> Progress 0.0%, elapsed 294.0 s, iters = (103668, 0), opt = 5.316
+> Progress 0.0%, elapsed 297.0 s, iters = (104727, 0), opt = 5.316
+> Progress 0.0%, elapsed 300.0 s, iters = (105787, 0), opt = 5.316
+> Progress 0.0%, elapsed 303.0 s, iters = (106814, 0), opt = 5.316
+> Progress 0.0%, elapsed 306.0 s, iters = (107883, 0), opt = 5.316
+> Progress 0.0%, elapsed 309.0 s, iters = (108947, 0), opt = 5.316
+> Progress 0.0%, elapsed 312.0 s, iters = (109997, 0), opt = 5.316
+> Progress 0.0%, elapsed 315.0 s, iters = (111065, 0), opt = 5.316
+> Progress 0.0%, elapsed 318.0 s, iters = (112129, 0), opt = 5.316
+> Progress 0.0%, elapsed 321.0 s, iters = (113190, 0), opt = 5.316
+> Progress 0.0%, elapsed 324.0 s, iters = (114258, 0), opt = 5.316
+> Progress 0.0%, elapsed 327.0 s, iters = (115288, 0), opt = 5.316
+> Progress 0.0%, elapsed 330.0 s, iters = (116349, 0), opt = 5.316
+> Progress 0.0%, elapsed 333.0 s, iters = (117415, 0), opt = 5.316
+> Progress 0.0%, elapsed 336.0 s, iters = (118476, 0), opt = 5.316
+> Progress 0.0%, elapsed 339.0 s, iters = (119546, 0), opt = 5.316
+> Progress 0.0%, elapsed 342.0 s, iters = (120587, 0), opt = 5.316
+> Progress 0.0%, elapsed 345.0 s, iters = (121652, 0), opt = 5.316
+> Progress 0.0%, elapsed 348.0 s, iters = (122718, 0), opt = 5.316
+> Progress 0.0%, elapsed 351.0 s, iters = (123758, 0), opt = 5.316
+> Progress 0.0%, elapsed 354.0 s, iters = (124821, 0), opt = 5.316
+> Progress 0.0%, elapsed 357.0 s, iters = (125896, 0), opt = 5.316
+> Progress 0.0%, elapsed 360.0 s, iters = (126963, 0), opt = 5.316
+> Progress 0.0%, elapsed 363.0 s, iters = (128023, 0), opt = 5.316
+> Progress 0.0%, elapsed 366.0 s, iters = (129086, 0), opt = 5.316
+> Progress 0.0%, elapsed 369.0 s, iters = (130156, 0), opt = 5.316
+> Progress 0.0%, elapsed 372.0 s, iters = (131183, 0), opt = 5.316
+> Progress 0.0%, elapsed 375.0 s, iters = (132238, 0), opt = 5.316
+> Progress 0.0%, elapsed 378.0 s, iters = (133300, 0), opt = 5.316
+> Progress 0.0%, elapsed 381.0 s, iters = (134362, 0), opt = 5.316
+> Progress 0.0%, elapsed 384.0 s, iters = (135423, 0), opt = 5.316
+> Progress 0.0%, elapsed 387.0 s, iters = (136461, 0), opt = 5.316
+> Progress 0.0%, elapsed 390.0 s, iters = (137496, 0), opt = 5.316
+> Progress 0.0%, elapsed 393.0 s, iters = (138556, 0), opt = 5.316
+> Progress 0.0%, elapsed 396.0 s, iters = (139575, 0), opt = 5.316
+> Progress 0.0%, elapsed 399.0 s, iters = (140639, 0), opt = 5.316
+> Progress 0.0%, elapsed 402.0 s, iters = (141706, 0), opt = 5.316
+> Progress 0.0%, elapsed 405.0 s, iters = (142769, 0), opt = 5.316
+> Progress 0.0%, elapsed 408.0 s, iters = (143822, 0), opt = 5.316
+> Progress 0.0%, elapsed 411.0 s, iters = (144882, 0), opt = 5.316
+> Progress 0.0%, elapsed 414.0 s, iters = (145947, 0), opt = 5.316
+> Progress 0.0%, elapsed 417.0 s, iters = (147014, 0), opt = 5.316
+> Progress 0.0%, elapsed 420.0 s, iters = (148045, 0), opt = 5.316
+> Progress 0.0%, elapsed 423.0 s, iters = (149108, 0), opt = 5.316
+> Progress 0.0%, elapsed 426.0 s, iters = (150173, 0), opt = 5.316
+> Progress 0.0%, elapsed 429.0 s, iters = (151242, 0), opt = 5.316
+> Progress 0.0%, elapsed 432.0 s, iters = (152272, 0), opt = 5.316
+> Progress 0.0%, elapsed 435.0 s, iters = (153304, 0), opt = 5.316
+> Progress 0.0%, elapsed 438.0 s, iters = (154368, 0), opt = 5.316
+> Progress 0.0%, elapsed 441.0 s, iters = (155416, 0), opt = 5.316
+> Progress 0.0%, elapsed 444.0 s, iters = (156411, 0), opt = 5.316
+> Progress 0.0%, elapsed 447.0 s, iters = (157443, 0), opt = 5.316
+> Progress 0.0%, elapsed 450.0 s, iters = (158492, 0), opt = 5.316
+> Progress 0.0%, elapsed 453.0 s, iters = (159554, 0), opt = 5.316
+> Progress 0.0%, elapsed 456.0 s, iters = (160578, 0), opt = 5.316
+> Progress 0.0%, elapsed 459.0 s, iters = (161626, 0), opt = 5.316
+> Progress 0.0%, elapsed 462.0 s, iters = (162689, 0), opt = 5.316
+> Progress 0.0%, elapsed 465.0 s, iters = (163760, 0), opt = 5.316
+> Progress 0.0%, elapsed 468.0 s, iters = (164781, 0), opt = 5.316
+> Progress 0.0%, elapsed 471.0 s, iters = (165846, 0), opt = 5.316
+> Progress 0.0%, elapsed 474.0 s, iters = (166911, 0), opt = 5.316
+> Progress 0.0%, elapsed 477.0 s, iters = (167964, 0), opt = 5.316
+> Progress 0.0%, elapsed 480.0 s, iters = (169002, 0), opt = 5.316
+> Progress 0.0%, elapsed 483.0 s, iters = (169969, 0), opt = 5.316
+> Progress 0.0%, elapsed 486.0 s, iters = (170953, 0), opt = 5.316
+> Progress 0.0%, elapsed 489.0 s, iters = (171952, 0), opt = 5.316
+> Progress 0.0%, elapsed 492.0 s, iters = (172899, 0), opt = 5.316
+> Progress 0.0%, elapsed 495.0 s, iters = (173889, 0), opt = 5.316
+> Progress 0.0%, elapsed 498.0 s, iters = (174876, 0), opt = 5.316
+> Progress 0.0%, elapsed 501.0 s, iters = (175848, 0), opt = 5.316
+> Progress 0.0%, elapsed 504.0 s, iters = (176824, 0), opt = 5.316
+> Progress 0.0%, elapsed 507.0 s, iters = (177800, 0), opt = 5.316
+> Progress 0.0%, elapsed 510.0 s, iters = (178766, 0), opt = 5.316
+> Progress 0.0%, elapsed 513.0 s, iters = (179627, 0), opt = 5.316
+> Progress 0.0%, elapsed 516.0 s, iters = (180439, 0), opt = 5.316
+> Progress 0.0%, elapsed 519.0 s, iters = (181352, 0), opt = 5.316
+> Progress 0.0%, elapsed 522.0 s, iters = (182242, 0), opt = 5.316
+> Progress 0.0%, elapsed 525.0 s, iters = (183148, 0), opt = 5.316
+> Progress 0.0%, elapsed 528.0 s, iters = (184064, 0), opt = 5.316
+> Progress 0.0%, elapsed 531.0 s, iters = (185025, 0), opt = 5.316
+> Progress 0.0%, elapsed 534.0 s, iters = (185949, 0), opt = 5.316
+> Progress 0.0%, elapsed 537.0 s, iters = (186874, 0), opt = 5.316
+> Progress 0.0%, elapsed 540.0 s, iters = (187806, 0), opt = 5.316
+> Progress 0.0%, elapsed 543.0 s, iters = (188769, 0), opt = 5.316
+> Progress 0.0%, elapsed 546.0 s, iters = (189713, 0), opt = 5.316
+> Progress 0.0%, elapsed 549.0 s, iters = (190701, 0), opt = 5.316
+> Progress 0.0%, elapsed 552.0 s, iters = (191694, 0), opt = 5.316
+> Progress 0.0%, elapsed 555.0 s, iters = (192710, 0), opt = 5.316
+> Progress 0.0%, elapsed 558.0 s, iters = (193726, 0), opt = 5.316
+> Progress 0.0%, elapsed 561.0 s, iters = (194734, 0), opt = 5.316
+> Progress 0.0%, elapsed 564.0 s, iters = (195756, 0), opt = 5.316
+> Progress 0.0%, elapsed 567.0 s, iters = (196769, 0), opt = 5.316
+> Progress 0.0%, elapsed 570.0 s, iters = (197831, 0), opt = 5.316
+> Progress 0.0%, elapsed 573.0 s, iters = (198888, 0), opt = 5.316
+> Progress 0.0%, elapsed 576.0 s, iters = (199941, 0), opt = 5.316
+> Progress 0.0%, elapsed 579.0 s, iters = (201001, 0), opt = 5.316
+> Progress 0.0%, elapsed 582.0 s, iters = (202068, 0), opt = 5.316
+> Progress 0.0%, elapsed 585.0 s, iters = (203120, 0), opt = 5.316
+> Progress 0.0%, elapsed 588.0 s, iters = (204182, 0), opt = 5.316
+> Progress 0.0%, elapsed 591.0 s, iters = (205213, 0), opt = 5.316
+> Progress 0.0%, elapsed 594.0 s, iters = (206278, 0), opt = 5.316
+> Progress 0.0%, elapsed 597.0 s, iters = (207326, 0), opt = 5.316
+> Progress 0.0%, elapsed 600.0 s, iters = (208396, 0), opt = 5.316
+> Progress 0.0%, elapsed 603.0 s, iters = (209456, 0), opt = 5.316
+> Progress 0.0%, elapsed 606.0 s, iters = (210499, 0), opt = 5.316
+> Progress 0.0%, elapsed 609.0 s, iters = (211557, 0), opt = 5.316
+> Progress 0.0%, elapsed 612.0 s, iters = (212615, 0), opt = 5.316
+> Progress 0.0%, elapsed 615.0 s, iters = (213638, 0), opt = 5.316
+> Progress 0.0%, elapsed 618.0 s, iters = (214687, 0), opt = 5.316
+> Progress 0.0%, elapsed 621.0 s, iters = (215744, 0), opt = 5.316
+> Progress 0.0%, elapsed 624.0 s, iters = (216806, 0), opt = 5.316
+> Progress 0.0%, elapsed 627.0 s, iters = (217860, 0), opt = 5.316
+> Progress 0.0%, elapsed 630.0 s, iters = (218913, 0), opt = 5.316
+> Progress 0.0%, elapsed 633.0 s, iters = (219975, 0), opt = 5.316
+> Progress 0.0%, elapsed 636.0 s, iters = (221008, 0), opt = 5.316
+> Progress 0.0%, elapsed 639.0 s, iters = (222041, 0), opt = 5.316
+> Progress 0.0%, elapsed 642.0 s, iters = (223097, 0), opt = 5.316
+> Progress 0.0%, elapsed 645.0 s, iters = (224148, 0), opt = 5.316
+> Progress 0.0%, elapsed 648.0 s, iters = (225211, 0), opt = 5.316
+> Progress 0.0%, elapsed 651.0 s, iters = (226272, 0), opt = 5.316
+> Progress 0.0%, elapsed 654.0 s, iters = (227326, 0), opt = 5.316
+> Progress 0.0%, elapsed 657.0 s, iters = (228373, 0), opt = 5.316
+> Progress 0.0%, elapsed 660.0 s, iters = (229433, 0), opt = 5.316
+> Progress 0.0%, elapsed 663.0 s, iters = (230458, 0), opt = 5.316
+> Progress 0.0%, elapsed 666.0 s, iters = (231510, 0), opt = 5.316
+> Progress 0.0%, elapsed 669.0 s, iters = (232567, 0), opt = 5.316
+> Progress 0.0%, elapsed 672.0 s, iters = (233628, 0), opt = 5.316
+> Progress 0.0%, elapsed 675.0 s, iters = (234675, 0), opt = 5.316
+> Progress 0.0%, elapsed 678.0 s, iters = (235724, 0), opt = 5.316
+> Progress 0.0%, elapsed 681.0 s, iters = (236786, 0), opt = 5.316
+> Progress 0.0%, elapsed 684.0 s, iters = (237819, 0), opt = 5.316
+> Progress 0.0%, elapsed 687.0 s, iters = (238866, 0), opt = 5.316
+> Progress 0.0%, elapsed 690.0 s, iters = (239923, 0), opt = 5.316
+> Progress 0.0%, elapsed 693.0 s, iters = (240987, 0), opt = 5.316
+> Progress 0.0%, elapsed 696.0 s, iters = (242049, 0), opt = 5.316
+> Progress 0.0%, elapsed 699.0 s, iters = (243107, 0), opt = 5.316
+> Progress 0.0%, elapsed 702.0 s, iters = (244180, 0), opt = 5.316
+> Progress 0.0%, elapsed 705.0 s, iters = (245237, 0), opt = 5.316
+> Progress 0.0%, elapsed 708.0 s, iters = (246264, 0), opt = 5.316
+> Progress 0.0%, elapsed 711.0 s, iters = (247318, 0), opt = 5.316
+> Progress 0.0%, elapsed 714.0 s, iters = (248384, 0), opt = 5.316
+> Progress 0.0%, elapsed 717.0 s, iters = (249444, 0), opt = 5.316
+> Progress 0.0%, elapsed 720.0 s, iters = (250502, 0), opt = 5.316
+> Progress 0.0%, elapsed 723.0 s, iters = (251567, 0), opt = 5.316
+> Progress 0.0%, elapsed 726.0 s, iters = (252628, 0), opt = 5.316
+> Progress 0.0%, elapsed 729.0 s, iters = (253698, 0), opt = 5.316
+> Progress 0.0%, elapsed 732.0 s, iters = (254713, 0), opt = 5.316
+> Progress 0.0%, elapsed 735.0 s, iters = (255782, 0), opt = 5.316
+> Progress 0.0%, elapsed 738.0 s, iters = (256837, 0), opt = 5.316
+> Progress 0.0%, elapsed 741.0 s, iters = (257895, 0), opt = 5.316
+> Progress 0.0%, elapsed 744.0 s, iters = (258950, 0), opt = 5.316
+> Progress 0.0%, elapsed 747.0 s, iters = (260010, 0), opt = 5.316
+> Progress 0.0%, elapsed 750.0 s, iters = (261077, 0), opt = 5.316
+> Progress 0.0%, elapsed 753.0 s, iters = (262142, 0), opt = 5.316
+--------------------
+Synthesis summary
+constraint 1: P>=1/2 [!(((x = 0) & (y = 0))) U ((x = 2) & (y = 0))]
+optimality objective: R[exp]{"steps"}min=? [F (((x = 2) & (y = 0)) | ((x = 0) & (y = 0)))] 
+
+method: AR, synthesis time: 753.21 s
+number of holes: 32, family size: 28210333750147755832761816289148129201353281873410779508637696, super quotient: 153 states / 14432 actions
+explored: 0 %
+AR stats: avg MDP size: 153, iterations: 262207
+
+optimal: 5.315981
+--------------------
+
+None
+
+hole scores:  {6: 0.10535909017760836}
+selected hole:  6
+hole has options:  [50, 52]
+2022-06-06 14:36:06,564 - synthesizer_pomdp.py - FSC synthesis: elapsed 1555.4 s, opt = 5.316, injections: 23.
+2022-06-06 14:36:06,564 - synthesizer_pomdp.py - Injecting memory into observation 0 ...
+2022-06-06 14:36:06,564 - quotient_pomdp.py - Unfolding POMDP using the following memory allocation vector: [25, 1, 1, 1, 1, 1, 1, 1, 1] ...
+2022-06-06 14:36:06,565 - quotient_pomdp.py - Constructed quotient MDP having 159 states and 15633 actions.
+
+------------------------------------------------------------
+
+2022-06-06 14:36:08,912 - quotient_pomdp.py - Symmetry breaking: reduced design space from 10000000000000000000000000000000000000000000000000000000000000000 to 8881784197001252323389053344726562500000000000000
+2022-06-06 14:36:09,044 - synthesizer.py - Synthesis initiated.
+> Progress 0.0%, elapsed 3.0 s, iters = (892, 0), opt = 5.316
+> Progress 0.0%, elapsed 6.0 s, iters = (1853, 0), opt = 5.316
+> Progress 0.0%, elapsed 9.0 s, iters = (2810, 0), opt = 5.316
+> Progress 0.0%, elapsed 12.0 s, iters = (3762, 0), opt = 5.316
+> Progress 0.0%, elapsed 15.0 s, iters = (4717, 0), opt = 5.316
+> Progress 0.0%, elapsed 18.0 s, iters = (5677, 0), opt = 5.316
+> Progress 0.0%, elapsed 21.0 s, iters = (6635, 0), opt = 5.316
+> Progress 0.0%, elapsed 24.0 s, iters = (7590, 0), opt = 5.316
+> Progress 0.0%, elapsed 27.0 s, iters = (8514, 0), opt = 5.316
+> Progress 0.0%, elapsed 30.0 s, iters = (9471, 0), opt = 5.316
+> Progress 0.0%, elapsed 33.0 s, iters = (10433, 0), opt = 5.316
+> Progress 0.0%, elapsed 36.0 s, iters = (11390, 0), opt = 5.316
+> Progress 0.0%, elapsed 39.0 s, iters = (12348, 0), opt = 5.316
+> Progress 0.0%, elapsed 42.0 s, iters = (13306, 0), opt = 5.316
+> Progress 0.0%, elapsed 45.0 s, iters = (14258, 0), opt = 5.316
+> Progress 0.0%, elapsed 48.0 s, iters = (15205, 0), opt = 5.316
+> Progress 0.0%, elapsed 51.0 s, iters = (16159, 0), opt = 5.316
+> Progress 0.0%, elapsed 54.0 s, iters = (17090, 0), opt = 5.316
+> Progress 0.0%, elapsed 57.0 s, iters = (18054, 0), opt = 5.316
+> Progress 0.0%, elapsed 60.0 s, iters = (19002, 0), opt = 5.316
+> Progress 0.0%, elapsed 63.0 s, iters = (19956, 0), opt = 5.316
+> Progress 0.0%, elapsed 66.0 s, iters = (20918, 0), opt = 5.316
+> Progress 0.0%, elapsed 69.0 s, iters = (21875, 0), opt = 5.316
+> Progress 0.0%, elapsed 72.0 s, iters = (22835, 0), opt = 5.316
+> Progress 0.0%, elapsed 75.0 s, iters = (23801, 0), opt = 5.316
+> Progress 0.0%, elapsed 78.0 s, iters = (24726, 0), opt = 5.316
+> Progress 0.0%, elapsed 81.0 s, iters = (25680, 0), opt = 5.316
+> Progress 0.0%, elapsed 84.0 s, iters = (26642, 0), opt = 5.316
+> Progress 0.0%, elapsed 87.0 s, iters = (27607, 0), opt = 5.316
+> Progress 0.0%, elapsed 90.0 s, iters = (28564, 0), opt = 5.316
+> Progress 0.0%, elapsed 93.0 s, iters = (29507, 0), opt = 5.316
+> Progress 0.0%, elapsed 96.0 s, iters = (30457, 0), opt = 5.316
+> Progress 0.0%, elapsed 99.0 s, iters = (31418, 0), opt = 5.316
+> Progress 0.0%, elapsed 102.0 s, iters = (32347, 0), opt = 5.316
+> Progress 0.0%, elapsed 105.0 s, iters = (33277, 0), opt = 5.316
+> Progress 0.0%, elapsed 108.0 s, iters = (34234, 0), opt = 5.316
+> Progress 0.0%, elapsed 111.0 s, iters = (35184, 0), opt = 5.316
+> Progress 0.0%, elapsed 114.0 s, iters = (36134, 0), opt = 5.316
+> Progress 0.0%, elapsed 117.0 s, iters = (37091, 0), opt = 5.316
+> Progress 0.0%, elapsed 120.0 s, iters = (38037, 0), opt = 5.316
+> Progress 0.0%, elapsed 123.0 s, iters = (38997, 0), opt = 5.316
+> Progress 0.0%, elapsed 126.0 s, iters = (39955, 0), opt = 5.316
+> Progress 0.0%, elapsed 129.0 s, iters = (40918, 0), opt = 5.316
+> Progress 0.0%, elapsed 132.0 s, iters = (41837, 0), opt = 5.316
+> Progress 0.0%, elapsed 135.0 s, iters = (42800, 0), opt = 5.316
+> Progress 0.0%, elapsed 138.0 s, iters = (43750, 0), opt = 5.316
+> Progress 0.0%, elapsed 141.0 s, iters = (44701, 0), opt = 5.316
+> Progress 0.0%, elapsed 144.0 s, iters = (45663, 0), opt = 5.316
+> Progress 0.0%, elapsed 147.0 s, iters = (46629, 0), opt = 5.316
+> Progress 0.0%, elapsed 150.0 s, iters = (47586, 0), opt = 5.316
+> Progress 0.0%, elapsed 153.0 s, iters = (48548, 0), opt = 5.316
+> Progress 0.0%, elapsed 156.0 s, iters = (49472, 0), opt = 5.316
+> Progress 0.0%, elapsed 159.0 s, iters = (50434, 0), opt = 5.316
+> Progress 0.0%, elapsed 162.0 s, iters = (51383, 0), opt = 5.316
+> Progress 0.0%, elapsed 165.0 s, iters = (52344, 0), opt = 5.316
+> Progress 0.0%, elapsed 168.0 s, iters = (53303, 0), opt = 5.316
+> Progress 0.0%, elapsed 171.0 s, iters = (54265, 0), opt = 5.316
+> Progress 0.0%, elapsed 174.0 s, iters = (55224, 0), opt = 5.316
+> Progress 0.0%, elapsed 177.0 s, iters = (56182, 0), opt = 5.316
+> Progress 0.0%, elapsed 180.0 s, iters = (57136, 0), opt = 5.316
+> Progress 0.0%, elapsed 183.0 s, iters = (58065, 0), opt = 5.316
+> Progress 0.0%, elapsed 186.0 s, iters = (59026, 0), opt = 5.316
+> Progress 0.0%, elapsed 189.0 s, iters = (59987, 0), opt = 5.316
+> Progress 0.0%, elapsed 192.0 s, iters = (60947, 0), opt = 5.316
+> Progress 0.0%, elapsed 195.0 s, iters = (61906, 0), opt = 5.316
+> Progress 0.0%, elapsed 198.0 s, iters = (62866, 0), opt = 5.316
+> Progress 0.0%, elapsed 201.0 s, iters = (63815, 0), opt = 5.316
+> Progress 0.0%, elapsed 204.0 s, iters = (64778, 0), opt = 5.316
+> Progress 0.0%, elapsed 207.0 s, iters = (65705, 0), opt = 5.316
+> Progress 0.0%, elapsed 210.0 s, iters = (66665, 0), opt = 5.316
+> Progress 0.0%, elapsed 213.0 s, iters = (67622, 0), opt = 5.316
+> Progress 0.0%, elapsed 216.0 s, iters = (68574, 0), opt = 5.316
+> Progress 0.0%, elapsed 219.0 s, iters = (69525, 0), opt = 5.316
+> Progress 0.0%, elapsed 222.0 s, iters = (70479, 0), opt = 5.316
+> Progress 0.0%, elapsed 225.0 s, iters = (71436, 0), opt = 5.316
+> Progress 0.0%, elapsed 228.0 s, iters = (72393, 0), opt = 5.316
+> Progress 0.0%, elapsed 231.0 s, iters = (73351, 0), opt = 5.316
+> Progress 0.0%, elapsed 234.0 s, iters = (74270, 0), opt = 5.316
+> Progress 0.0%, elapsed 237.0 s, iters = (75235, 0), opt = 5.316
+> Progress 0.0%, elapsed 240.0 s, iters = (76179, 0), opt = 5.316
