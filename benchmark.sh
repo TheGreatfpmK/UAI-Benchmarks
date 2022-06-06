@@ -54,7 +54,7 @@ then
     then
         paynt_additional_dir
         
-        python3 additional.py
+        python3 additional.py "${paynt}"
     fi
 fi
 
