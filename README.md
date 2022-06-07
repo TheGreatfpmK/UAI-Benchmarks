@@ -29,3 +29,30 @@ The folder `original-logs` includes all log files from the original experiments 
 The subfolders `paynt-logs`, `storm-logs` and `prism-logs` contain all of the experiments included in the main table of the paper, sectioned in the same way.
 
 The subfolder `additional-logs` contain experiments which were not included in the main table but were mentioned in the paper.
+
+#### PAYNT experiments settings
+
+List of settings:
+- Incomplete search (*inc*) - `--incomplete-search`
+- Complete search (*com*) - implicit if incomplete search is not used
+- Synthesis method (*AR* or *Hyb*) - AR (implicit), Hybrid (`--method hybrid`)
+- Synthesis with memory injection (*mem*) - `--fsc-memory-injection`
+- Iterative synthesis (*iter*) - implicit if memory injection is not used
+
+Default settings: Incomplete search, AR and Memory injection (inc, AR, mem)
+
+|     **Model**    | **Fastest** |     **Best**    |
+|:----------------:|:-----------:|:---------------:|
+| crypt-4          |   Default   | Default         |
+| drone-4-1        |   Default   | Default         |
+| drone-4-2        |   Default   | Default         |
+| grid-av-4-0      |   Default   | Default         |
+| grid-av-4-0.1    |   Default   | (com, AR, iter) |
+| grid-l-30-5      |   Default   | (inc, Hyb, mem) |
+| hallway          |   Default   | (inc, AR, iter) |
+| maze             |   Default   | (inc, AR, iter) |
+| network-p-2-8-20 |   Default   | Default         |
+| nrp-8            |   Default   | Default         |
+| refuel-06        |   Default   | (inc, AR, iter) |
+| rocks-12         |   Default   | Default         |
+
