@@ -42,7 +42,7 @@ List of settings:
 Default settings: Incomplete search, AR and Memory injection (inc, AR, mem)
 
 |     **Model**    | **Fastest** |     **Best**    |
-|:----------------:|:-----------:|:---------------:|
+|------------------|:-----------:|:---------------:|
 | crypt-4          |   Default   | Default         |
 | drone-4-1        |   Default   | Default         |
 | drone-4-2        |   Default   | Default         |
