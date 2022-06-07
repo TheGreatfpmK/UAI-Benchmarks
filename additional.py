@@ -21,7 +21,7 @@ for model in models:
     project = model.decode("utf-8") + "/"
 
     if "grid-avoid-4-0.1" in model_name:
-        command = "timeout 1800 python3 {} --project {} --fsc-synthesis --fsc-memory-injection".format(paynt_path, project)
+        command = "timeout 1800 python3 {} --project {} --fsc-synthesis".format(paynt_path, project)
     else:
         command = "timeout 1800 python3 {} --project {} --incomplete-search --fsc-synthesis --fsc-memory-injection".format(paynt_path, project)
 
