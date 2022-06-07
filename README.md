@@ -30,7 +30,7 @@ The subfolders `paynt-logs`, `storm-logs` and `prism-logs` contain all of the ex
 
 The subfolder `additional-logs` contain experiments which were not included in the main table but were mentioned in the paper.
 
-#### PAYNT experiments settings
+### PAYNT experiments settings
 
 List of settings:
 - Incomplete search (*inc*) - `--incomplete-search`
