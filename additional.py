@@ -20,10 +20,7 @@ for model in models:
     model_name = os.path.basename(model).decode("utf-8")
     project = model.decode("utf-8") + "/"
 
-    if "grid-avoid-4-0.1" in model_name:
-        command = "timeout 1800 python3 {} --project {} --fsc-synthesis".format(paynt_path, project)
-    else:
-        command = "timeout 1800 python3 {} --project {} --incomplete-search --fsc-synthesis --fsc-memory-injection".format(paynt_path, project)
+    command = "timeout 1800 python3 {} --project {} --incomplete-search --fsc-synthesis --fsc-memory-injection".format(paynt_path, project)
 
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, error = process.communicate()
@@ -31,6 +28,16 @@ for model in models:
 
     with open(logs_dir.decode("utf-8") + model_name + "-" + "logs.txt", "w") as text_file:
         text_file.write(output.decode("utf-8"))
+
+    if "grid-avoid-4-0.1" in model_name:
+        command2 = "timeout 1800 python3 {} --project {} --fsc-synthesis --fsc-memory-injection".format(paynt_path, project)
+
+        process2 = subprocess.Popen(command2.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output2, error2 = process2.communicate()
+        process2.wait()
+
+        with open(logs_dir.decode("utf-8") + model_name + "-complete-" + "logs.txt", "w") as text_file:
+            text_file.write(output2.decode("utf-8"))
 
     print(model_name, "DONE")
     if error:

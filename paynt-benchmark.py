@@ -9,7 +9,7 @@ models = [ f.path for f in os.scandir(directory) if f.is_dir() ]
 logs_dir_fast = os.fsencode(dir_path + '/logs/paynt-logs/fastest/')
 logs_dir_best = os.fsencode(dir_path + '/logs/paynt-logs/best/')
 
-models_same_strat = ["grid-avoid-4-0", "grid-avoid-4-0.1", "crypt-4", "nrp-8", "drone-4-1", "drone-4-2", "network-prio-2-8-20", "rocks-12"]
+models_same_strat = ["grid-avoid-4-0", "crypt-4", "nrp-8", "drone-4-1", "drone-4-2", "network-prio-2-8-20", "rocks-12"]
 
 if len(sys.argv) > 1:
     paynt_path = sys.argv[1]
@@ -45,6 +45,8 @@ for model in models:
             command2 = "timeout 1800 python3 {} --project {} --incomplete-search --fsc-synthesis".format(paynt_path, project)
         elif "hallway" in model_name:
             command2 = "timeout 1800 python3 {} --project {} --filetype drn --incomplete-search --fsc-synthesis".format(paynt_path, project)
+        elif "grid-avoid-4-0.1" in model_name:
+            command2 = "timeout 1800 python3 {} --project {} --fsc-synthesis".format(paynt_path, project)
 
         process2 = subprocess.Popen(command2.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output2, error2 = process2.communicate()
