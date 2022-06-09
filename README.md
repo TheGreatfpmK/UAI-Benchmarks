@@ -19,6 +19,7 @@ The logs from all benchmarks will be saved to folder called `logs` in the direct
 
 ## Used versions of tools
 
+- PAYNT - version 0.1.1 (https://github.com/randriu/synthesis/releases/tag/v0.1.1)
 - Prism - version 4.7.dev (http://www.prismmodelchecker.org/download.php)
 - Storm - modified version 1.6.3 (https://zenodo.org/record/5734826)
 
